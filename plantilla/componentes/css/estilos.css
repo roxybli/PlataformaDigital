@@ -1,0 +1,166 @@
+
+.bg{
+
+	background-image: url("../../images/card/fondo_inventario.png");
+	background-repeat: repeat;
+	top: 0;
+	bottom: 0;
+	margin-top: -30px;
+	margin-bottom: -30px;
+
+	background-image: url("../../images/card/fondo_inventario.png");
+	top: 0;
+	bottom: 0;
+
+
+}
+.divCentrado{
+	margin: 0 auto;
+	width: 80%;
+}
+.divColorVerde{
+	background-color: rgba(0, 13, 90,1);
+	border: 5px solid #acc90d;
+	border-radius: 10px;
+	height: 200px;
+	margin-top: 50px;
+}
+.inventarioIMG{
+	text-align: center;
+	width: 100%;
+	padding-top: 5px;
+}
+.inventarioTitle{
+	background: #acc90d;
+	height: 17%;
+	margin-bottom: 0px;
+}
+.divColorVerde h3	{
+	color: white;
+}
+.blanco
+{
+	color: #fff
+}
+#materiaPrimaExistente{
+	display: none;
+}
+ .oculta, #capitalSubrubro{
+
+    display: none;
+  }
+
+  .resaltar{
+   /*background-color: #d3dddd;*/
+  }
+.contenedorNegocios{
+	background-image: url("../../images/card/fondo_inventario.png");
+	border: #fff;
+	border-width: 5px;
+	border-style: solid;
+	font-weight: bold;
+	height: 400px;
+}
+
+.negociosT th{
+	background: #000d5a;
+	margin: 0;
+	color: #fff;
+	font-weight: bold;
+}
+
+.negociosD th{
+	background: #000d5a;
+	margin: 0;
+	font-weight: bold;
+}
+
+.negociosD td{
+	color: #000;
+}
+
+.detalleB th{
+	background: #000d5a;
+	color: #fff;
+	margin: 0;
+	font-weight: bold;
+}
+
+.detalleB td{
+	font-weight: bold;
+	height: 50px;
+}
+
+.negociosT th{
+	background: #000d5a;
+	margin: 0;
+	color: #fff;
+	font-weight: bold;
+}
+
+.negociosD th{
+	background: #000d5a;
+	margin: 0;
+	color: #fff;
+	font-weight: bold;
+}
+
+.negociosD td{
+>>>>>>> pr/1
+	color: #000;
+}
+
+
+.negociosT  td{
+	background-color: rgba(0, 13, 90, 0.2);
+	color: #fff;
+	font-weight: bold;
+	border: #000d5a;
+	border-bottom-style: solid;
+}
+
+.negociosT  tr:hover{
+	background-color: rgba(0, 13, 90, 0.5);
+	border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+.totalCapital{
+	background-color: rgba(0, 13, 90, 0.05);
+
+}
+#cantidadVender{
+	border: 2px solid #000d5a
+}
+.oculto{
+    display: none;
+  }
+.noOculto{
+display: inline;
+}
+
+/* Inicion de Tabs de ingreso y egresos */
+#contenedorRIE{
+	margin:  0 auto;
+}
+.cardResumenIE{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.cardResumenIE .nav-tabs{
+	background-color: #000d5a;
+}
+.cardResumenIE .nav-tabs li{
+	padding: 10px
+}
+.cardResumenIE .nav-tabs li a{
+	color: #fff;
+	padding: 10px
+}
+.cardResumenIE .nav-tabs li a:hover{
+	background:#000d7f; 
+}
+/* Fin de Tabs de ingreso y egresos */
+
+
