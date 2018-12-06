@@ -5,8 +5,13 @@ class Guias_model extends CI_Model{
 			$titulo = $datos['Titulo'];
 			$fecha = $datos['Fecha1'];
 			$tipo = $datos['tipo'];
-			$video = explode('=', $datos['Video']);
-			$video = $video[1];
+			if($datos['Video']==""){
+				$video="";
+			}
+			else{
+				$video = explode('=', $datos['Video']);
+				$video = $video[1];
+			}
 			$Descripcion = $datos['Descripcion'];
 			$id=$this->session->userdata('id');
 

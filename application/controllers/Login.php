@@ -1,13 +1,12 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Login extends CI_Controller {
 public function __construct()
 	{
 		parent::__construct();
 		$this->load->library('Encrypt');
 	}
-
 	public function index()
 	{
 		$this->load->view('logueo/header-login');
@@ -73,10 +72,7 @@ public function __construct()
 				$this->load->view('perfiles/Insertar_Perfil',$data);
 				$this->load->view('administrador/base/footer');
 			}
-
 		}
-		
-
 	}
 	public function validar()
 	{
@@ -113,8 +109,6 @@ public function __construct()
 					'id_tipo'=>$fila->fk_Tipo_Usuaria,
 					'id_sede'=>$fila->FK_Sede,
 					);
-
-
 				$this->session->set_userdata($data);
 				$this->session->set_userdata($data2);
 				$this->session->set_userdata($data3);
@@ -151,8 +145,6 @@ public function __construct()
 					);
 				$this->session->set_userdata($data);
 				echo $this->session->userdata('usuario');*/
-
-
 	}
 
 }

@@ -31,7 +31,7 @@
                                                                 <input type="password" class="form-control" id="val-password " name="pass" placeholder="Contraseña" required>
                                                             </div>
                                                         </div>
-                                                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-sign-out f-s-20"></i> Entrar</button>
+                                                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-sign-out f-s-20"></i> Iniciar</button>
                                                         
                                                        <span class="register-link m-t-15 pull-right">
                                                             <a href="<?=base_url() ?>login/help">Contáctenos</a>

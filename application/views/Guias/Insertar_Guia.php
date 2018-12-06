@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript"></script>
-
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js" ></script>
 <script type="text/javascript" src="<?= base_url()?>plantilla/componentes/js/tinymce/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
@@ -131,12 +130,13 @@
                                                         <div class="col-md-6">
                                                         <a href="<?= base_url()?>Guias/Gestionar" style="color:white;" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Cancelar</a>  
                                                         </div>
+                                                        <input hidden type="submit" name="Publicar" id="Publicar">
                                                         <div class="col-md-6">
                                                         <a style="color:white;" id="Enviar" name="Enviar"  class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Publicar</a>
 
                                                             
                                                         </div>
-                                                        </div>   
+                                                        </div>    
                                                 
                                             </div>  
                                         </div>
@@ -300,12 +300,12 @@ $('#imagenN').change(function(){
 function ValidarImagen(obj){
     var uploadFile = obj.files[0];
     if (!window.FileReader) {
-        alert('El navegador no soporta la lectura de archivos');
+        sweetAlert("Accion no permitida","El navegador no soporta la lectura de archivos","error");
         return;
     }
 
     if (!(/\.(jpg|png|gif|jpeg)$/i).test(uploadFile.name)) {
-        alert('El archivo a adjuntar no es una imagen');
+        sweetAlert("Accion no permitida","El archivo a adjuntar no es una imagen","error");
     }
     else {
         var img = new Image();
@@ -324,7 +324,7 @@ function ValidarImagen(obj){
                
             }
             else {
-                alert('Imagen correcta :)');
+                 sweetAlert("Imagen Correcta", "haz subido una Imagen", "success");
                 document.getElementById('mostrarI').innerHTML='<img  src="'+URL.createObjectURL(uploadFile)+'"  width="200" height="200" id="vista" alt="Imagen a publicar"/>';                
             }
         };

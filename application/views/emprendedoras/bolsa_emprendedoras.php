@@ -1,6 +1,7 @@
  
  <script src="<?=base_url() ?>plantilla/mtl/material.min.js"></script>
  <link href="<?=base_url() ?>plantilla/mtl/material.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= base_url()?>/plantilla/componentes/js/lightbox/css/lightbox.min.css">
 <style type="text/css">
     #div12{
         margin: 30px;
@@ -183,7 +184,8 @@ Filtrar</a>
                     <p style='color:#000d5a;'></p>
                     <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                           <div class="mdl-card__title">
-                          <img class="img-responsive radius" style="height:250px;" src="<?= base_url()?>plantilla/img_perfil/<?= $perfil->Foto_Perfil?>">
+                            <a href="<?php echo base_url()?>plantilla/img_perfil/<?= $perfil->Foto_Perfil?>" data-lightbox="example-set">
+                          <img class="img-responsive radius img-thumbnail" style="height:250px;" src="<?= base_url()?>plantilla/img_perfil/<?= $perfil->Foto_Perfil?>"></a>
                           </div>
                           <div class="mdl-card__supporting-text">
                             <h2 class="mdl-card__title-text" style=""><?php echo $perfil->Nombre_Negocio?></h2>

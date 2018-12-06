@@ -186,12 +186,12 @@ $('#imagenN').change(function(){
 function ValidarImagen(obj){
     var uploadFile = obj.files[0];
     if (!window.FileReader) {
-        alert('El navegador no soporta la lectura de archivos');
+        sweetAlert("Accion no permitida","El navegador no soporta la lectura de archivos","error");
         return;
     }
 
     if (!(/\.(jpg|png|gif|jpeg)$/i).test(uploadFile.name)) {
-        alert('El archivo a adjuntar no es una imagen');
+         sweetAlert("Accion no permitida","El archivo a adjuntar no es una imagen","error");
     }
     else {
         var img = new Image();

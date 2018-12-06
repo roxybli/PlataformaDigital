@@ -37,7 +37,6 @@ foreach ($registro->result() as $info2) {
                             <div class="card-body">
                                 <h4 class="card TituloUser">Usuarias registradas</h4>
                                 <h1 style="margin:10px;"><?php echo $info2->Nombre_Sede?></h5>
-                                
                                 <div class="table-responsive m-t-40">
                                     <h2 class="card-subtitle" style="color: #000000">Usted puede descargar los datos en los siguientes formatos copiar, CSV, Excel, PDF & Print</h6>
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">

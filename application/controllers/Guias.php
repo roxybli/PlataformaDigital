@@ -1,8 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Guias extends CI_Controller {
-
 	public function index(){
 			$this->load->view('administrador/base/header');
 			//$this->load->view('administrador/base/home');
@@ -159,10 +157,5 @@ class Guias extends CI_Controller {
 					self.location ="'.base_url().'Guias/Gestionar"
 					</script>';
 			}
-
-
-		
-	    
-
 	}
 }
