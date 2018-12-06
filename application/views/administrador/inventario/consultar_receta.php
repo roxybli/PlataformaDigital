@@ -33,6 +33,7 @@
                     <table class="table negociosD cell-border" id="inventarioRecetas">
                         <thead>
                             <tr>
+                                <th class="text-center" style="color: #000000">No</th>
                                 <th class="text-center" style="color: #000000">Producto</th>
                                 <th class="text-center" style="color: #000000">Precio</th>
                                 <th class="text-center" style="color: #000000">Lugar</th>
@@ -42,18 +43,21 @@
                         </thead>
                         <tbody>
                         <?php 
+                        $ime=1;
                             foreach ($datos->result() as $filaProcedimientos)
                             {
                         ?>
                             <tr>
+                                <td class="text-center"><span><?= $ime ?></span></td>
                                 <td class="text-center"><span><?= $filaProcedimientos->Nombre_Producto ?></span></td>
                                 <td class="text-center"><span>$<?= $filaProcedimientos->Precio_Producto ?></span></td>
                                 <td class="text-center"><span><?= $filaProcedimientos->Direccion ?></span></td>
                                 <td class="text-center"><span><?= $filaProcedimientos->Nombre ?></span></td>
-                                <td class="text-center" ><a href="<?= base_url() ?>inventario/detalleProcedimiento?e=<?= $filaProcedimientos->PK_Id_Producto ?>" >Ver detalles</a></td>
+                                <td class="text-center" ><a href="<?= base_url() ?>inventario/detalleProcedimiento?e=<?= $filaProcedimientos->PK_Id_Producto ?>" style="color: #ff0000">Ver detalles</a></td>
                             </tr>
                         
-                        <?php       
+                        <?php  
+                        $ime++;     
                                 }
                             }
                         ?>

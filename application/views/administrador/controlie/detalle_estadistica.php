@@ -53,35 +53,35 @@ table td{
                             <td colspan="2" class="text-left"  style="color:#000d5a"><?= $ingresos->Nombre_Ingreso." ($".$ingresos->Cantidad_Ingreso.")" ?></td>
                         <?php 
                             switch ($ingresos->Total) {
-                                case (($ingresos->Total >= 0) && ($ingresos->Total <= 100)):
+                                case (($ingresos->Total >= 0) && ($ingresos->Total <= 150)):
                                     echo '<td colspan="" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 100) && ($ingresos->Total <= 200)):
+                                case (($ingresos->Total > 150) && ($ingresos->Total <= 250)):
                                     echo '<td colspan="2" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 200) && ($ingresos->Total <= 300)):
+                                case (($ingresos->Total > 250) && ($ingresos->Total <= 350)):
                                     echo '<td colspan="3" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 300) && ($ingresos->Total <= 400)):
+                                case (($ingresos->Total > 350) && ($ingresos->Total <= 450)):
                                     echo '<td colspan="4"  class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 400) && ($ingresos->Total <= 500)):
+                                case (($ingresos->Total > 450) && ($ingresos->Total <= 550)):
                                     echo '<td colspan="5" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
 
-                                case (($ingresos->Total > 500) && ($ingresos->Total <= 600)):
+                                case (($ingresos->Total > 550) && ($ingresos->Total <= 650)):
                                     echo '<td colspan="6"  class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 600) && ($ingresos->Total <= 700)):
+                                case (($ingresos->Total > 650) && ($ingresos->Total <= 750)):
                                     echo '<td colspan="7" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 700) && ($ingresos->Total <= 800)):
+                                case (($ingresos->Total > 750) && ($ingresos->Total <= 850)):
                                     echo '<td colspan="8" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 800) && ($ingresos->Total <= 900)):
+                                case (($ingresos->Total > 850) && ($ingresos->Total <= 950)):
                                     echo '<td colspan="9" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($ingresos->Total > 900) && ($ingresos->Total <= 1000)):
+                                case (($ingresos->Total > 950) && ($ingresos->Total <= 1050)):
                                     echo '<td colspan="10" class="text-left"><div class="barra" style="border-left:'.$ingresos->Cantidad_Ingreso.'px solid #acc90d">d</div></td>';
                                     break;
                                 
@@ -98,16 +98,16 @@ table td{
                         <tr>
                             <td></td>
                             <td></td>
-                            <td class="text-right" style="color:#000d5a">$100</td>
-                            <td class="text-right" style="color:#000d5a">$200</td>
-                            <td class="text-right" style="color:#000d5a">$300</td>
-                            <td class="text-right" style="color:#000d5a">$400</td>
-                            <td class="text-right" style="color:#000d5a">$500</td>
-                            <td class="text-right" style="color:#000d5a">$600</td>
-                            <td class="text-right" style="color:#000d5a">$700</td>
-                            <td class="text-right" style="color:#000d5a">$800</td>
-                            <td class="text-right" style="color:#000d5a">$900</td>
-                            <td class="text-right" style="color:#000d5a">$1000</td>
+                            <td class="text-right" style="color:#000d5a">$150</td>
+                            <td class="text-right" style="color:#000d5a">$250</td>
+                            <td class="text-right" style="color:#000d5a">$350</td>
+                            <td class="text-right" style="color:#000d5a">$450</td>
+                            <td class="text-right" style="color:#000d5a">$550</td>
+                            <td class="text-right" style="color:#000d5a">$650</td>
+                            <td class="text-right" style="color:#000d5a">$750</td>
+                            <td class="text-right" style="color:#000d5a">$850</td>
+                            <td class="text-right" style="color:#000d5a">$950</td>
+                            <td class="text-right" style="color:#000d5a">$1050</td>
                         </tr>
 
                     </table>    
@@ -134,35 +134,35 @@ table td{
                             <td colspan="2" class="text-left"  style="color:#000d5a"><?= $egresos->Nombre_Egreso." ($".$egresos->Cantidad_Egreso.")" ?></td>
                         <?php 
                             switch ($egresos->Total) {
-                                case (($egresos->Total >= 0) && ($egresos->Total <= 100)):
+                                case (($egresos->Total >= 0) && ($egresos->Total <= 150)):
                                     echo '<td colspan="" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 100) && ($egresos->Total <= 200)):
+                                case (($egresos->Total > 150) && ($egresos->Total <= 250)):
                                     echo '<td colspan="2" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 200) && ($egresos->Total <= 300)):
+                                case (($egresos->Total > 250) && ($egresos->Total <= 350)):
                                     echo '<td colspan="3" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 300) && ($egresos->Total <= 400)):
+                                case (($egresos->Total > 350) && ($egresos->Total <= 450)):
                                     echo '<td colspan="4"  class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 400) && ($egresos->Total <= 500)):
+                                case (($egresos->Total > 450) && ($egresos->Total <= 550)):
                                     echo '<td colspan="5" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
 
-                                case (($egresos->Total > 500) && ($egresos->Total <= 600)):
+                                case (($egresos->Total > 550) && ($egresos->Total <= 650)):
                                     echo '<td colspan="6"  class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 600) && ($egresos->Total <= 700)):
+                                case (($egresos->Total > 650) && ($egresos->Total <= 750)):
                                     echo '<td colspan="7" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 700) && ($egresos->Total <= 800)):
+                                case (($egresos->Total > 750) && ($egresos->Total <= 850)):
                                     echo '<td colspan="8" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 800) && ($egresos->Total <= 900)):
+                                case (($egresos->Total > 850) && ($egresos->Total <= 950)):
                                     echo '<td colspan="9" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
-                                case (($egresos->Total > 900) && ($egresos->Total <= 1000)):
+                                case (($egresos->Total > 950) && ($egresos->Total <= 1050)):
                                     echo '<td colspan="10" class="text-left"><div class="barra" style="border-left:'.$egresos->Cantidad_Egreso.'px solid #acc90d">d</div></td>';
                                     break;
                                 
@@ -179,16 +179,16 @@ table td{
                         <tr>
                             <td></td>
                             <td></td>
-                            <td class="text-right" style="color:#000d5a">$100</td>
-                            <td class="text-right" style="color:#000d5a">$200</td>
-                            <td class="text-right" style="color:#000d5a">$300</td>
-                            <td class="text-right" style="color:#000d5a">$400</td>
-                            <td class="text-right" style="color:#000d5a">$500</td>
-                            <td class="text-right" style="color:#000d5a">$600</td>
-                            <td class="text-right" style="color:#000d5a">$700</td>
-                            <td class="text-right" style="color:#000d5a">$800</td>
-                            <td class="text-right" style="color:#000d5a">$900</td>
-                            <td class="text-right" style="color:#000d5a">$1000</td>
+                            <td class="text-right" style="color:#000d5a">$150</td>
+                            <td class="text-right" style="color:#000d5a">$250</td>
+                            <td class="text-right" style="color:#000d5a">$350</td>
+                            <td class="text-right" style="color:#000d5a">$450</td>
+                            <td class="text-right" style="color:#000d5a">$550</td>
+                            <td class="text-right" style="color:#000d5a">$650</td>
+                            <td class="text-right" style="color:#000d5a">$750</td>
+                            <td class="text-right" style="color:#000d5a">$850</td>
+                            <td class="text-right" style="color:#000d5a">$950</td>
+                            <td class="text-right" style="color:#000d5a">$1050</td>
                         </tr>
 
                     </table>    

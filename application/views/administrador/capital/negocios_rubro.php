@@ -31,20 +31,27 @@
             <table class="table table-bordered negociosD" id="resumenSubrubros">
                 <thead>
                     <tr>
+                        <th  class="text-center" style="color: #000000" >No</th>
                         <th  class="text-center" style="color: #000000" >Nombre del negocio</th>
                         <th  class="text-center" style="color: #000000">Acción</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-
+                        $ime=1;
                         foreach ($datos->result() as $subrubros) {
                     ?>
                     <tr>
+                        <td class="text-center"><?= $ime?></td>
                         <td class="text-center"><?= $subrubros->Nombre_Subrubro ?></td>
                         <td   class="text-center"><a class="text-danger" href="<?= base_url() ?>capital/detalleNegocio/<?= $subrubros->PK_Id_Subrubro ?>">Ver detalles</a></td>
                     </tr>
-                    <?php } }?>
+
+                    <?php $ime++; } 
+
+                }
+
+                ?>
                 </tbody>
 
             </table>

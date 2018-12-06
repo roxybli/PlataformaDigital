@@ -17,8 +17,9 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
-            <div class="card-title">
-            </div>
+            <div class="card-title text-right">
+              <a href="<?= base_url() ?>controlie/detalleBalancePDF/<?= $fecha ?>" class="btn btn-danger btn-sm" target="_blank">Ver en PDF</a>
+          </div>
             <div class="card-body">
                <div class="table-responsive">
                 <?php 
@@ -28,17 +29,13 @@
                     }
                     else
                     {
-
                 ?>
-                    <table class="table detalleB">
-                        <thead>
+                    <table class="table detalleB" id="resumenB">
+                        <thead >
                         <tr>
-                            <td colspan="6" class="text-right"><a href="<?= base_url() ?>controlie/detalleBalancePDF/<?= $fecha ?>" class="btn btn-danger btn-sm" target="_blank">Ver en PDF</a></td>
-                        </tr>
-                        <tr>
-                        
+                        <th>No</th>
                             <th>Fecha</th>
-                            <th>Operacion</th>
+                            <th>Operación</th>
                             <th>Egreso de dinero</th>
                             <th>Ingreso</th>
                             <th>Balance</th>
@@ -49,11 +46,13 @@
                         <?php
                         $contador=0;
                         $ime=0;
+                        $imei=1;
                             foreach ($datos->result() as $filaDatos)
                             {
                                 
                            ?> 
                                <tr>
+                                <td ><span><?= $imei ?></span></td>
                                     <td ><span><?= $filaDatos->Fecha_Balance ?></span></td>
                                     <td ><span><?= $filaDatos->Nombre_Operacion ?> -<?= $filaDatos->Nombre_Egreso ?></span></td>
                                     <td ><span>$<?= $filaDatos->Cantidad_Egreso ?></span></td>
@@ -76,12 +75,16 @@
                                 </tr>
                         <?php    
                                   $contador++;
+                                  $imei++;
+
                             }
+
                     }
                          ?>
                         <tr>
-                            <td colspan="4" class="text-center"><h3>Total despues de gastos</h3></td>
-                            <td colspan="2"> <a href="#"><span class="btn btn-primary form-control">$<?= $ime ?></span></a></td>
+                            <td colspan="4" class="text-center"><h3>Total después de gastos</h3></td>
+                            <td colspan="2"> <a href="#"><span class="btn btn-primary form-control">$<?= $ime?>
+                            </span></a></td>
                         </tr>
                         <!--<tr>
                             <td colspan="2"> <a href="#"><span class="btn btn-primary form-control">Ver en PDF</span></a></td>
@@ -95,3 +98,8 @@
     </div>
 </div> 
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#resumenB').DataTable();
+} );
+</script>

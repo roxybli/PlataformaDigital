@@ -48,7 +48,7 @@ foreach ($Nus->result() as $ns) {
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h5> <?= $r->Num?></h5>
-                                    <p class="m-b-0">Rubro con mas usuarias: <?= $r->Nombre_Rubro?></p>
+                                    <p class="m-b-0">Rubro con más usuarias: <?= $r->Nombre_Rubro?></p>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ foreach ($Nus->result() as $ns) {
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
+                                    <span><i class="fa fa-user f-s-40 color-success"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2><?= $t->Registro?></h2>
@@ -70,7 +70,7 @@ foreach ($Nus->result() as $ns) {
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
+                                    <span><i class="fa fa-user f-s-40 color-success"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2><?= $ns->Registro?></h2>

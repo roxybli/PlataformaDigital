@@ -31,35 +31,32 @@
                     {
 
                 ?>
-                    <table class="table detalleB text-cell">
+                    <table class="table detalleB" id="balancesR">
                         <thead>
                             <tr>
-                                <th></th>
+                                <th>No</th>
                                 <th>Fecha</th>
-                                <th>Información</th>
-                                <th>Operación</th>
-                                <th></th>
-                                
+                                <th width="39%">Información</th>
+                                <th width="20%">Operación</th>                              
                             </tr>
                         </thead>
                         <tbody>
                         <?php
                         $contador=0;
+                        $ime=1;
                             foreach ($datos->result() as $filaDatos)
                             {
                            ?> 
                                <tr>
-                                    <td>
-                                        
-                                    </td>
-                                    <td ><span><?= $filaDatos->Fecha_Balance ?></span></td>
-                                    <td >Balance correspondiene a esta fecha</td>
-                                    <td ><a href="<?= base_url() ?>controlie/detalleBalance?f=<?= $filaDatos->Fecha_Balance ?>" >Ver detalles</a></td>
-                                    <td><span></span></td>
-                                    
+                                    <td style="color: #000000"><?= $ime ?></td>
+                                    <td style="color: #000000"><?= $filaDatos->Fecha_Balance ?></td>
+                                    <td style="color: #000000">Balance correspondiene a esta fecha</td>
+                                    <td style="color: #000000"><a href="<?= base_url() ?>controlie/detalleBalance?f=<?= $filaDatos->Fecha_Balance ?>" style="color: #ff0000">Ver detalles</a></td>
                                 </tr>
                         <?php    
-                                  $contador++;
+                         $contador++;
+                        $ime++;
+                                 
                                 }
                             }
 
@@ -74,3 +71,8 @@
     </div>
 </div> 
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#balancesR').DataTable();
+} );
+</script>

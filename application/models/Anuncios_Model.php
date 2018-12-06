@@ -76,7 +76,7 @@ class Anuncios_model extends CI_Model{
 	public function EliminarAnuncio($id){
 
 		$sql="DELETE  FROM tbl_Anuncios  WHERE pk_Id_Anuncio=$id";
-		echo $sql;
+		//echo $sql;
 		if($this->db->query($sql)){
 			return true;
 		}

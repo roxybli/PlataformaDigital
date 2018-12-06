@@ -339,7 +339,7 @@ class Controlie extends CI_Controller {
 			        <thead class='active' >
 			        <tr>
 	                    <th>Fecha</th>
-	                    <th>Operacion</th>
+	                    <th>Operación</th>
 	                    <th>Egreso de dinero</th>
 	                    <th>Ingreso</th>
 	                    <th>Balance</th>
@@ -571,12 +571,7 @@ class Controlie extends CI_Controller {
 	                            <td class='text-center'>Total de egresos</td>
 	                            <td class='text-center'>$".$totalE."</td>
 	                        </tr>";
-
-			         
 					$html .= "</table></div>";
-
-			 
-
 			         $pdfFilePath = "resumen de ingresos y egresos.pdf";
 			         //load mPDF library
 			        $this->load->library('M_pdf');
@@ -605,11 +600,7 @@ class Controlie extends CI_Controller {
 						self.location ="'.base_url().'reportes/trabajosRealizados"
 						</script>';
 				}
-			
-
 	}
-
-
 	public function estadisticaMIE()
 	{
 			$d = $this->input->post();

@@ -110,21 +110,23 @@
                                 <div class="table-responsive m-t-40">
                                     <a class="btn btn-success" style="color:white; padding:10px; margin: 20px;  background-color:#512da8" data-toggle="modal" data-target="#ModalInsert"><i class="fa fa-plus-circle" style="margin:10px;" aria-hidden="true"></i>Crear nuevo rubro</a>
                                      <h6 class="card-subtitle" style="color: #000000">Usted puede descargar los datos en los siguientes formatos copiar, CSV, Excel, PDF & Print</h6>
-                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="90%">
+                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="90%" align="center">
                                         <thead>
                                             <tr>
-                                                <th width="10%">Id Rubro</th>
+                                                <th width="10%">No</th>
                                                 <th width="40%">Nombre del Rubro</th>
                                                 <th width="20%">Accion</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                            <?php
+                                            $ime=1;
                                                 foreach ($Rubro->result() as $Rubros) { 
                                                     echo "<tr>";  
-                                                    echo "<td id='ni' style='color: #000000'>".$Rubros->PK_Id_Rubro."</td>";  
+                                                    echo "<td id='ni' style='color: #000000'>".$ime."</td>";  
                                                     echo "<td id='nom' style='color: #000000'>".$Rubros->Nombre_Rubro."</td>";
                                                     $nombre = "'".$Rubros->Nombre_Rubro."'";
+                                                    $ime++;
 
                                                     //echo "<td><a onclick='Eliminar($Rubros->PK_Id_Rubro)' class='btn btn-danger m-b-10 m-l-5'><i style='color:white;' class='fa fa-trash-o' aria-hidden='true'></i></a></td>";
                                                    // echo '<td><a onclick="editar('.$Rubros->PK_Id_Rubro.','.$nombre.')" class="btn btn-warning m-b-10 m-l-5" style="color:white;" data-toggle="modal" data-target="#ModalEdit"><i style="color:white;" class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>';

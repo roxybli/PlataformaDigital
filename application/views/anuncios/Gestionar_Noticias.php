@@ -43,17 +43,17 @@ foreach ($Anuncios->result() as $noti) {
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead >
                                             <tr>
-                                                
+                                                <th>No</th>
                                                 <th>Título</th>
                                                 <th>Institución</th>
                                                 <th>Publicada por</th>
-                                                <th>Fecha de publicacion</th>
+                                                <th>Fecha de publicación</th>
                                                 <th>Operación</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                
+                                                <th>No</th>
                                                 <th>Título</th>
                                                 <th>Institución</th>
                                                 <th>Publicada por</th>
@@ -63,13 +63,15 @@ foreach ($Anuncios->result() as $noti) {
                                         </tfoot>
                                         <tbody>
                                         <?php
+                                        $ime=1;
                                                 foreach ($Anuncios->result() as $info){ 
                                                     echo "<tr>";  
-                                                   // echo "<td id='ni' style='color: #000000'>".$info->pk_Id_Anuncio."</td>";  
+                                                   echo "<td id='ni' style='color: #000000'>".$ime."</td>";  
                                                     echo "<td id='nom' style='color: #000000'>".$info->Titulo."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$info->Nombre_Institucion."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$info->Nombre."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$info->Fecha."</td>";
+                                                    $ime++;
                                                     $id=$info->pk_Id_Anuncio;
                                                     //INformacion para editar Noticia
                                                     $idUser1=$info->FK_Id_Usuaria;

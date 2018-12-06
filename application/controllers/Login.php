@@ -85,9 +85,6 @@ public function __construct()
 		var_dump($datos);'*/
 		$nombre= $_POST['nomuser'];
 		$password= $_POST['pass'];
-		//$valorencriptado=$this->encrypt->encode($password);
-		//$si=$valorencriptado;
-		//$si=$_POST['pass'];
 		//$valordesncriptado=$this->encrypt->decode($valorencriptado);
 		$fila = $this->Usuarias_Model->validarUsuaria($nombre);
 		if ($fila != null)

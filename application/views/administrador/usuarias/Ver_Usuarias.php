@@ -43,7 +43,7 @@ foreach ($registro->result() as $info2) {
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead >
                                             <tr style="background'color:#0005da; color:white;">
-                                                <th style="background'color:#0005da; color:white;"> Id usuario</th>
+                                                <th style="background'color:#0005da; color:white;"> No.</th>
                                                 <th>Nombre completo</th>
                                                 <th>Dirección</th>
                                                 <th>Tipo de usuaria</th>
@@ -54,7 +54,7 @@ foreach ($registro->result() as $info2) {
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Id usuario</th>
+                                                <th>No</th>
                                                 <th>Nombre completo</th>
                                                 <th>Dirección</th>
                                                 <th>Tipo de usuaria</th>
@@ -65,14 +65,15 @@ foreach ($registro->result() as $info2) {
                                         </tfoot>
                                         <tbody>
                                         <?php
+                                        $ime=1;
                                                 foreach ($registro->result() as $info) { 
                                                     echo "<tr>";  
-                                                    echo "<td id='ni' style='color: #000000'>".$info->pk_Id_Usuaria."</td>";  
+                                                    echo "<td id='ni' style='color: #000000'>".$ime."</td> ";
                                                     echo "<td id='nom' style='color: #000000'>".$info->Nombre." ".$info->Apellido."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$info->Direccion."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$info->Tipo."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$info->Telefono."</td>";
-                                                    
+                                                    $ime++;
                                                     $fechaActual = date("Y-m-d");
                                                     $fecha2=$info->Fecha_Actividad;
                                                      //$inicio = strtotime($fechaActual);
@@ -92,6 +93,7 @@ foreach ($registro->result() as $info2) {
                                                                     <li onclick="NoDelete()"><a title="Este usuario esta activo no se puede eliminar" ><i  class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a> </li>
                                                                     <li><a href="'.base_url().'/Emprendedoras/editar?id='.$id.'"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</a></li></ul>
                                                                 </div></td>';
+
                                                      }
                                                      else{
                                                      if($diasFalt>60){

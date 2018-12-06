@@ -77,6 +77,7 @@ class Anuncios extends CI_Controller {
 	}
 	public function eliminarAnuncio(){
 			$id= $this->input->GET('id');
+			 $datos=$this->input->POST();
 			$this->load->model('Anuncios_Model');
 			$bool=$this->Anuncios_Model->EliminarAnuncio($id);
 			if($bool){

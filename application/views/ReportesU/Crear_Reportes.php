@@ -83,7 +83,7 @@
                                     <li>- Teléfono</li>
                                     </ul>
                                     <br>
-                                 <form method="POST" action="<?= base_url()?>Reportes/ReportePeriodo">
+                                 <form method="POST" action="<?= base_url()?>Reportes/ReportePeriodo" target="_blank">
                                      <div class="row form-validation">
                                      <?php
                                      if($this->session->userdata('id_tipo')==1)
@@ -153,7 +153,7 @@
                                      <div class="row" >
                                      <a onclick="cancelar()" style="margin:0 auto; font-weight:bold;" class="btn btn-success"><i class="fa fa-close" style="margin:10px;"></i> Cancelar</a>
 
-                                         <button style="margin:0 auto; font-weight:bold; background-color:#FF5252; color:white;" class="btn " target="_blank"><i class="fa fa-file" style="margin:10px;"></i> Generar pdf</button>
+                                         <button style="margin:0 auto; font-weight:bold; background-color:#FF5252; color:white;" class="btn " ><i class="fa fa-file" style="margin:10px;"></i> Generar pdf</button>
                                      </div>
                                      
                                  </form>
@@ -175,7 +175,7 @@
                                     <li>- Teléfono</li>
                                     </ul>
                                     <br>
-                                 <form method="POST" action="<?= base_url()?>Reportes/ReportePor">
+                                 <form method="POST" action="<?= base_url()?>Reportes/ReportePor" target="_blank">
                                      <div class="row">
                                         
                                         <?php
@@ -224,7 +224,7 @@
                                      </div>
                                      <div class="row" >
                                      <a onclick="cancelar()" style="margin:0 auto; font-weight:bold;" class="btn btn-success"><i class="fa fa-close" style="margin:10px;"></i> Cancelar</a>
-                                         <button style="margin:0 auto; font-weight:bold; background-color:#FF5252; color:white;" class="btn "><i class="fa fa-file" style="margin:10px;" target="_blank"></i> Generar pdf</button>
+                                         <button style="margin:0 auto; font-weight:bold; background-color:#FF5252; color:white;" class="btn "><i class="fa fa-file" style="margin:10px;"></i> Generar pdf</button>
                                      </div>
                                  </form>
                                      
@@ -248,7 +248,7 @@
                                     <li>- Dirección</li>
                                     <li>- Teléfono</li>
                                     </ul>
-                                 <form method="POST" action="<?= base_url()?>Reportes/ReporteGeneral">
+                                 <form method="POST" action="<?= base_url()?>Reportes/ReporteGeneral" target="_blank">
                                      <div class="row">
                                         <div class="col-md-12">
 
@@ -281,7 +281,7 @@
                                      <br>
                                       <div class="col-md-12" >
                                         <a onclick="cancelar()" style="margin:0 auto; font-weight:bold;" class="btn btn-success"><i class="fa fa-close" style="margin:10px;"></i> Cancelar</a>
-                                         <button style="margin:0 auto; font-weight:bold; background-color:#FF5252; color:white;" class="btn "><i class="fa fa-file" style="margin:10px;"></i> Generar pdf</button>
+                                         <button style="margin:0 auto; font-weight:bold; background-color:#FF5252; color:white;" class="btn "><i class="fa fa-file" style="margin:10px;" ></i> Generar pdf</button>
                                      </div>
                                         </div>
                                        

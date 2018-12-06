@@ -54,9 +54,9 @@ class Usuarias_model extends CI_Model{
 			$apellido=$data['apellido'];
 			$nomuser=$data['nomuser'];
 			$pass=$data['pass'];
-			$valorencriptado=$this->encrypt->encode($pass);
-			$si=$valorencriptado;
-			$valordesncriptado=$this->encrypt->decode($valorencriptado);
+			//$valorencriptado=$this->encrypt->encode($pass);
+			//$si=$valorencriptado;
+			//$valordesncriptado=$this->encrypt->decode($si);
 			//echo $valordesncriptado;	
 			$direccion=$data['direccion'];
 			$telefono=$data['telefono'];
@@ -65,7 +65,7 @@ class Usuarias_model extends CI_Model{
 			$sede=$data['sede'];
 			$Año_Ingreso=$data['Año_Ingreso'];
 			$fechaActual = date("Y/m/d");
-			$sql="INSERT INTO tbl_Usuarias(FK_Sede, Nombre,Apellido,Nom_User,Pass,Direccion,fk_Tipo_Usuaria,Telefono,Dui,Año_Ingreso,Fecha_Registro) VALUES('$sede','$nombre','$apellido','$nomuser','$si','$direccion','$tipo','$telefono','$dui','$Año_Ingreso','$fechaActual')";
+			$sql="INSERT INTO tbl_Usuarias(FK_Sede, Nombre,Apellido,Nom_User,Pass,Direccion,fk_Tipo_Usuaria,Telefono,Dui,Año_Ingreso,Fecha_Registro) VALUES('$sede','$nombre','$apellido','$nomuser','$pass','$direccion','$tipo','$telefono','$dui','$Año_Ingreso','$fechaActual')";
 			//$this->db->bind_param('sss', $contenido, $video, $img);
 			if($this->db->query($sql)){
 				return true;
@@ -145,7 +145,6 @@ class Usuarias_model extends CI_Model{
 		$sql="SELECT COUNT(*) AS Numero_Usuarias_Nuevas FROM tbl_Usuarias WHERE Fecha_Registro BETWEEN (SELECT Fecha_Actividad FROM tbl_Usuarias WHERE pk_Id_Usuaria=$id_user AND fk_Tipo_Usuaria=$id_tipo) AND '$fechaActual' AND fk_Tipo_Usuaria=3";
 		$num =$this->db->query($sql);
 		return $num;
-
 	}
 	public function NumeroUsuarias(){
 		$sql ="Select count(*) AS Registro from tbl_Usuarias";

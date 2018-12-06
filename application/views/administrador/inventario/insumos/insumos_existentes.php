@@ -47,6 +47,7 @@
                     <table class="table negociosD text-cell" id="inventarioInsumos">
                         <thead>
                             <tr>
+                                <th style="color: #000000">No</th>
                                 <th style="color: #000000">Nombre del insumo</th>
                                 <th style="color: #000000">Cantidad</th>
                                 <th style="color: #000000">Precio</th>
@@ -58,6 +59,7 @@
                         </thead>
                         <tbody>
                         <?php
+                        $ime=1;
                             foreach ($insumos->result() as $filaInsumos)
                             {
                                 if (($filaInsumos->Cantidad_Minima + 2) < $filaInsumos->Existencia_Insumo)
@@ -70,7 +72,7 @@
                                     echo '<tr style="background-color: rgba(255, 0, 0, 0.2);">';
                                 }
                            ?> 
-                               
+                                    <td><span><?= $ime ?></span></td>
                                     <td><span><?= $filaInsumos->Nombre_Insumo ?></span></td>
                                     <td><span><?= $filaInsumos->Existencia_Insumo ?></span></td>
                                     <td><span><?= $filaInsumos->Precio_Insumo ?></span></td>
@@ -86,7 +88,8 @@
                                         </div>
                                     </td>                                  
                                 </tr>
-                        <?php    
+                        <?php   
+                        $ime++; 
                                 }
                             }
                          ?>

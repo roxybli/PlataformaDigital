@@ -74,14 +74,14 @@
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
             <div class="view">
-                <img class="d-block w-100" height="400" src="<?= base_url()?>plantilla/Imagenes_Slider/ae_1.jpg" alt="First slide">
+                <img class="d-block w-100" height="300" src="<?= base_url()?>plantilla/Imagenes_Slider/ae_1.jpg" alt="First slide">
                 <div class="mask rgba-black-light"></div>
             </div>
         </div>
         <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-                <img class="d-block w-100" height="400" src="<?= base_url()?>plantilla/Imagenes_Slider/ae_2.jpg" alt="Second slide">
+                <img class="d-block w-100" height="300" src="<?= base_url()?>plantilla/Imagenes_Slider/ae_2.jpg" alt="Second slide">
                 <div class="mask rgba-black-strong"></div>
             </div>
            
@@ -89,7 +89,7 @@
         <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-                <img class="d-block w-100" height="400" src="<?= base_url()?>plantilla/Imagenes_Slider/ae_3.jpg" alt="Third slide">
+                <img class="d-block w-100" height="300" src="<?= base_url()?>plantilla/Imagenes_Slider/ae_3.jpg" alt="Third slide">
                 <div class="mask rgba-black-slight"></div>
             </div>
          

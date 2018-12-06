@@ -45,7 +45,7 @@
                                 <img class="imgRedonda" src="<?php echo base_url().'plantilla/img_perfil/'.$info->Foto_Contacto?>" alt="" />
                         </td>
                           <td style="color: #000000"><?= $info->Nombre_Contacto?></td>
-                          <td style="color: #000000"><a href="<?php echo base_url()?>Mensajes/mostrarMensajesContactos?Id=<?php echo $info->PK_Id_Contacto?>" style="color: #000">Ver historial</a></td>
+                          <td style="color: #000000"><a href="<?php echo base_url()?>Mensajes/mostrarMensajesContactos?Id=<?php echo $info->PK_Id_Contacto?>" style="color: #ff0000">Ver historial</a></td>
                          
                         </tr>
                         <?php 
@@ -56,7 +56,7 @@
                          <tr>
                           <td scope="row"><img class="imgRedonda" src="<?php echo base_url().'plantilla/img_perfil/'.$infoA->Foto_Perfil?>" alt="" /></td>
                           <td><?= $infoA->Nombre?></td>
-                          <td ><a href="<?php echo base_url()?>Mensajes/mostrarMensajesContactos?Id=<?php echo $infoA->PK_Id_Contacto?>">Ver historial</a></td>
+                          <td style="color:#ff0000"><a href="<?php echo base_url()?>Mensajes/mostrarMensajesContactos?Id=<?php echo $infoA->PK_Id_Contacto?>" >Ver historial</a></td>
                          
                         </tr>
                         <?php

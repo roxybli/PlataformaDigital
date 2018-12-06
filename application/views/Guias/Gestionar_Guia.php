@@ -43,7 +43,7 @@ foreach ($Guia->result() as $guia) {
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead >
                                             <tr>
-                                                <th> Id Guia</th>
+                                                <th> No</th>
                                                 <th>Titulo</th>
                                                 <th>Publicada por</th>
                                                 <th>Fecha de publicacion</th>
@@ -53,7 +53,7 @@ foreach ($Guia->result() as $guia) {
                                         </thead>
                                         <tfoot>
                                             <tr>
-                                                <th>Id noticia</th>
+                                                <th>No</th>
                                                 <th>Titulo</th>
                                                 <th>Publicada por</th>
                                                 <th>Fecha de publicacion</th>
@@ -63,13 +63,15 @@ foreach ($Guia->result() as $guia) {
                                         </tfoot>
                                         <tbody>
                                         <?php
+                                        $ime=1;
                                                 foreach ($Guia->result() as $guia){ 
                                                     echo "<tr>";  
-                                                    echo "<td id='ni' style='color: #000000'>".$guia->pk_Id_Guia."</td>";  
+                                                    echo "<td id='ni' style='color: #000000'>".$ime."</td>";  
                                                     echo "<td id='nom' style='color: #000000'>".$guia->Titulo_Guia."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$guia->Nombre."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$guia->Fecha_Publicacion."</td>";
                                                     echo "<td id='cat' style='color: #000000'>".$guia->Tipo_publicacion."</td>";
+                                                    $ime++;
                                                     $id=$guia->pk_Id_Guia;
                                                     //INformacion para editar Noticia
                                                     $idUser1=$guia->FK_Id_Usuaria;

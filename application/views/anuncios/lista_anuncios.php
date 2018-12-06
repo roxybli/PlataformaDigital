@@ -134,7 +134,7 @@ else
                             </form>
                         Buscar por título y/o institución</li>
                 </div>
-             <div class="row" style="margin:30px;">
+        <div class="row" style="margin:30px;">
                 <a id="btnFecha" onclick="Fecha()" class="btn btn-warning" style="color:white;"><i class="fa fa-calendar" style="margin:10px;"></i>Buscar por fechas</a>
                 </div>
                 <div style="display:none;" id="DivFecha">
@@ -156,7 +156,7 @@ else
                        <div class="row">
                         <div class="col-md-6">
                         <div class="input-group">
-                            <a onclick="Cancel()" class="btn btn-secondary" style="margin:10px; color:white;"><i style="margin:10px;" class="fa fa-times-circle"></i>Cancelar</a>
+                            <a onclick="Cancel()" class="btn btn-success" style="margin:10px; color:white;"><i style="margin:10px;" class="fa fa-times-circle"></i>Cancelar</a>
                         </div>
                         </div>
                         <div class="col-md-6">

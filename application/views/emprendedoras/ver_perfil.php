@@ -98,8 +98,7 @@
             <header>
                   <div class="avatar">
                 <a href="<?php echo base_url().'plantilla/img_perfil/'.$Perfil->Foto_Perfil;?>" data-lightbox="example-set">
-                <img src="<?php echo base_url().'plantilla/img_perfil/'.$Perfil->Foto_Perfil;?>" alt="" class="img-thumbnail" style="height:200px";></a>
-            
+                <img style="height: 150px; width: 150px;"src="<?php echo base_url().'plantilla/img_perfil/'.$Perfil->Foto_Perfil;?>" alt="" class="img-thumbnail" style="height:200px";></a>
                  </div>
             </header>
                 <div class="desc">

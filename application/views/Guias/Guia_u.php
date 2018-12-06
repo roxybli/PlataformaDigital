@@ -71,10 +71,8 @@ padding: 25px;
                                                         <div class="row"> 
                                                             <img  width="720px" align="center"  src="<?= base_url()?>plantilla/Documentos/<?= $GuiaU->Imagen?>">
                                                         </div><br><br>
-                                                       
-                                                            <div class="DivDescarga row">
+                                                            <div class="DivDescarga row contenido" >
                                                              <?php echo $GuiaU->Contenido;?></div>
-                                                       
                                                         <div class="DivDescarga row">
                                                         <?php
                                                         if($GuiaU->Tipo_publicacion=="Documento"){

@@ -37,6 +37,7 @@
                     <table class="table negociosD cell-border" id="inventarioProductos">
                         <thead>
                             <tr>
+                                <th style="color: #000000">No</th>
                                 <th style="color: #000000">Producto</th>
                                 <th style="color: #000000">Cantidad</th>
                                 <th style="color: #000000">Precio</th>
@@ -49,10 +50,12 @@
                         <tbody>
 
                         <?php 
+                        $ime=1;
                             foreach ($datos->result() as $filaProducto)
                             {
                         ?>
                             <tr>
+                                <td class="text-center"><span><?= $ime ?></span></td>
                                 <td><?= $filaProducto->Nombre_Producto ?></td>
                                 <td><?= $filaProducto->Existencia_Producto ?></td>
                                 <td>$<?= $filaProducto->Precio_Producto ?></td>
@@ -63,6 +66,7 @@
                             </tr>
 
                         <?php 
+                        $ime++;
                             }
                             }
                         ?>

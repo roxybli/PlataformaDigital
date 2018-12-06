@@ -30,16 +30,18 @@
             <table class="table negociosD" id="resumenSubrubros">
                 <thead>
                     <tr>
+                        <th  class="text-center" style="color: #000000" >No</th>
                         <th  class="text-center" style="color: #000000" >Nombre del negocio</th>
                         <th  class="text-center" style="color: #000000">Acción</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-
+                    $ime=1;
                         foreach ($datos->result() as $subrubros) {
                     ?>
                     <tr>
+                        <td class="text-center"><?= $ime ?></td>
                         <td class="text-center"><?= $subrubros->Nombre_Subrubro ?></td>
                         <td>                                
                             <div class="dropdown" align="center">
@@ -51,7 +53,9 @@
                             </div>
                         </td>   
                     </tr>
-                    <?php } }?>
+                    <?php 
+                     $ime++;
+                } }?>
                 </tbody>
 
             </table>

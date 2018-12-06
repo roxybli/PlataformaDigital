@@ -80,14 +80,12 @@
 }
 
 .detalleB th{
-	background: #000d5a;
-	color: #fff;
+	background: #fff;
+	color: #000;
 	margin: 0;
-	font-weight: bold;
 }
 
 .detalleB td{
-	font-weight: bold;
 	height: 50px;
 }
 

@@ -50,7 +50,7 @@ foreach ($user->result() as $fila2) {
                 # code...
             }
             ?>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
@@ -63,7 +63,7 @@ foreach ($user->result() as $fila2) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
@@ -84,11 +84,11 @@ foreach ($user->result() as $fila2) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
+                                    <span><i class="fa fa-envelope f-s-40 color-success"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2><?= $NumM->N_Mens?></h2>
@@ -98,7 +98,7 @@ foreach ($user->result() as $fila2) {
                         </div>
                     </div>
 
-                    <div class="col-md-3">
+                   <!-- <div class="col-md-3">
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
@@ -111,7 +111,7 @@ foreach ($user->result() as $fila2) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-12">
@@ -120,7 +120,7 @@ foreach ($user->result() as $fila2) {
                                 <div class="card-two">
                                     <header>
                                         <div class="avatar">
-                                            <img src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto_Perfil;?>" alt="Imagen de perfil" />
+                                            <img style="height: 150px; width: 150px;" src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto_Perfil;?>" alt="Imagen de perfil" />
                                         </div>
                                     </header>
 
