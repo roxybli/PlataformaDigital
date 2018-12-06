@@ -17,17 +17,6 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
-            <div class="card-title">
-                <!--<div class="form-group">
-                    <div class="input-group">
-                        <a href="" title="Buscar Insumo"><button class="btn btn-primary"><i class="fa fa-search f-s-20"></i></button></a>
-                        <input type="text" class="form-control" id="insumoB" name="" placeholder="Insumo a buscar">  
-                        <div class="input-group-addon">
-                        <a href="<?= base_url() ?>insumos/" title="Agregar Insumo"><button class="btn btn-primary"><i class="fa fa-plus f-s-20"></i></button></a>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
             <div class="card-body">
                 <div class="table-responsive">
                 <div class="text-right">
@@ -39,7 +28,6 @@
                     }
                     else
                     {
-
                 ?>
                 <a target="_blank" href="<?= base_url() ?>insumos/reporteInsumos" class="btn btn-danger"> Ver en PDF</a>
                 </div>

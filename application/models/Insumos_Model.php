@@ -54,10 +54,8 @@ public function actualizarInsumo($datos=null)
 		$precioInsumo = $datos['precioInsumo'];
 		$existenciaInsumo = $datos['existenciaInsumo'];
 		$idInsumo = $datos['idInsumo'];
-
 		$sql = "UPDATE tbl_Insumos SET Nombre_Insumo = '$nombreInsumo', Precio_Insumo = '$precioInsumo', Existencia_Insumo = '$existenciaInsumo'
 				WHERE PK_Id_Insumo = '$idInsumo'";
-
 		if ($this->db->query($sql))
 		{
 			return true;

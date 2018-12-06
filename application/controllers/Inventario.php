@@ -191,7 +191,7 @@ class Inventario extends CI_Controller {
 		$bool = $this->Inventario_Model->actualizarProducto($id);
 		if ($bool== false)
 		{
-			echo '<script type="text/javascript">alert("Error al realizar operacion")</script>';
+			echo '<script type="text/javascript">alert("Error al realizar operación")</script>';
 
 		}
 		else
@@ -199,7 +199,7 @@ class Inventario extends CI_Controller {
 			if ($bool)
 			{
 				echo '<script type="text/javascript">
-				alert("Operacion realizada con exito !!!");
+				alert("Operación realizada con exito !!!");
 				self.location ="'.base_url().'inventario/productos_disponibles"
 				</script>';
 			}
@@ -650,5 +650,79 @@ class Inventario extends CI_Controller {
 					self.location ="'.base_url().'reportes/trabajosRealizados"
 					</script>';
 			}
+	}
+public function estadisticaMensualVR()
+	{
+		$this->load->view('administrador/base/header');
+		$this->load->view('administrador/inventario/estadisticas_mv');
+		$this->load->view('administrador/base/footer2');
+	}
+public function estadisticaVR()
+	{
+			$d = $this->input->post();
+			$mes =$d['mesResumen'];
+			$a = date('Y');
+			$fechaI = $a.'-'.$mes.'-01';
+			$fechaF = $a.'-'.$mes.'-31';
+			$id = $this->session->userdata('id');
+			$this->load->model("Inventario_Model");
+			$datos = $this->Inventario_Model->obtenerVentas($id);
+			$ventas = $this->Inventario_Model->estadisticasVR($id, $fechaI, $fechaF);
+			$data = array('ventas' => $ventas,'datos'=>$datos);
+			$this->load->view('administrador/base/header');
+			$this->load->view('administrador/inventario/ventas_estadisticas', $data);
+			$this->load->view('administrador/base/footer2');		
+	}
+	public function datosProducto()
+	{
+		$id = $_GET['i'];
+		$this->load->Model("Inventario_Model");
+		$datos = $this->Inventario_Model->datosProducto($id);
+		$data = array('datos' => $datos );
+		$this->load->view('administrador/base/header');
+		$this->load->view('administrador/inventario/actualizarReceta', $data);
+		$this->load->view('administrador/base/footer2');
+	}
+public function actualizarReceta()
+	{
+		$datos = $this->input->post();
+		$this->load->Model("Inventario_Model");
+		$bool = $this->Inventario_Model->actualizarProcedimiento($datos);
+		if ($bool== false)
+		{
+			echo '<script type="text/javascript">alert("Error al actualizar los datos")</script>';
+		}
+		else
+		{
+			if ($bool)
+			{
+				echo '<script type="text/javascript">
+				alert("Receta actualizada correctamente !!!");
+				self.location ="'.base_url().'inventario/consultar_receta"
+				</script>';
+			}
+		}
+	}
+	public function eliminarReceta()
+	{
+		$id = $_GET['i'];
+		$this->load->Model("Inventario_Model");
+
+		$bool = $this->Inventario_Model->eliminarProcedimiento($id);
+
+		if ($bool== false)
+		{
+			echo '<script type="text/javascript">alert("Error al eliminar los datos")</script>';
+		}
+		else
+		{
+			if ($bool)
+			{
+				echo '<script type="text/javascript">
+				alert("Receta eliminada correctamente !!!");
+				self.location ="'.base_url().'inventario/consultar_receta"
+				</script>';
+			}
+		}
 	}
 }

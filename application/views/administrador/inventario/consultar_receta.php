@@ -38,7 +38,7 @@
                                 <th class="text-center" style="color: #000000">Precio</th>
                                 <th class="text-center" style="color: #000000">Lugar</th>
                                 <th class="text-center" style="color: #000000">Creado Por</th>
-                                <th class="text-center" style="color: #000000">Opcion</th>
+                                <th class="text-center" style="color: #000000">Opción</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,7 +53,20 @@
                                 <td class="text-center"><span>$<?= $filaProcedimientos->Precio_Producto ?></span></td>
                                 <td class="text-center"><span><?= $filaProcedimientos->Direccion ?></span></td>
                                 <td class="text-center"><span><?= $filaProcedimientos->Nombre ?></span></td>
-                                <td class="text-center" ><a href="<?= base_url() ?>inventario/detalleProcedimiento?e=<?= $filaProcedimientos->PK_Id_Producto ?>" style="color: #ff0000">Ver detalles</a></td>
+                                <td>
+                                     <div class="dropdown" align="center">
+                                            <button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown"><i class="fa fa-cogs fa-lg"></i><span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                 <li><a href="<?= base_url() ?>inventario/detalleProcedimiento?e=<?= $filaProcedimientos->PK_Id_Producto ?>"><i class="fa fa-eye"></i>Ver detalles</a></li>
+                                                <li><a href="<?= base_url() ?>inventario/datosProducto?i=<?= $filaProcedimientos->PK_Id_Producto ?>"><i class="fa fa-edit fa-lg"></i> Editar</a></li>
+                                                <li><a href="<?= base_url() ?>Inventario/eliminarReceta?i=<?= $filaProcedimientos->PK_Id_Producto?>"><i class="fa fa-trash-o fa-lg"></i> Eliminar</a></li>
+                                            </ul>
+                                        </div>
+
+                                </td>
+
+
+                                
                             </tr>
                         
                         <?php  

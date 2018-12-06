@@ -3,7 +3,7 @@ table{
    background-color: rgba(0, 13, 90, 0.2);
 }
 .barra{
-    padding: 7px;
+    padding: 6px;
     color: rgba(0, 13, 90, 0);
 }
 table td{
@@ -16,12 +16,12 @@ table td{
     </div>
 
     <div class="col-md-5 align-center">
-        <h3 style="color: #fff">Detalle estadistica </h3>
+        <h3 style="color: #fff">Detalle estadística </h3>
      </div>
 
     <div class="col-md-3 align-self-center">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javascript:void(0)">Estadisticas</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Estadísticas</a></li>
             <li class="breadcrumb-item active">detalle</li>
         </ol>
     </div>

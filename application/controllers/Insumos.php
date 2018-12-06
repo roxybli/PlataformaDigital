@@ -76,12 +76,8 @@ class Insumos extends CI_Controller {
 	{
 		$id = $_GET['i'];
 		$this->load->Model("Insumos_Model");
-
 		$datos = $this->Insumos_Model->datosIndumo($id);
-
-
 		$data = array('datos' => $datos );
-
 		$this->load->view('administrador/base/header');
 		$this->load->view('administrador/inventario/insumos/actualizar_insumo', $data);
 		$this->load->view('administrador/base/footer2');
@@ -90,15 +86,11 @@ class Insumos extends CI_Controller {
 	public function actualizarInsumo()
 	{
 		$datos = $this->input->post();
-
 		$this->load->Model("Insumos_Model");
-
 		$bool = $this->Insumos_Model->actualizarInsumo($datos);
-
 		if ($bool== false)
 		{
 			echo '<script type="text/javascript">alert("Error al actualizar los datos")</script>';
-
 		}
 		else
 		{
@@ -111,18 +103,14 @@ class Insumos extends CI_Controller {
 			}
 		}
 	}
-
 	public function eliminarInsumo()
 	{
 		$id = $_GET['i'];
 		$this->load->Model("Insumos_Model");
-
 		$bool = $this->Insumos_Model->eliminarInsumo($id);
-
 		if ($bool== false)
 		{
 			echo '<script type="text/javascript">alert("Error al eliminar los datos")</script>';
-
 		}
 		else
 		{
@@ -135,7 +123,6 @@ class Insumos extends CI_Controller {
 			}
 		}
 	}
-
 	public function reporteInsumos()
 	{
 		$this->load->model('Insumos_Model');

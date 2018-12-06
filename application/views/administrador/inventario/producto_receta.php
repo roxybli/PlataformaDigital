@@ -126,7 +126,7 @@
                                     <td class="text-primary"><input type="text" id="medida_insumo" name="medidaInsumo[]" value="<?= $filaInsumos->Medida_Insumo ?>"  required></td>
                                     <td class="text-primary"><input type="hidden" name="tipoInsumo[]" value="<?= $filaInsumos->FK_Id_Tipo_Insumo ?>" disabled required></td>
                                     <td>                                
-                                        <input type="radio"  class="form-control" name="materiaPrimaSeleccionada[]" value="<?= $filaInsumos->PK_Id_Insumo ?>" >
+                                        <input type="checkbox"  class="form-control" name="materiaPrimaSeleccionada[]" value="<?= $filaInsumos->PK_Id_Insumo ?>" >
                                         <?php 
                                          //echo "<button type='button' class='btn btn-primary btn-sm' onclick='agregar($nombre, $precioInsumo, $medidaInsumo, $idInsumo, $idTipoInsumo)'><i class='fa fa-plus'></i></button>";
                                          ?>
