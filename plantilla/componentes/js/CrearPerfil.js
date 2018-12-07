@@ -47,10 +47,6 @@
         document.getElementById('Div2Imagenes').style.display = 'none';
      }
 	 
-
-	 
-	 
-	 
      function SubirImgPerfil(){
     document.getElementById('imagenPerfil').click();
     }
@@ -102,8 +98,6 @@ $(document).ready(function(){
                     descripcionN: "required",
                     telefono: "required",
                     correo: "required",
-				
-					
                 },
                 messages: {
                     nombreN: "Inserte un nombre para su negocio",
@@ -150,9 +144,6 @@ if(input.files && input.files[0]){
     }
     }
 }
-
-
-
 function foto2(input){
 if(input.files && input.files[0]){
     var reader = new FileReader(); 

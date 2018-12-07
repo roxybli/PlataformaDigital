@@ -131,17 +131,7 @@ class Controlie extends CI_Controller {
 		if (sizeof($datos['ingresosN'])== $contadorIngresosN && sizeof($datos['ingresosD'])== $contadorIngresosD
 			&& sizeof($datos['egresosN'])== $contadorEgresosN && sizeof($datos['egresosD'])== $contadorEgresosD)
 		{
-			/*echo "<br>Todo nice<br>";
-				var_dump($datos['ingresosN'])."<br>";
-				echo "<br>";
-				var_dump($datos['ingresosD'])."<br>";
-				echo "<br>";
-				var_dump($datos['egresosN'])."<br>";
-				echo "<br>";
-				var_dump($datos['egresosD'])."<br>";
-				echo "<br>";
-				var_dump($datos['estadoE'])."<br>";*/
-
+		
 				$idUsuario = $this->session->userdata('id');
 
 				$this->load->model('Controlie_Model');
@@ -153,7 +143,6 @@ class Controlie extends CI_Controller {
 						alert("Error al guardar los datos !!!");
 						self.location ="'.base_url().'controlie/"
 						</script>';
-
 				}
 				else
 				{
@@ -161,7 +150,7 @@ class Controlie extends CI_Controller {
 					{
 						//$fecha = $datos['fechaIE'];
 						echo '<script type="text/javascript">
-						alert("Insumos guardados correctamente !!!");
+						alert("Datos guardados correctamente !!!");
 						self.location ="'.base_url().'controlie/procesarIE"
 						</script>';
 
@@ -211,7 +200,7 @@ class Controlie extends CI_Controller {
 			{
 				$fecha = $datos['fechaEgresos'];
 				echo '<script type="text/javascript">
-				alert("Operacion realizada exitosamente !!!");
+				alert("Operación realizada exitosamente !!!");
 				self.location ="'.base_url().'controlie/validarEgresos?f='.$fecha.'"
 				</script>';
 

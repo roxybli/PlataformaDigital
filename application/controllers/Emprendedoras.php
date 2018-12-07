@@ -112,9 +112,6 @@ class Emprendedoras extends CI_Controller {
 		$this->load->model('Perfiles_Model');
 		$perfil=$this->Perfiles_Model->Ver_Perfil($var, $cant);
 		$this->load->model('Contactos_Model');
-		
-		
-		
 		if($this->session->userdata('login')){
 			$veriP=$this->Contactos_Model->VerificarContactoP($var);
 			$veri=$this->Contactos_Model->VerificarContacto($var);
@@ -157,7 +154,7 @@ class Emprendedoras extends CI_Controller {
 	    $bool= $this->Usuarias_Model->editarUsuaria($datos);
 	    if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Informacion modificada con exito");
+				alert("Información modificada con exito");
 				self.location ="'.base_url().'/Emprendedoras/VerUsuarias"
 				</script>';
 	    }

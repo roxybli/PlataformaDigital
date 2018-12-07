@@ -134,9 +134,7 @@ class Perfiles_Model extends CI_Model
 		$perfil=$this->db->query($sql2);
 		return $perfil;
 
-		//CONSULTA PARA CREAR O MODIFICAR LA VISTA POR FAVOR NO TOCAR SI NO SABE MUCHO MENOS BORRAR GRACIAS!!
-		//ATT. DESARROLLADOR
-
+		
 		//CREATE OR REPLACE VIEW  VW_Perfiles AS SELECT p.*, r.*, u.Nombre, u.Apellido, s.* FROM tbl_Perfiles_Empresariales AS p INNER JOIN tbl_Rubros AS r ON p.FK_Rubro = r.PK_Id_Rubro INNER JOIN tbl_Usuarias AS u ON p.FK_Usuaria =u.pk_Id_Usuaria INNER JOIN tbl_Sedes as s ON u.FK_Sede = s.pk_Id_Sede 
 		
 		//OJO NO BORRAR 

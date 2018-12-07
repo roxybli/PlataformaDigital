@@ -164,7 +164,6 @@ class Usuarias_model extends CI_Model{
 			$apellido=$data['apellido'];
 			$nomuser=$data['nomuser'];
 			$pass=$data['pass'];
-
 			$direccion=$data['direccion'];
 			$telefono=$data['telefono'];
 			$sede=$data['sede'];

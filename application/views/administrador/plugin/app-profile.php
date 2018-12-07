@@ -97,24 +97,9 @@ foreach ($user->result() as $fila2) {
                             </div>
                         </div>
                     </div>
-
-                   <!-- <div class="col-md-3">
-                        <div class="card p-30">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-user f-s-40 color-danger"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2><?= $NumCo->N_Cont?></h2>
-                                    <p class="m-b-0">Contactos</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-12">
+                    <div class="col-lg-60">
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-two">
@@ -123,18 +108,11 @@ foreach ($user->result() as $fila2) {
                                             <img style="height: 150px; width: 150px;" src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto_Perfil;?>" alt="Imagen de perfil" />
                                         </div>
                                     </header>
-
                                   <br><br><br>  <h3 style="color: #000"><?php echo "Encargada del negocio: <br>".$fila->Nombre." ".$fila->Apellido?></h3>
                                     <div class="desc" style="color: #000">
                                         <h4 style="color: #000">Sede</h4><?php echo $fila->Nombre_Sede;?>
                                     </div>
-                                   <!-- <div class="contacts">
-                                        <a href=""><i class="fa fa-plus"></i></a>
-                                        <a href=""><i class="fa fa-whatsapp"></i></a>
-                                        <a href=""><i class="fa fa-envelope"></i></a>
-                                        <div class="clear"></div>
-                                    </div>
-                                </div>-->
+                                  
                             </div>
                         </div>
                     </div>
@@ -253,9 +231,26 @@ foreach ($user->result() as $fila2) {
                                                                        
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Contraseña </span>
+                                                                                <span> Contraseña Actual</span>
                                                                                     <div class="input-group">
-                                                                                        <input type="pass" class="form-control" id="val-municipio " name="pass" placeholder="Contraseña" value="<?php echo $fila2->Pass;?>" onkeyup="this.value=NumText(this.value)">
+                                                                                        <input type="password" onclick="cambiarPW()" class="form-control" id="val-pass1" name="pass1" placeholder="Contraseña" onkeyup="this.value=NumText(this.value)">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                             <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                <span>Contraseña Nueva </span>
+                                                                                    <div class="input-group">
+                                                                                        <input onclick="cambiarPW()"
+                                                                                        type="password" class="form-control" id="val-pass2 " name="pass2" placeholder="Contraseña"  onkeyup="this.value=NumText(this.value)">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                             <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                <span>Repita Contraseña Nueva </span>
+                                                                                    <div class="input-group">
+                                                                                        <input type="password" onclick="cambiarPW()" class="form-control" id="val-pass3 " name="pass" placeholder="Contraseña" onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -267,7 +262,7 @@ foreach ($user->result() as $fila2) {
                                                                                 <div class="form-group">
                                                                                 <span>Dirección </span>
                                                                                     <div class="input-group">
-                                                                                        <input type="text" class="form-control" id="val-phoneus " name="direccion" placeholder="Direccion" value="<?php echo $fila2->Direccion;?>" onkeyup="this.value=NumText(this.value)">
+                                                                                        <input type="text" class="form-control" id="val-phoneus " name="direccion" placeholder="Dirección" value="<?php echo $fila2->Direccion;?>" onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -334,12 +329,11 @@ foreach ($user->result() as $fila2) {
                                                                                 </div>
                                                                             </div>
                                                                             <!--/span-->
-                                                                       
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
                                                                                 <span>Descripción </span>
                                                                                     <div class="input-group">
-                                                                                        <textarea type="text" class="form-control" id="val-municipio " name="descripcion_n" placeholder="Descripción" value="<?php echo $fila->Descripcion_Negocio;?>"  onkeypress="this.value=NumText(this.value)"></textarea>
+                                                                                        <textarea type="text" class="form-control" id="val-municipio " name="descripcion_n" placeholder="Descripción" value="<?php echo $fila->Descripcion_Negocio;?>" onkeypress="this.value=NumText(this.value)"></textarea>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -370,7 +364,7 @@ foreach ($user->result() as $fila2) {
                                                                                 <div class="form-group">
                                                                                 <span>Correo </span>
                                                                                     <div class="input-group">
-                                                                                        <input type="text" class="form-control" id="val-username" name="Correo_n" placeholder="# DUI" value="<?php echo $fila->Correo;?>" onkeyup="this.value=NumText(this.value)">
+                                                                                        <input type="text" class="form-control" id="val-username" name="Correo_n" placeholder="Correo" value="<?php echo $fila->Correo;?>" onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -401,7 +395,6 @@ foreach ($user->result() as $fila2) {
       <div class="modal-header" >
         <h5 class="modal-title" id="exampleModalLongTitle" style="color:black;">Editar Imagen</h5>
         <a onclick="Limpiar()"  class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
-          
         </a>
       </div>
       <div class="modal-body">
@@ -412,19 +405,12 @@ foreach ($user->result() as $fila2) {
        <div id="form1">
        <div class="row btnCenter">
                 <a onclick="SubirImg(1)" style="color:white"  class="btn subirImgG"><i class="fa fa-cloud-upload"></i> Seleccionar imagen</a>
-               
-                
         </div>
        <form class="form-valide" enctype="multipart/form-data" action="<?= base_url()?>Perfiles/editarImagen?c=1" method="POST" id="mensaje" name="mensaje">
-           
-               
-                <input type="file" hidden name="imagen" id="imagen1" onchange="cambio(this)">
-                
+                <input type="file" hidden name="imagen" id="imagen1" onchange="cambio(this)"> 
             <div class="row btnCenter" id="DivBotones1" style="display:none;"> 
                 
-                    <a onclick="Limpiar()"  class="btn btn-secondary" data-dismiss="modal">Cancelar</a>     
-                
-                
+                    <a onclick="Limpiar()"  class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
                 
             </div>
@@ -439,9 +425,7 @@ foreach ($user->result() as $fila2) {
             </div>
             <div class="row btnCenter" id="DivBotones2" style="display:none;"> 
                 
-                    <a onclick="Limpiar()" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>     
-                
-               
+                    <a onclick="Limpiar()" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>   
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
                 
             </div>
@@ -454,10 +438,7 @@ foreach ($user->result() as $fila2) {
                 <input type="file" hidden name="imagen" id="imagen3" onchange="cambio3(this)">
             </div>
             <div class="row btnCenter" id="DivBotones3" style="display:none;"> 
-                
-                    <a  class="btn btn-secondary" onclick="Limpiar()" data-dismiss="modal">Cancelar</a>     
-                
-              
+                    <a  class="btn btn-secondary" onclick="Limpiar()" data-dismiss="modal">Cancelar</a> 
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
                 
             </div>
@@ -473,37 +454,43 @@ foreach ($user->result() as $fila2) {
 </div>
 
 <script type="text/javascript">
+
+    function cambiarPW(){
+    var p1 = document.getElementById("val-pass3").value;
+    var p2 = document.getElementById("val-pass2").value;
+    var p3 = document.getElementById("val-pass3").value;
+        if (p1 != p2) 
+        {
+      alert("Las Contraseñas deben de coincidir");
+      return false;
+    } 
+    else 
+    {
+      p3=pass;
+      return true; 
+    }
+
+    }
+
     function editI(v){
         //alert('hola');
         if(v==1){
-
             document.getElementById('form1').style.display = 'block';
             document.getElementById('form2').style.display = 'none';
             document.getElementById('form3').style.display = 'none';
-
         }
         if(v==2){
             document.getElementById('form1').style.display = 'none';
             document.getElementById('form2').style.display = 'block';
             document.getElementById('form3').style.display = 'none';
-
-
         }
         if(v==3){
             document.getElementById('form1').style.display = 'none';
             document.getElementById('form2').style.display = 'none';
             document.getElementById('form3').style.display = 'block';
-
         }
-       
     }
-/*$('#imagen').change(function(){
-    foto(this);
-    alert('holaf');
-    alert(this);
-});*/
 function Limpiar() {
-
     document.getElementById('DivImagen').innerHTML='';
     document.getElementById('DivBotones1').style.display='none';
     document.getElementById('DivBotones2').style.display='none';
@@ -526,12 +513,6 @@ function SubirImg(va){
         document.getElementById('imagen3').click(); 
     }
     }
-/*$(document).ready(function(){
-     $('#imagen').change(function(){
-    ValidarImagen(this); 
-    });
-
-});*/
 function cambio(inu){
     ValidarImagen(inu);
 
@@ -574,21 +555,17 @@ function ValidarImagen(obj, v){
                 $('#imagen2').val("");
                 $('#imagen3').val("");
                 document.getElementById('DivImagen').innerHTML=' ';
-                document.getElementById('DivBotones').style.display='none';
-                
+                document.getElementById('DivBotones').style.display='none';       
             }
             else {
                 alert('Imagen correcta:)');
                 document.getElementById('DivImagen').innerHTML='<img class=" img-responsive radius" src="'+URL.createObjectURL(uploadFile)+'"  width="100" height="100" id="vista" alt="Imagen a publicar"/>';
                 document.getElementById('DivBotones1').style.display='block';
                 document.getElementById('DivBotones2').style.display='block';
-                document.getElementById('DivBotones3').style.display='block';
-                //document.getElementById('mostrarI').innerHTML='<img  src="'+URL.createObjectURL(uploadFile)+'"  width="200" height="200" id="vista" alt="Imagen a publicar"/>';                
+                document.getElementById('DivBotones3').style.display='block';                
             }
         };
         img.src = URL.createObjectURL(uploadFile);
-
-        
     }                 
 }
 </script>

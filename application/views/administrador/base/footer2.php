@@ -1,3 +1,8 @@
+ <div class="row justify-content-center">
+                            <!-- footer -->
+                            <footer >Copyright <a href="#!">UES-FMO</a> &copy; <?php echo date("Y");?></footer>
+                            <!-- End footer -->
+                    </div>
 
     <script src="<?=base_url() ?>plantilla/componentes/js/lib/jquery/jquery.min.js"></script>
     <script src="<?=base_url() ?>plantilla/componentes/js/estilos.js"></script>

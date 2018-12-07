@@ -1,76 +1,9 @@
 $(function(){
-	/*var nombreProducto = $("#nombreProducto").val();
-	var cantidadInsumos = $("#cantidadInsumos").val();*/
-/*
-	$("#crearReceta").click(function(){
-		//alert($("#nombreProducto").val());
-		if ($("#cantidadInsumos").val() != "" && $("#nombreProducto").val() != "")
-		{
-			$("#cabeceraReceta").slideUp();
-			$("#tituloReceta").html("Insumos para el producto:<strong> "+ $("#nombreProducto").val() + "</strong>");
-
-			var cantidadInsumos = $("#cantidadInsumos").val();
-
-			for (var i = 0; i < cantidadInsumos; i++)
-			{
-				var datos = '';
-				datos += '<div class="row">';
-		        datos += '<div class="col-md-4">';
-		        datos +=    '<div class="form-group">';
-		        datos +=       '<div class="input-group">';
-		        datos +=           '<input type="text" class="form-control" id="" value="" name="nombre[]" placeholder="Nombre del insumo">';
-		        datos +=        '</div>';
-		        datos +=   ' </div>';
-		        datos +='</div>';
-
-		        datos +='<div class="col-md-4">';
-		        datos +=    '<div class="form-group">';
-		        datos +=        '<div class="input-group">';
-		        datos +=            '<input type="text" class="form-control" id="" name="ingrediente[]" placeholder="Cantidad del insumos">';
-		        datos +=            '<input type="hidden" class="form-control" id="" name="nombreProducto" value="'+$("#nombreProducto").val()+'">';
-		        datos +=        '</div>';
-		        datos +=    '</div>';
-		        datos += '</div>';
-
-		        datos +='<div class="col-md-4">';
-		        datos +=    '<div class="form-group">';
-		        datos +=        '<div class="input-group">';
-		        datos +=            '<select name="medidas[]" class="form-control">';
-				datos +=                 '<option value="---">---</option>';
-				datos +=                 '<option value="Gramos">Gramos</option>';
-				datos +=                 '<option value="Kilos">Kilos</option>';
-				datos +=                 '<option value="Onzas">Onzas</option>';
-				datos +=                 '<option value="Libras">Libras</option>';
-				datos +=                 '<option value="Libras">Litros</option>';
-				datos +=             '</select>';
-		        datos +=        '</div>';
-		        datos +=    '</div>';
-		        datos += '</div>';
-		        datos +='</div>';
-				
-				$("#tablaInsumos").append(datos);
-			}
-		    	boton = '<button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20"></i> Guardar receta</button> ';
-		    	boton2 = ' <button type="button" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-ban f-s-20"></i> Cancelar </button>';
-		    	$("#tablaInsumos").append(boton);
-		    	$("#tablaInsumos").append(boton2);
-		}
-		else
-		{
-			alert("Debes ingresar todos los datos !!!");
-		}
-
-	    	
-	});
-*/
-
 	$('#fechaIE').datepicker({
 					format: 'yyyy-mm-dd',
 					language:'es',
 
 				});
-
-
 	$("#categoriaInsumos").change(function(){
 		$("#segundaParteR").slideUp();
 		var tipoMateriaPrima = $("#categoriaInsumos").val();

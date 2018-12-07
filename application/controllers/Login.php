@@ -21,12 +21,6 @@ public function __construct()
 				self.location ="'.base_url().'"
 				</script>';
 	}
-	public function forgot()
-	{
-		$this->load->view('logueo/header-login');
-		$this->load->view('logueo/forgot-password');
-		$this->load->view('logueo/footer-login');
-	}
 	public function help()
 	{
 		$this->load->view('logueo/header-login');
@@ -94,11 +88,6 @@ public function __construct()
 					'id'=> $fila->pk_Id_Usuaria,
 					'login'=> TRUE,
 					);
-				/*$data2 = array(
-					'departamento'=> $fila->depa,
-					'tipoUsuario'=> $fila->tipoU,
-					'nombre'=> $fila->nombre,
-					);*/
 					$data2 = array(
 					'fotoUsuaria'=> $foto->Foto_Perfil,
 					'nombreNegocio'=> $foto->Nombre_Negocio,
@@ -112,9 +101,7 @@ public function __construct()
 				$this->session->set_userdata($data);
 				$this->session->set_userdata($data2);
 				$this->session->set_userdata($data3);
-				//$this->session->set_userdata($data3);
-				//header("Location:".base_url()."home/inicio");
-
+				
 				echo '<script type="text/javascript">
 				alert("Bienvenido al Sistema: '.$this->session->userdata('usuario').'");
 				self.location ="'.base_url().'Login/home"
@@ -137,14 +124,6 @@ public function __construct()
 				self.location ="'.base_url().'Login"
 				</script>';
 		}
-
-		/*	$data = array(
-					'usuario'=> $nombre,
-					'id'=> 9,
-					'login'=> TRUE,
-					);
-				$this->session->set_userdata($data);
-				echo $this->session->userdata('usuario');*/
 	}
 
 }

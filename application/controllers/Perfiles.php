@@ -82,12 +82,20 @@ class Perfiles extends CI_Controller {
 		$this->load->model('Perfiles_Model');
 		$bool = $this->Perfiles_Model->editarUsuaria($datos);
 		if($bool){
-
 			echo '<script type="text/javascript">
 				alert("Informacion modificada con exito");
 				self.location ="'.base_url().'/Login/home"
 				</script>';
+				
 		}
+		if($pass1=$pass && $pass2=$pass)
+				{
+					echo '<script type="text/javascript">
+				alert("Contraseña cambiada correctamente");
+				self.location ="'.base_url().'/Login/home"
+				</script>';
+
+			}
 		else{
 			echo '<script type="text/javascript">alert("Error al insertar los datos verifique o comuniquese con el administrador del sistema")</script>';
 		}
