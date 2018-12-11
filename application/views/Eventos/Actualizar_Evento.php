@@ -5,7 +5,7 @@
          .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #04B486;
+        background-color: #512da8;
         padding: 20px;
         text-align: center;
         color: white;
@@ -66,7 +66,7 @@ foreach ($eventos->result() as $event) {
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Eventos/'">Cancelar</button></div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Eventos/'">Regresar</button></div>
                         <div class="col-md-6">
                         <button type="submit" class="btn btn-primary">Guardar</button></div>
                 </div>

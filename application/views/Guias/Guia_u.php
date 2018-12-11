@@ -39,6 +39,9 @@ padding: 25px;
     height: 100px;
     text-align: center;
 }
+p {
+    color: #000000;
+}
 </style>
 <div class="container-fluid">
     <?php
@@ -68,8 +71,8 @@ padding: 25px;
                                                         <div class="DivDescarga row">
                                                              <?php echo $GuiaU->Descripcion_Guia;?>
                                                         </div><br><br>
-                                                        <div class="row"> 
-                                                            <img  width="720px" align="center"  src="<?= base_url()?>plantilla/Documentos/<?= $GuiaU->Imagen?>">
+                                                        <div class="row" align="center"> 
+                                                            <img  width="720px"  src="<?= base_url()?>plantilla/Documentos/<?= $GuiaU->Imagen?>">
                                                         </div><br><br>
                                                             <div class="DivDescarga row contenido" >
                                                              <?php echo $GuiaU->Contenido;?></div>
@@ -80,8 +83,8 @@ padding: 25px;
 
                                                         }
                                                         else if($GuiaU->Tipo_publicacion=="Video"){
-
-                                                            echo "<iframe align='center' width='400' height='400' src='https://www.youtube.com/embed/". $GuiaU->Video_Multimedia."?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
+                                                           
+                                                            echo "<iframe align='center' width='570' height='415' src='https://www.youtube.com/embed/". $GuiaU->Video_Multimedia."?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>";
 
                                                         }
 

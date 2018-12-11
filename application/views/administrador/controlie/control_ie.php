@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <strong><label>Cantidad de Ingresos</label></strong>
                                     <div class="input-group">
-                                        <input type="number" value="0" class="form-control" id="cantidadIngresos" name="" min="0" placeholder="Cantidad de ingresos" onkeypress="return numeros(event, 'num')" required>
+                                        <input type="number" value="0" max="10" class="form-control" id="cantidadIngresos" name="" min="0" placeholder="Cantidad de ingresos" onkeypress="return numeros(event, 'num')"  required>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                 <label>Cantidad de egresos</label>
                                     <div class="input-group">
-                                        <input type="number" value="0" class="form-control" id="cantidadEgresos" name="" min="0" placeholder="Cantidad de egresos" onkeypress="return numeros(event, 'num')" required>
+                                        <input type="number" value="0" class="form-control" id="cantidadEgresos" name="" min="0" max="10" placeholder="Cantidad de egresos" onkeypress="return numeros(event, 'num')"  required>
                                     </div>
                                 </div>
                             </div>

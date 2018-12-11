@@ -171,10 +171,8 @@ foreach ($info->result() as $Info) {
                                                         <!--/row-->
                                                         </div>
                                                         <div class="row">
-                                                        <div class="col-md-6">
-                                                        <a href="<?= base_url()?>Emprendedoras/VerUsuarias" style="color:white;" class="btn btn-secondary "><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Cancelar</a>  
-                                                        </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12" align='right'>
+                                                        <a href="<?= base_url()?>Emprendedoras/VerUsuarias" style="color:white;" class="btn btn-secondary "><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Regresar</a>  
                                                         <button id="btnGuardar" class="btn btn-primary"><i class="fa fa-floppy-o" style="margin:10px;"></i> Guardar</button>
                                                         </div>
                                                         </div>

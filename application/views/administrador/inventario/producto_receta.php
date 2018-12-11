@@ -142,19 +142,10 @@
                         </tbody>
                     </table>
                     <input type="hidden" name="idUsuario" value="<?= $this->session->userdata('id') ?>">
-                    <button type="submit" id="segundoPasoR" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-save f-s-30"></i> Guardar </button>
+                    <div align="right">
+                    <button type="submit" id="segundoPasoR" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-save f-s-30"></i> Guardar </button></div>
                     </div>
                 </div>
-
-                            <!--<table class="table table-bordered" id="datosReceta">
-                                <tr>
-                                    <td>INSUMO</td>
-                                    <td>PRECIO</td>
-                                    <td>MEDIDA</td>
-                                    <td>CANTIDAD REQUERIDA</td>
-                                    <td>EXISTENCIA</td>
-                                </tr>
-                            </table>-->
                     </form>
                 </div>
                             
@@ -165,22 +156,6 @@
 
 </div>
 <script>
-   /* function agregar(n, p, m, iI, iT)
-    {
-        html = '';
-        html += '<tr>';
-        html +=             '<td><label>' + n + '</label></td>';
-        html +=             '<td><label>' + p + '</label></td>';
-        html +=             '<td><label>' + m + '</label></td>';
-        html +=             '<td><input type="text" value=""></td>';
-        html +=             '<td><label>' + iI + '</label></td>';
-        html +=             '<td><label>' + iT + '</label></td>';
-        html +=        '</tr>';
-
-        $("#datosReceta").append(html);
-        $(this).css("display","none");
-        //alert(n + p + m + iI + iT);
-    }*/
 
 $(document).on("ready", main);
 function main()

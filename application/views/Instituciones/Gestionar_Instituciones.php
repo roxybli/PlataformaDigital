@@ -3,7 +3,7 @@
          .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #7401DF;
+        background-color: #512da8;
         padding: 20px;
         text-align: center;
         color: white;
@@ -54,7 +54,7 @@
                                 <input type="text" class="form-control" id="val-name" name="Nombre_Institucion" placeholder="Nombre de la Institución"  onkeyup="this.value=NumText(this.value)" required>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Instituciones/'"  >Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Instituciones/'"  >Regresar</button>
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                                 <input type="text" hidden name="ID" id="ID">
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Instituciones/'">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Instituciones/'">Regresar</button>
                         <button type="submit" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Editar</button>
                     </div>
                 </div>

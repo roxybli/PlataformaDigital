@@ -1,7 +1,7 @@
 
 <div class="row page-titles" style="background:#000d5a;">
     <div class="col-md-4 align-self-center">
-        <a href="<?=base_url() ?>inventario/productos_disponibles"><h3 class="text-primary"><i class="fa fa-times-circle"></i> Cancelar</h3></a>
+        <a href="<?=base_url() ?>inventario/productos_disponibles"><h3 class="text-primary"><i class="fa fa-chevron-left"></i> Volver</h3></a>
      </div>
 
      <div class="col-md-5 align-center">
@@ -58,9 +58,11 @@
            </div>
         </div>
 
-        <div class="form-group" id="botonV">
+
+        <div class="form-group" id="botonV" align="right">
         <p></p>
-          <button class="btn btn-primary btn-lg"><span class="fa fa-share-square-o f-s-20 oculto" id="btnVenta"></span> Realizar venta</button>
+        <a style="color:white;" href="<?=base_url() ?>inventario/productos_disponibles" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:4px;"></i>Regresar</a>
+          <button class="btn btn-primary "><i class="fa fa-share-square-o f-s-20" style="margin:4px;"></i><span class="fa fa-share-square-o f-s-20 oculto" id="btnVenta"></span> Vender</button>
         </div><!-- input group -->
 
          <div class="form-group oculto" id="mensajeError">

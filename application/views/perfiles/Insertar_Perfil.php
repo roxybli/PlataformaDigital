@@ -3,7 +3,7 @@
 .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #F44336;
+        background-color: #512da8;
         padding: 20px;
         text-align: center;
         color: white;
@@ -157,7 +157,7 @@
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Inserte numero de telefono de su negocio</label>
+                                                                <label class="etiqueta">Inserte numero de teléfono de su negocio</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="telefono" name="telefono"  placeholder="Inserte su número de WhatsApp"  onkeypress="return numeros(event, 'num')" required>
                                                                     </div>
@@ -176,7 +176,7 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 btnCenter">
-                                                                 <a onclick="Atras()" class="btn btn-info" id="anterior" ><i class="fa fa-arrow-left"></i> Cancelar</a> 
+                                                                 <a onclick="Atras()" class="btn btn-secundary" id="anterior" ><i class="fa fa-arrow-left"></i> regresar</a> 
                                                              </div>
                                                         <div class="col-md-6 btnCenter">
                                                              <a onclick="siguiente()" class="btn btn-info" id="siguiente">Siguiente  <i class="fa fa-arrow-right"></i></a>

@@ -3,7 +3,7 @@
          .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #7401DF;
+        background-color: #512da8;
         padding: 20px;
         text-align: center;
         color: white;
@@ -54,8 +54,8 @@
                                 <input type="text" class="form-control" id="val-name" name="Nombre_Rubro" placeholder="Nombre del rubro" onkeyup="this.value=NumText(this.value)" required>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Rubros/'">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Rubros/'" align='right'>Regresar</button>
+                        <button type="submit" class="btn btn-primary"align='right'>Guardar</button>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                                 <input type="text" hidden name="ID" id="ID">
                             </div>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Rubros/'">Cancelar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Rubros/'">Regresar</button>
                         <button type="submit" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true" ></i>Editar</button>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                                 </div>
                             <div class="card-body">
                                 <div class="table-responsive m-t-40">
-                                    <a class="btn btn-success" style="color:white; padding:10px; margin: 20px;  background-color:#512da8" data-toggle="modal" data-target="#ModalInsert"><i class="fa fa-plus-circle" style="margin:10px;" aria-hidden="true"></i>Crear nuevo rubro</a>
+                                    <a class="btn btn-success" style="color:white; padding:10px; margin: 20px;  background-color:#512da8" data-toggle="modal" data-target="#ModalInsert" ><i class="fa fa-plus-circle" style="margin:10px;" aria-hidden="true"></i>Crear nuevo rubro</a>
                                      <h6 class="card-subtitle" style="color: #000000">Usted puede descargar los datos en los siguientes formatos copiar, CSV, Excel, PDF & Print</h6>
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="90%" align="center">
                                         <thead>

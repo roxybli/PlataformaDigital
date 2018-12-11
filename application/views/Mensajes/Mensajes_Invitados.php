@@ -8,7 +8,7 @@
     }
 </style>
 <div class="container">
-<div style="background-color:#4527a0; color:white; padding:20;">
+<div style="background-color:#512da8; color:white; padding:20;">
 <h3  style="color:white; padding: 30px; margin: 20px; " class=" text-center"><b> Mensajes de los visitantes de tu perfil</b></h3>
 </div>
 <div class="messaging">

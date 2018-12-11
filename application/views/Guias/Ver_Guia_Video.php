@@ -32,7 +32,7 @@
                                             <div>
                                                 <div class="m-t-20 row">
                                                     <div class="col-md-3 col-xs-12" style="padding: 20px;">
-                                                      <iframe width="200" height="200" src="https://www.youtube.com/embed/<?php echo $Guias->Video_Multimedia?>?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                      <iframe width="280" height="250" src="https://www.youtube.com/embed/<?php echo $Guias->Video_Multimedia?>?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                                     </div>
                                                         <div class="col-md-9 col-xs-12 alert">
                                                             <h1 style="color:#013ADF " > <?php echo $Guias->Titulo_Guia;?></h1><hr>

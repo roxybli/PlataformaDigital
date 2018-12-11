@@ -34,7 +34,7 @@
         <div class="col-lg-12">
             <div class=" card ">
             <div class="card">
-                 <div style="background-color:#4527a0; color:white; padding:20;">
+                 <div style="background-color:#512da8; color:white; padding:20;">
 <h3  style="color:white; padding: 10px; " class=" text-center"><b> Historial de Mensajes</b></h3>
 </div>
                  

@@ -52,10 +52,11 @@
 
     <?php } ?>
 
-        <tr>
-            <td colspan="4" class="text-center">
+        <tr align="right">
+            <td colspan="10"  align="right">
             <input type="hidden" value="<?= $filaCuerpoE->Fk_Id_Subrubro ?>" name="idSubrubro">
-            <button class="btn-primary btn-lg">Actualizar datos</button>
+             <a style="color:white;" href="<?= base_url() ?>capital/gestionarNegocio" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:4px;"></i>Regresar</a>
+            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20"></i> Actualizar</button>
             </td>
         </tr>
 </table>

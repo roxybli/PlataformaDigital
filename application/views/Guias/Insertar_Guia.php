@@ -124,20 +124,15 @@
                                          </textarea>
                                          </div>
                                          </div>
-                                    </div>
+                                    </div> <br>
 
                                      <div class="row">
-                                                        <div class="col-md-6">
-                                                        <a href="<?= base_url()?>Guias/Gestionar" style="color:white;" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Cancelar</a>  
-                                                        </div>
-                                                        <input hidden type="submit" name="Publicar" id="Publicar">
-                                                        <div class="col-md-6">
-                                                        <a style="color:white;" id="Enviar" name="Enviar"  class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Publicar</a>
-
-                                                            
+                                                        <div class="col-md-12"  align="right">
+                                                        <a href="<?= base_url()?>Guias/Gestionar" style="color:white;" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Regresar</a>  
+                                                        <input hidden type="submit" name="Publicar" id="Publicar">                          
+                                                        <a style="color:white;" id="Enviar" name="Enviar"  class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Publicar</a>     
                                                         </div>
                                                         </div>    
-                                                
                                             </div>  
                                         </div>
                                         </div>

@@ -61,7 +61,7 @@ foreach ($Guia->result() as $guia) {
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group ">
-                                                <label class="control-label" style="color: #000000"> Editar la descripcion de la publicacion</label>
+                                                <label class="control-label" style="color: #000000"> Editar la descripción de la publicacion</label>
                                                     <input type="text" name="Descripcion" class="form-control" required="true" value="<?= $guia->Descripcion_Guia?>" onkeyup="this.value=NumText(this.value)">
                                                 </div>
                                             </div>   
@@ -69,7 +69,7 @@ foreach ($Guia->result() as $guia) {
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group ">
-                                                <label class="control-label" style="color: #000000">Editar fecha de publicacion</label>
+                                                <label class="control-label" style="color: #000000">Editar fecha de publicación</label>
                                                     <input type="text" id="fecha1" name="Fecha1" class="form-control" required="true" value="<?= $guia->Fecha_Publicacion?>" required>
                                                 </div>
                                             </div>   
@@ -165,7 +165,7 @@ foreach ($Guia->result() as $guia) {
                                         </div>
                                          <div class="row">
                                             <div class="col-md-12">
-                                        <label class="control-label" style="color: #000000">A continuacion se muestra una area para editar el contenido que acompañe la publicacion</label>
+                                        <label class="control-label" style="color: #000000">A continuación se muestra una area para editar el contenido que acompañe la publicación</label>
                                          <textarea id="Contenido" name='Contenido' class=" form-control  form-control" rows="15" placeholder="Enter text ..." style="height:450px" onkeypress="this.value=NumText(this.value)" required>
                                          <?= $guia->Contenido?>
                                          </textarea>
@@ -184,10 +184,9 @@ foreach ($Guia->result() as $guia) {
                                                 
                                             </div> 
                                             <div class="row">
-                                                        <div class="col-md-6">
-                                                        <a style="color:white;" href="<?= base_url()?>Guias/Gestionar" class="btn btn-secondary "><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Cancelar</a>  
-                                                        </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12"  align="right">
+                                                        <a style="color:white;" href="<?= base_url()?>Guias/Gestionar" class="btn btn-secondary "><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Regresar</a>  
+                                                        
                                                         <a style="color:white;" id="Enviar" name="Enviar"  class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Editar</a>
                                                             
                                                         </div>

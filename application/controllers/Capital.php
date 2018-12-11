@@ -303,7 +303,7 @@ class Capital extends CI_Controller {
 					{
 						//$fecha = $datos['fechaIE'];
 						echo '<script type="text/javascript">
-						alert("Insumos guardados correctamente !!!");
+						
 						self.location ="'.base_url().'capital/gestionarNegocio"
 						</script>';
 					}
@@ -334,7 +334,7 @@ class Capital extends CI_Controller {
 				{
 					//$fecha = $datos['fechaIE'];
 					echo '<script type="text/javascript">
-					alert("Elemento eliminado correctamente !!!");
+					
 					self.location ="'.base_url().'capital/actualizarNegocio/'.$n.'"
 					</script>';
 				}
@@ -357,7 +357,6 @@ class Capital extends CI_Controller {
 				{
 					//$fecha = $datos['fechaIE'];
 					echo '<script type="text/javascript">
-					alert("Elemento eliminado correctamente !!!");
 					self.location ="'.base_url().'capital/gestionarNegocio"
 					</script>';
 				}

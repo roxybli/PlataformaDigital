@@ -100,7 +100,11 @@ height: 100px
     #ln:hover{
         background-color: #000d5a;
 
-    }</style>
+    }
+p {
+    color: #000000;
+}
+</style>
 <div class="container-fluid">
     <?php
 if($this->session->userdata('login')){
@@ -152,7 +156,7 @@ if($this->session->userdata('login')){
                                                         <div> 
                                                             <span ><p style="color:#004d40; text-align: left;" ><i class="fa fa-check"></i> Publicado por <?= $noti->Nombre?></p></span>        
                                                             <span> <p style="color:#004d40;" ><i class="fa fa-building" ></i> Institución: <?= $noti->Nombre_Institucion?></p>
-                                                         <span><p style="color:#004d40; text-align: left;"><i class="fa fa-calendar" ></i> Fecha de publicación: <?= $noti->Fecha?></p></span>  
+                                                         <span><p style="color:#004d40; text-align: left; "><i class="fa fa-calendar" ></i> Fecha de publicación: <?= $noti->Fecha?></p></span>  
                                                          </div></div>
                                                 </div>
                                             </div>

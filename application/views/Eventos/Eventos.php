@@ -11,7 +11,7 @@
   .TituloUser{
     display: block;
     margin: 0 auto;
-    background-color: #04B486;
+    background-color: #512da8;
     padding: 20px;
     text-align: center;
     color: white;
@@ -109,9 +109,8 @@
                             <p class="m-b-15 f-s-12 etiquetas">Inserte la descripción del evento.</p>
                             <textarea  class="form-control" style="height:150px;"  id="contenido_evento" name="contenido_evento" onkeypress="this.value=NumText(this.value)" placeholder="Descripcion del evento" required></textarea>
                         </div>
-                    </div> <div class="col-md-6">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Eventos/'">Cancelar</button></div>
-                         <div class="col-md-6">
+                    </div> <div class="col-md-12"  align="right">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Eventos/'">Regresar</button>
                         <button type="submit" class="btn btn-primary">Guardar</button></div>
                 </div>
             </form>
@@ -219,8 +218,8 @@
               html+='<p style="color: #000000">Descripción: '+registro[i]['contenido_evento']+'</p><p style="color: #000000">Dirección: '+registro[i]['ubicacion']+'</p>';
               if(id ==1 || id==2){
                // alert(registro[i]['id_evento']);
-                html+= "<a class='btn btn-danger' href='<?= base_url()?>Eventos/Eliminar?IdE="+registro[i]['id_evento']+"''> Elminar </a> "
-                html+=" <a class='btn btn-warning' href='<?= base_url()?>Eventos/Actualizar?IdE="+registro[i]['id_evento']+"'>Actualizar</a> </div></div> </div></div>"
+                html+= "<a class='btn btn-danger' align='right' href='<?= base_url()?>Eventos/Eliminar?IdE="+registro[i]['id_evento']+"''> Elminar </a> "
+                html+=" <a class='btn btn-primary'align='right' href='<?= base_url()?>Eventos/Actualizar?IdE="+registro[i]['id_evento']+"'>Actualizar</a> </div></div> </div></div>"
               }
               }
             document.getElementById('DivEventList').innerHTML=html;

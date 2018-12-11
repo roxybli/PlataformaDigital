@@ -9,7 +9,7 @@
          .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #0489B1;
+        background-color: #512da8;
         padding: 20px;
         text-align: center;
         color: white;
@@ -19,30 +19,7 @@
      }
 </style>
 <?php
-/*
-if(isset($_POST['btn'])){
-    //print_r($_FILES);
-    //obtener datos de la imagen
-    $nombre=$_FILES['imagenN']['name'];
-    $tempo= $_FILES['imagenN']['tmp_name'];
-    $dir="plantilla/images/imagenesA/";
-    //echo "NOmbre".$nombre."<br> url".$tempo;
-    move_uploaded_file($tempo, $dir.$nombre);
-    $imagenconvert= file_get_contents($dir.$nombre);
-    //echo "longitud del archivo".$imagenconvert;
-
-    //echo "<img src='data:image/jpg; base64>,".base64_encode($imagenconvert)."'";
-}
-*/
 ?>
-<!--ESTA ES LA FORMA DE MOSTRAR LA IMAGEN
-<form method="POST" action="<?= base_url() ?>Anuncios/guardar" enctype="multipart/form-data">
-
-<input type="file" name="imagenN"> selleccionar archivo
-<button name="btn">Guardar</button>
-</form>
-<img src="data:image/jpg; base64,<?php echo base64_encode($imagenconvert);?>"/>
--->
 <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
@@ -56,7 +33,6 @@ if(isset($_POST['btn'])){
             </div>
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
-
             <div class="container-fluid">
                 <!-- Start Page Content -->
                 <div class="row ">
@@ -74,7 +50,7 @@ if(isset($_POST['btn'])){
                                                          <div class="col-md-12">
                                                                 <div class="form-group"  id='datetimepicker9' >
                                                                     <label style="color: #000000"> Fecha de publicación:</label>
-                                                                   <div class='input-group' >                    
+                                                                   <div class='input-group' >           
                                                                     <input type='date' class="form-control" id="fecha" name="fecha" placeholder="Seleccione una fecha"  required />
                                                                         <span class="input-group-addon">
                                                                             <span class="glyphicon glyphicon-calendar">
@@ -143,18 +119,12 @@ if(isset($_POST['btn'])){
                                                             <!--/span--> 
                                                         </div>                                                        
 
-                                                        <div class="row">
-                                                        <div class="col-md-6">
-                                                        <a style="color:white;" href="<?= base_url()?>Anuncios/" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Cancelar</a>  
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                        <button type="submit" class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Publicar</button>
-                                                            
+                                                        <div class="row" align="right">
+                                                        <div class="col-md-12" align="right" >
+                                                        <a style="color:white;" href="<?= base_url()?>Anuncios/" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Regresar</a>  
+                                                        <button type="submit" class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Publicar</button>                                                        
                                                         </div>
                                                         </div> 
-
-
-                                                       
                                                     </form>
                                         <!-- End Bread crumb -->
                                 </div>
@@ -228,7 +198,7 @@ $.fn.datepicker.dates['es'] = {
                 monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
                 };
     $('#fecha').datepicker({
-                format: 'yyyy-mm-dd',
+                format: 'd-m-y',
                 language:'es',
 
             });

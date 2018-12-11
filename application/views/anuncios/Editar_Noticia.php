@@ -10,7 +10,7 @@
          .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #0489B1;
+        background-color: #512da8;
         padding: 20px;
         text-align: center;
         color: white;
@@ -83,7 +83,7 @@ foreach ($Noticia->result() as $Noti) {
                                                                    <input hidden type="text" name="Imagen" value="<?= $Noti->Imagen?>">
                                                                    <input hidden type="text" name="Id" value="<?= $Noti->pk_Id_Anuncio?>">
 
-                                                                        <input type='date' class="form-control" id="fecha" name="fecha" placeholder="Seleccione una fecha" required> value="<?= $Noti->Fecha?>" />
+                                                                        <input type='date' class="form-control" id="fecha" name="fecha" placeholder="Seleccione una fecha" required value="<?= $Noti->Fecha?>" />
                                                                         <span class="input-group-addon">
                                                                             <span class="glyphicon glyphicon-calendar">
                                                                             </span>
@@ -103,8 +103,7 @@ foreach ($Noticia->result() as $Noti) {
                                                                 <label style="color: #000000">Descripción de Pubicacion</label>
                                                                 <div class="form-group">
                                                                     <div class="input-group">
-                                                                        <input type="text" class="form-control" id="val-name " name="Descripcion_Noticia" placeholder="Descripcion de la Noticia" onkeyup="this.value=NumText(this.value)" required value="
-                                                                            <?= $Noti->Descripcion_Noticia?>">
+                                                                        <input type="text" class="form-control" id="val-name " name="Descripcion_Noticia" placeholder="Descripcion de la Noticia" onkeyup="this.value=NumText(this.value)" required value="<?= $Noti->Descripcion_Noticia?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -162,11 +161,9 @@ foreach ($Noticia->result() as $Noti) {
                                                             <!--/span-->
                                                             <!--/span--> 
                                                         </div>
-                                                        <div class="row">
-                                                        <div class="col-md-6">
-                                                        <a style="color:white;"  href="<?=base_url() ?>Anuncios/GestionarNoticias" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Cancelar</a>  
-                                                        </div>
-                                                        <div class="col-md-6">
+                                                        <div class="row" align="right">
+                                                        <div class="col-md-12">
+                                                        <a style="color:white;" href="<?=base_url() ?>Anuncios/GestionarNoticias" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:10px;"></i>Regresar</a>  
                                                         <button type="submit" class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Editar</button>
                                                             
                                                         </div>

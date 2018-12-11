@@ -34,7 +34,7 @@ $(document).ready(function(){
 					apellido: "Ingrese el apellido completo de la usuaria",
 					tipo: "Seleccione un tipo de usuaria",
 					nomuser: "Asigne un nombre de usuaria para el sistema",
-					pass: "No puede crear un usuario si no ha insertado una contraseña",
+					pass: "la contraseña tiene que ser de 8 caracteres, No puede crear un usuario si no ha insertado una contraseña",
 					direccion: "Ingrese la direccion de la usuaria",
 					telefono: "Ingrese el numero de contacto de la usuaria",
 					dui: "Igrese el numero de Dui de la usuaria"

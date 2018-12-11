@@ -97,6 +97,54 @@ foreach ($user->result() as $fila2) {
                             </div>
                         </div>
                     </div>
+                     <div class="row" id="MenuCard">
+                    <div class="col-md-6">
+                            <div class="CardItem card" style="background-color:#8e24aa; color:white; height:100px;">
+                                <a href="<?=base_url()?>Emprendedoras/verUsuarias">
+                                <div class="textIcon">
+                                    <img class="iconImage"  src="<?= base_url()?>plantilla/images/usuario.png">
+                                    Gestionar usuarias
+                                </div>
+                                </a> 
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                            <div class="CardItem card" style="background-color:#00897b; color:white; height:100px;">
+                                <a href="<?=base_url() ?>Emprendedoras/">
+                                <div class="textIcon">
+                                    <img class="iconImage"  src="<?= base_url()?>plantilla/images/carro.png">
+                                    Bolsa de emprendedoras
+                                </div>
+                                </a>
+                                
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        
+                            <div  class="CardItem card" style="background-color:#512da8; color:white; height:100px;">
+                                    <a href="<?=base_url() ?>Guias/Gestionar">
+                                    <div class="textIcon">
+                                        <img class="iconImage"  src="<?= base_url()?>plantilla/images/participacion.png">
+                                        Gestionar Guias Multimedia
+                                    </div>
+                                    </a>
+                                    
+                                </div>
+                        
+                            
+                    </div>
+                     <div class="col-md-6">
+                            <div class="CardItem card" style="background-color:#d81b60; color:white; height:100px;">
+                                <a href="<?=base_url() ?>Anuncios/GestionarNoticias">
+                                <div class="textIcon">
+                                    <img class="iconImage"  src="<?= base_url()?>plantilla/images/navegador.png">
+                                    Gestionar Noticias
+                                </div>
+                                </a>
+                                
+                            </div>
+                    </div>
+                </div>
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-60">

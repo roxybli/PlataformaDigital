@@ -59,7 +59,7 @@
                         </div>
                     </form>
                 </div>
- <div><strong><h3  style="color: #000000 " align="center">Estadística Hístorica</h3></strong><br>  
+<!-- <div><strong><h3  style="color: #000000 " align="center">Estadística Hístorica</h3></strong><br>  
                     <form class="form" method="post" action="<?= base_url() ?>controlie/estadisticaMIE">
                         <div class="row ">
                             <div class="col-md-2">
@@ -101,10 +101,9 @@
                                         <option value="12">Diciembre</option>
                                     </select>  
                             </div>
-                            <!--/span-->
-                            <div class="col-md-2">
+                                                        <div class="col-md-2">
                                     <button class="btn btn-primary">Aceptar</button>
-                            </div>
+                            </div>-->
 
                             <!--/span-->
                         </div>

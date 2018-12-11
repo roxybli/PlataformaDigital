@@ -64,7 +64,7 @@
  .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #0489B1;
+        background-color: #512da8;
         padding: 5px;
         text-align: center;
         color: white;
@@ -256,7 +256,7 @@ else
                             html+='<img alt="user" style="height:200px;" class="img-responsive radius"  src="<?=base_url() ?>plantilla/img_anuncios/'+registros[i]['Imagen']+'"/>';
                         }
 
-                       html+='</div><div class="col-md-9 col-xs-12 alert" ><p style="color:#000;"> '+registros[i]['Descripcion_Noticia']+'</p><span><p><i class="fa fa-check" style="margin:10px;"></i>Publicado por '+registros[i]['Nombre']+'<span><p><i class="fa fa-calendar" style="margin:10px;"></i>Fecha de publicacion '+registros[i]['Fecha']+'</p><br></span></p><br></span><a class="btn  btn-info" href="<?= base_url()?>Anuncios/VerAnuncios?id='+registros[i]['pk_Id_Anuncio']+'" style="color:white;">Leer mas...</a></div></div></div></div></div></div></div></div></div></div></div>';
+                       html+='</div><div class="col-md-9 col-xs-12 alert" ><p style="color:#000;"> '+registros[i]['Descripcion_Noticia']+'</p><span><p><i class="fa fa-check" style="margin:10px;"></i>Publicado por '+registros[i]['Nombre']+'<span ><p><i class="fa fa-calendar" style="margin:10px;" id="fecha"></i>Fecha de publicacion '+registros[i]['Fecha']+'</p><br></span></p><br></span><a class="btn  btn-info" href="<?= base_url()?>Anuncios/VerAnuncios?id='+registros[i]['pk_Id_Anuncio']+'" style="color:white;">Leer mas...</a></div></div></div></div></div></div></div></div></div></div></div>';
                     }
                 }
                 else{
@@ -274,7 +274,7 @@ else
                 monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
                 };
     $('#fecha').datepicker({
-                format: 'yyyy-mm-dd',
+                format: 'dd-mm-y',
                 language:'es',
 
             });

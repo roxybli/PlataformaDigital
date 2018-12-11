@@ -47,8 +47,9 @@
                             <div class="dropdown" align="center">
                                 <button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown"><i class="fa fa-cogs fa-lg"></i><span class="caret"></span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?= base_url() ?>capital/actualizarNegocio/<?= $subrubros->PK_Id_Subrubro ?>"><i class="fa fa-edit fa-lg"></i> Actualizar</a></li>
+                                    
                                     <li><a href="<?= base_url() ?>capital/eliminarNegocio/<?= $subrubros->PK_Id_Subrubro ?>"><i class="fa fa-trash fa-lg"></i> Eliminar</a></li>
+                                    <li><a href="<?= base_url() ?>capital/actualizarNegocio/<?= $subrubros->PK_Id_Subrubro ?>"><i class="fa fa-edit fa-lg"></i> Editar</a></li>
                                 </ul>
                             </div>
                         </td>   

@@ -82,13 +82,10 @@
                     }
                          ?>
                         <tr>
-                            <td colspan="4" class="text-center"><h3>Total después de gastos</h3></td>
+                            <td colspan="4" class="text-center"><h3>Total</h3></td>
                             <td colspan="2"> <a href="#"><span class="btn btn-primary form-control">$<?= $ime?>
                             </span></a></td>
                         </tr>
-                        <!--<tr>
-                            <td colspan="2"> <a href="#"><span class="btn btn-primary form-control">Ver en PDF</span></a></td>
-                        </tr>-->
                         </tbody>
                     </table>
                 </div>

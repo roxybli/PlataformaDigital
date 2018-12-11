@@ -57,9 +57,10 @@
                                      <div class="dropdown" align="center">
                                             <button class="btn btn-primary dropdown-toggle btn-sm" type="button" data-toggle="dropdown"><i class="fa fa-cogs fa-lg"></i><span class="caret"></span></button>
                                             <ul class="dropdown-menu">
-                                                 <li><a href="<?= base_url() ?>inventario/detalleProcedimiento?e=<?= $filaProcedimientos->PK_Id_Producto ?>"><i class="fa fa-eye"></i>Ver detalles</a></li>
-                                                <li><a href="<?= base_url() ?>inventario/datosProducto?i=<?= $filaProcedimientos->PK_Id_Producto ?>"><i class="fa fa-edit fa-lg"></i> Editar</a></li>
-                                                <li><a href="<?= base_url() ?>Inventario/eliminarReceta?i=<?= $filaProcedimientos->PK_Id_Producto?>"><i class="fa fa-trash-o fa-lg"></i> Eliminar</a></li>
+                                               <li><a href="<?= base_url() ?>Inventario/eliminarReceta?i=<?= $filaProcedimientos->PK_Id_Producto?>"><i class="fa fa-trash-o fa-lg"></i> Eliminar</a></li> 
+                                                <li><a href="<?= base_url() ?>inventario/datosProducto?i=<?= $filaProcedimientos->PK_Id_Producto ?>"><i class="fa fa-edit fa-lg"></i> Editar</a></li>  
+                                               <li><a href="<?= base_url() ?>inventario/detalleProcedimiento?e=<?= $filaProcedimientos->PK_Id_Producto ?>"><i class="fa fa-eye"></i>Ver detalles</a></li>                            
+                                                   
                                             </ul>
                                         </div>
 
@@ -89,3 +90,4 @@
     $('#inventarioRecetas').DataTable();
 } );
 </script>
+

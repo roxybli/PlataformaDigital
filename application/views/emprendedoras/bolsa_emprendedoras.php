@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="<?= base_url()?>/plantilla/componentes/js/lightbox/css/lightbox.min.css">
 <style type="text/css">
     #div12{
-        margin: 30px;
+        margin: 40px;
         /*background-color: #acc90d;*/
 
             }
@@ -110,7 +110,7 @@
 </div>
 </div>
 <!--/.Carousel Wrapper-->
-       <div id="filtros" class="col-lg-12 card">
+       <div id="filtros" class="col-lg-22 card">
 
        <div class="input-group input-group-rounded has-success">
             <input id="NombreB" name="NombreB" type="text" placeholder="Buscar por nombre del negocio" class="form-control" onkeyup="this.value=NumText(this.value)">

@@ -27,22 +27,20 @@
                         </li>
                            <li><a href="<?=base_url() ?>Anuncios/"><i class="fa fa-book"></i><span class="hide-menu">Noticias</span></a>
                            </li>
-
-<li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-file-movie-o">  
+                            <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-file-movie-o">  
                           </i><span class="hide-menu">Guias Multimedia</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?=base_url() ?>Guias/Cargar_Guias?v=1">Documentos</a></li>
                                 <li><a href="<?=base_url() ?>Guias/Cargar_Guias?v=2">videos</a></li>
                             </ul>
                         </li> 
-
-
-                         
+                        <li> <a class="has-arrow-inicio " href="<?=base_url() ?>Emprendedoras/" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Reportes</span></a>
+                        </li> 
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-window-restore"></i><span class="hide-menu">Aplicaciones Empresariales</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?=base_url() ?>capital/negocios/">Capital inicial</a></li>
                                 <li><a href="<?=base_url() ?>inventario/">Inventario</a></li>
-                                 <li><a href="<?=base_url() ?>controlie/">Control de Egresos e Ingresos</a></li>
+                                 <li><a href="<?=base_url() ?>controlie/">Control de Ingresos y Egresos</a></li>
                             </ul>
                             </li>
                             </ul>

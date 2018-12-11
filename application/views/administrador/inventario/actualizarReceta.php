@@ -1,6 +1,6 @@
 <div class="row page-titles" style="background:#000d5a;">
     <div class="col-md-4 align-self-center">
-        <a href="<?=base_url() ?>inventario/consultar_receta"><h3 class="text-primary"><i class="fa fa-times-circle"></i> Cancelar </h3></a>
+        <a href="<?=base_url() ?>inventario/consultar_receta"><h3 class="text-primary"><i class="fa fa-chevron-left"></i> Volver</h3></a>
      </div>
 
      <div class="col-md-5 align-center">
@@ -39,7 +39,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-8">
+                                                </div>
+                                                <div class="col-md-6">
                                                     <div class="form-group"><label style="color: #000000"> Nombre de la Receta:</label>
                                                         <div class="input-group"> 
                                                             <input type="text" class="form-control" value="<?= $filaDato->Nombre_Producto?>" name="nombreProducto" onkeyup="this.value=NumText(this.value)" >
@@ -58,8 +59,10 @@
                                                 <!--/span-->
                                             </div>
                                             <!--/row-->
-                                            <!--/row-->
-                                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20"></i> Actualizar </button>
+                                            <!--/row--><div class="row" align="right">
+                                                        <div class="col-md-12" align="right" >
+                                                <a style="color:white;" href="<?=base_url() ?>inventario/consultar_receta" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:4px;"></i>Regresar</a>
+                                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20"></i> Actualizar </button></div></div>
                                         </form>
                             <!-- End Bread crumb -->
 

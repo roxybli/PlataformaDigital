@@ -41,7 +41,6 @@ class Anuncios extends CI_Controller {
 	    $bool= $this->Anuncios_Model->insertarAnuncio($nombre, $datos);
 	    if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Anuncio creado con exito");
 				self.location ="'.base_url().'Anuncios"
 				</script>';
 	    }
@@ -119,7 +118,6 @@ class Anuncios extends CI_Controller {
 	    $bool= $this->Anuncios_Model->editarAnuncio($nombre, $datos);
 	    if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Anuncio editado con exito");
 				self.location ="'.base_url().'Anuncios/GestionarNoticias"
 				</script>';
 	    }

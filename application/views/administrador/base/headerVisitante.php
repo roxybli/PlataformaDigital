@@ -45,6 +45,8 @@
       <a id="ln" class="mdl-navigation__link" href="<?=base_url() ?>"><span class="letra-menu"><i class="fa fa-shopping-bag" style="margin:10;" aria-hidden="true"></i>Bolsa de emprendedoras</span></a>
         <a id="ln" class="mdl-navigation__link" href="<?=base_url() ?>Anuncios/"><span class="letra-menu"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
 Noticias</span></a>
+ <a id="ln" class="mdl-navigation__link" href="<?=base_url() ?>Ayuda/" ><span class="letra-menu"><i style="margin:10;" class="fa fa-question" aria-hidden="true"></i>Ayuda</span></a>
+                   
         <a id="ln" class="mdl-navigation__link" href="<?= base_url()?>Login"><span class="letra-menu"><i style="margin:10;" class="fa fa-user-circle" aria-hidden="true"></i>Iniciar sesion</span></a>
       </nav>
     </div>

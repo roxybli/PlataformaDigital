@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-           <div style="background-color:#4527a0; color:white; padding:10;">
+           <div style="background-color:#512da8; color:white; padding:10;">
 <h3  style="color:white; padding: 10px;  " class=" text-center"><b> Lista de Contactos</b></h3>
 </div>
                 <table class="table">

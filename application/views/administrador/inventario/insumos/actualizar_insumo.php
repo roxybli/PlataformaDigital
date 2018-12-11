@@ -1,6 +1,6 @@
 <div class="row page-titles" style="background:#000d5a;">
     <div class="col-md-4 align-self-center">
-        <a href="<?=base_url() ?>insumos/insumosExistentes"><h3 class="text-primary"><i class="fa fa-times-circle"></i> Cancelar </h3></a>
+        <a href="<?=base_url() ?>insumos/insumosExistentes"><h3 class="text-primary"><i class="fa fa-chevron-left"></i> Volver</h3></a>
      </div>
 
      <div class="col-md-5 align-center">
@@ -88,7 +88,10 @@
                                                 <!--/span-->
                                             </div>
                                             <!--/row-->
-                                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20"></i> Actualizar </button>
+                                            <div class="row" align="right">
+                                            <div class="col-md-12" align="right" >
+                                                <a style="color:white;" href="<?=base_url() ?>inventario/consultar_receta" class="btn btn-secondary"><i class="fa fa-times-circle f-s-20" style="margin:4px;"></i>Regresar</a>
+                                            <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20"></i> Actualizar </button></div></div>
                                         </form>
                             <!-- End Bread crumb -->
 

@@ -57,7 +57,7 @@ table td{
                             ?></td>
                         <?php 
                                 $total=($ventas->Cantidad_Venta*$ventas->Precio_Producto);
-                                echo $total;
+                                //echo $total;
                             switch ($ventas) {
                                 case (($total >= 0) && ($total <= 150)):
                                     echo '<td colspan="" class="text-left"><div class="barra" style="border-left:'.$ventas->Cantidad_Venta.'px solid #acc90d">d</div></td>';

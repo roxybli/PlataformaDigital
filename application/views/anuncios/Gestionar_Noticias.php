@@ -3,7 +3,7 @@
          .TituloUser{
         display: block;
         margin: 0 auto;
-        background-color: #0489B1;
+        background-color: #512da8;
         padding: 20px;
         text-align: center;
         color: white;
