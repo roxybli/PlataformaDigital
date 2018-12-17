@@ -47,13 +47,12 @@ class Emprendedoras extends CI_Controller {
 		$bool=$this->Usuarias_Model->eliminarUsuaria($id);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Usuaria Eliminada");
 				self.location ="'.base_url().'/Emprendedoras/verUsuarias"
 				</script>';
 		}
 		else{
 			echo '<script type="text/javascript">
-				alert("ERROR");
+				alert("ERROR No se pudo eliminar");
 				self.location ="'.base_url().'/Emprendedoras/verUsuarias"
 				</script>';
 
@@ -83,7 +82,6 @@ class Emprendedoras extends CI_Controller {
 	    $bool= $this->Usuarias_Model->insertarTipo($datos);
 	    if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Tipo de usuaria insertada con exito");
 				self.location ="'.base_url().'/Emprendedoras/tipo"
 				</script>';
 	    }
@@ -98,7 +96,6 @@ class Emprendedoras extends CI_Controller {
 	    $bool= $this->Usuarias_Model->insertarUsuaria($datos);
 	    if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Usuaria insertada con exito");
 				self.location ="'.base_url().'/Emprendedoras/InsertarUsuaria"
 				</script>';
 	    }
@@ -154,7 +151,6 @@ class Emprendedoras extends CI_Controller {
 	    $bool= $this->Usuarias_Model->editarUsuaria($datos);
 	    if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Información modificada con exito");
 				self.location ="'.base_url().'/Emprendedoras/VerUsuarias"
 				</script>';
 	    }

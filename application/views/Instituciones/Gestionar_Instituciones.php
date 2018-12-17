@@ -1,17 +1,4 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-</style>
  <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
                     <h3 class="text-primary">Inicio</h3> </div>

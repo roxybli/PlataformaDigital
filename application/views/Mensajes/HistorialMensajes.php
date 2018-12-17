@@ -1,16 +1,3 @@
-<style type="text/css">
-    .emisor{
-        background-color:  #CEE3F6;
-       color: #000000;
-
-    }
-    .receptor{
-        background-color: #BEF781;
-        color: #000000;
-    }
-</style>
-
-
 <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
                     <h3 class="text-primary">Inicio</h3> </div>

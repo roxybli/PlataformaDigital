@@ -1,31 +1,11 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" />
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 
 <style>
-  #calendar {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .TituloUser{
-    display: block;
-    margin: 0 auto;
-    background-color: #512da8;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    border-radius: 98;
-    width: 100%;
-    font-weight: bold;
-    }
-    .etiquetas{
-      color: #000;
-      font-size: large;
-     }
-    .color {
-      background-color: #808e95;
-     }
+thead tr{
+  background: #ffffff;
+}
 </style>
 <div class="container-fluid">
     <div class="row">
@@ -37,8 +17,8 @@
                     <div class="row">
                     <?php 
                     if($this->session->userdata('id_tipo')==1 or $this->session->userdata('id_tipo')==2){
-                      echo '<div class="col-md-6">
-                            <a class="btn btn-success" style="color:white;" data-toggle="modal" data-target="#ModalInsert"><b><i class="fa fa-calendar" ></i> Insertar evento</b></a>
+                      echo '<div class="col-md-12" align="right">
+                            <a class="btn btn-primary" style="color:white;" data-toggle="modal" data-target="#ModalInsert"><b><i class="fa fa-calendar" ></i> Insertar evento</b></a>
                             </div>';
                     }
                     ?>
@@ -65,7 +45,7 @@
 <div class="modal fade" id="ModalInsert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header" style="background-color:#04B486;">
+      <div class="modal-header" style="background-color:#512da8;">
         <h5 class="modal-title" id="exampleModalLongTitle" style="color:white;">Insertar un nuevo evento</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -79,7 +59,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                       <div class="form-group">
-                            <p class=" m-b-15 f-s-12 etiquetas">Seleccione la fecha de inicio.</p>
+                            <p class=" m-b-15 f-s-16 etiquetas">Seleccione la fecha de inicio.</p>
                             <input type="text" class="form-control input-rounded" placeholder="Seleccione la fecha de inicio" name="fecha_inicio" id="fecha_inicio">
                         </div>
                     </div>
@@ -87,27 +67,27 @@
                 <div class="col-md-6">
                   <div class="form-group">
                       <div class="form-group">
-                            <p class="m-b-15 f-s-12 etiquetas">Seleccione la fecha de fin.</p>
+                            <p class="m-b-15 f-s-16 etiquetas">Seleccione la fecha de fin.</p>
                             <input type="text" class="form-control input-rounded" placeholder="Seleccione la fecha de fin" name="fecha_fin" id="fecha_fin">
                         </div>
                     </div>
                 </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <p class="m-b-15 f-s-12 etiquetas">Inserte un títtulo para el evento</p>  
+                            <p class="m-b-15 f-s-16 etiquetas">Inserte un títtulo para el evento</p>  
                             <input type="text" class="form-control input-rounded" id="titulo_evento" name="titulo_evento" onkeyup="this.value=NumText(this.value)" placeholder="Titulo del evento" required> 
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <p class="m-b-15 f-s-12 etiquetas">Inserte la ubicación del evento.</p>
+                            <p class="m-b-15 f-s-16 etiquetas">Inserte la ubicación del evento.</p>
                              <input type="text" class="form-control input-rounded"" id="ubicacion" name="ubicacion" onkeyup="this.value=NumText(this.value)" placeholder="Ubicacion del evento" required>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <p class="m-b-15 f-s-12 etiquetas">Inserte la descripción del evento.</p>
-                            <textarea  class="form-control" style="height:150px;"  id="contenido_evento" name="contenido_evento" onkeypress="this.value=NumText(this.value)" placeholder="Descripcion del evento" required></textarea>
+                            <p class="m-b-15 f-s-16 etiquetas">Inserte la descripción del evento.</p>
+                            <textarea  class="form-control" style="height:150px;"  id="contenido_evento" name="contenido_evento" onkeypress="this.value=NumText(this.value)" placeholder="Descripcion del evento, requisitos de asistencia, hora de inicio, documentación necesarias, entre otros." required></textarea>
                         </div>
                     </div> <div class="col-md-12"  align="right">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Eventos/'">Regresar</button>
@@ -232,6 +212,5 @@
     }
 </script>
                                 
-
   
 

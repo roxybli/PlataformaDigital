@@ -33,7 +33,6 @@ class Perfiles extends CI_Controller {
 	    $bool=$this->Perfiles_Model->InsertarPerfil($img_perfil, $img_1, $img_2, $img_3, $datos);
 	    if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Usuaria insertada con exito");
 				self.location ="'.base_url().'/Login/home"
 				</script>';
 	    }
@@ -69,7 +68,7 @@ class Perfiles extends CI_Controller {
 		$bool=$this->Perfiles_Model->EditarImagen($campo, $img, $id);
 		if($bool){
 	    	echo '<script type="text/javascript">
-				alert("Usuaria insertada con exito");
+				
 				self.location ="'.base_url().'/Login/home"
 				</script>';
 	    }
@@ -83,7 +82,7 @@ class Perfiles extends CI_Controller {
 		$bool = $this->Perfiles_Model->editarUsuaria($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Informacion modificada con exito");
+				
 				self.location ="'.base_url().'/Login/home"
 				</script>';
 				
@@ -91,7 +90,6 @@ class Perfiles extends CI_Controller {
 		if($pass1=$pass && $pass2=$pass)
 				{
 					echo '<script type="text/javascript">
-				alert("Contraseña cambiada correctamente");
 				self.location ="'.base_url().'/Login/home"
 				</script>';
 
@@ -108,7 +106,6 @@ class Perfiles extends CI_Controller {
 		if($bool){
 
 			echo '<script type="text/javascript">
-				alert("Informacion modificada con exito");
 				self.location ="'.base_url().'/Login/home"
 				</script>';
 		}

@@ -1,8 +1,4 @@
-<style>
-    #Ingresos, #Egresos, #procesarIE{
-        display: none;
-    }
-</style>
+
 <div class="row page-titles" style="background:#000d5a;">
     <div class="col-md-4 align-self-center">
     <a href="<?=base_url() ?>controlie/"><h3 class="text-primary"><i class="fa fa-chevron-left"></i> Volver </h3></a>

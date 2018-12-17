@@ -18,7 +18,7 @@ class Rubros extends CI_Controller {
 		$bool=$this->Rubros_Model->insertarRubros($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Rubro insertado con ´éxito");
+				
 				self.location ="'.base_url().'/Rubros"
 				</script>';
 		}
@@ -35,7 +35,7 @@ class Rubros extends CI_Controller {
 		$bool=$this->Rubros_Model->editarRubros($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Rubro editado con exito");
+			
 				self.location ="'.base_url().'/Rubros"
 				</script>';
 		}
@@ -52,7 +52,6 @@ class Rubros extends CI_Controller {
 		$bool=$this->Rubros_Model->eliminarRubros($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Rubro eliminado con éxito");
 				self.location ="'.base_url().'/Rubros"
 				</script>';
 		}

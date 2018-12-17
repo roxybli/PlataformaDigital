@@ -6,25 +6,6 @@ foreach ($user->result() as $fila2) {
     # code...
 }
 ?>
-<style type="text/css">
-    .imgs {
-        width: 300px;
-        height: 300px;
-        
-
-    }
-    .subirImgG{
-      background-color: #536DFE;
-      margin: 0 auto;
-      color: white;
-      font-weight: bold;
-      padding: 20px;
-     }
-      .btnCenter{
-      text-align: center;
-      padding: 10px;
-     }
-</style>
             <!-- Container fluid  -->
             <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
             <div class="row page-titles">
@@ -100,10 +81,10 @@ foreach ($user->result() as $fila2) {
                      <div class="row" id="MenuCard">
                     <div class="col-md-6">
                             <div class="CardItem card" style="background-color:#8e24aa; color:white; height:100px;">
-                                <a href="<?=base_url()?>Emprendedoras/verUsuarias">
+                                <a href="<?=base_url() ?>Contactos/">
                                 <div class="textIcon">
                                     <img class="iconImage"  src="<?= base_url()?>plantilla/images/usuario.png">
-                                    Gestionar usuarias
+                                    Chat
                                 </div>
                                 </a> 
                             </div>
@@ -122,10 +103,10 @@ foreach ($user->result() as $fila2) {
                     <div class="col-md-6">
                         
                             <div  class="CardItem card" style="background-color:#512da8; color:white; height:100px;">
-                                    <a href="<?=base_url() ?>Guias/Gestionar">
+                                    <a href="<?=base_url() ?>inventario/productos_disponibles">
                                     <div class="textIcon">
-                                        <img class="iconImage"  src="<?= base_url()?>plantilla/images/participacion.png">
-                                        Gestionar Guias Multimedia
+                                        <img class="iconImage"  src="<?= base_url()?>plantilla/images/navegador.png">
+                                        Productos en Inventario
                                     </div>
                                     </a>
                                     
@@ -135,10 +116,10 @@ foreach ($user->result() as $fila2) {
                     </div>
                      <div class="col-md-6">
                             <div class="CardItem card" style="background-color:#d81b60; color:white; height:100px;">
-                                <a href="<?=base_url() ?>Anuncios/GestionarNoticias">
+                                <a href="<?=base_url() ?>controlie/balances">
                                 <div class="textIcon">
                                     <img class="iconImage"  src="<?= base_url()?>plantilla/images/navegador.png">
-                                    Gestionar Noticias
+                                    Balances de ingresos y egresos
                                 </div>
                                 </a>
                                 
@@ -451,12 +432,12 @@ foreach ($user->result() as $fila2) {
         <div id="DivImagen">
         </div>
        <div id="form1">
-       <div class="row btnCenter">
+       <div class="row btnCenter1">
                 <a onclick="SubirImg(1)" style="color:white"  class="btn subirImgG"><i class="fa fa-cloud-upload"></i> Seleccionar imagen</a>
         </div>
        <form class="form-valide" enctype="multipart/form-data" action="<?= base_url()?>Perfiles/editarImagen?c=1" method="POST" id="mensaje" name="mensaje">
                 <input type="file" hidden name="imagen" id="imagen1" onchange="cambio(this)"> 
-            <div class="row btnCenter" id="DivBotones1" style="display:none;"> 
+            <div class="row btnCente1" id="DivBotones1" style="display:none;"> 
                 
                     <a onclick="Limpiar()"  class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
@@ -466,12 +447,12 @@ foreach ($user->result() as $fila2) {
        </div>
        <div id="form2">
        <form enctype="multipart/form-data" class="form-valide" action="<?= base_url()?>Perfiles/editarImagen?c=2" method="POST" id="mensaje" name="mensaje">
-            <div class="row btnCenter">
+            <div class="row btnCenter1">
                 <a onclick="SubirImg(2)" style="color:white"  class="btn subirImgG"><i class="fa fa-cloud-upload"></i> Seleccionar imagen</a>
                 <input type="file" hidden name="imagen" id="imagen2" onchange="cambio2(this)">
 
             </div>
-            <div class="row btnCenter" id="DivBotones2" style="display:none;"> 
+            <div class="row btnCenter1" id="DivBotones2" style="display:none;"> 
                 
                     <a onclick="Limpiar()" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>   
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
@@ -481,11 +462,11 @@ foreach ($user->result() as $fila2) {
        </div>
        <div id="form3">
        <form enctype="multipart/form-data" class="form-valide" action="<?= base_url()?>Perfiles/editarImagen?c=3" method="POST" id="mensaje" name="mensaje">
-            <div class="row btnCenter">
+            <div class="row btnCenter1">
                 <a onclick="SubirImg(3)" style="color:white"  class="btn subirImgG"><i class="fa fa-cloud-upload"></i> Seleccionar imagen</a>
                 <input type="file" hidden name="imagen" id="imagen3" onchange="cambio3(this)">
             </div>
-            <div class="row btnCenter" id="DivBotones3" style="display:none;"> 
+            <div class="row btnCenter1" id="DivBotones3" style="display:none;"> 
                     <a  class="btn btn-secondary" onclick="Limpiar()" data-dismiss="modal">Cancelar</a> 
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
                 

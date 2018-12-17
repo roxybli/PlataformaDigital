@@ -1,17 +1,4 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
-<style type="text/css">
-         .TituloUser{
-         display: block;
-        margin: 0 auto;
-        background-color: #8e24aa;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-</style>
 <?php 
 foreach ($registro->result() as $info2) {
 }

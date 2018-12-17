@@ -1,51 +1,5 @@
  <script src="<?=base_url() ?>plantilla/mtl/material.min.js"></script>
  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
- <style type="text/css">
-     .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-     }
-     .etiqueta{
-        color: black;
-     }
-     .encabezado1{
-        display: block;
-        background-color:#4a148c;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        font-weight: bold;
-
-     }
-     .encabezado2{
-        background-color:#d32f2f;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        font-weight: bold;
-
-     }
-     .encabezado3{
-        background-color:#880e4f;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        font-weight: bold;
-
-     }
-     #divP{
-        padding: 10px;
-     }
-
-
- </style>
  <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
@@ -117,7 +71,7 @@
                                         <div class="col-md-6">
 
                                             <div class="form-group">
-                                                <label class="etiqueta">Año de inicio</label>
+                                                <label class="etiquetaa">Año de inicio</label>
                                                 <div class="input-group">
                                                     <select id="Año_Ingreso" name="Año_Ingreso" class="form-control">
                                                         <?php
@@ -133,7 +87,7 @@
                                         </div>
                                         <div class="col-md-6">
                                            <div class="form-group">
-                                                <label class="etiqueta">Año de Fin</label>
+                                                <label class="etiquetaa">Año de Fin</label>
                                                 <div class="input-group">
                                                     <select id="Año_Ingreso" name="Año_Fin" class="form-control">
                                                         <?php
@@ -207,7 +161,7 @@
                                      ?>
                                      <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="etiqueta">Seleccione el año</label>
+                                                <label class="etiquetaa">Seleccione el año</label>
                                                 <div class="input-group">
                                                     <select id="Año_Ingreso" name="Año_Ingreso" class="form-control">
                                                         <?php

@@ -163,7 +163,6 @@ class Inventario extends CI_Controller {
 			if ($bool==TRUE)
 			{
 				echo '<script type="text/javascript">
-				alert("Su producto esta en proceso");
 				self.location ="'.base_url().'//inventario/productosProceso"
 				</script>';
 			}
@@ -199,7 +198,6 @@ class Inventario extends CI_Controller {
 			if ($bool)
 			{
 				echo '<script type="text/javascript">
-				alert("Operación realizada con exito !!!");
 				self.location ="'.base_url().'inventario/productos_disponibles"
 				</script>';
 			}
@@ -697,7 +695,7 @@ public function actualizarReceta()
 			if ($bool)
 			{
 				echo '<script type="text/javascript">
-				alert("Receta actualizada correctamente !!!");
+			
 				self.location ="'.base_url().'inventario/consultar_receta"
 				</script>';
 			}
@@ -719,7 +717,6 @@ public function actualizarReceta()
 			if ($bool)
 			{
 				echo '<script type="text/javascript">
-				alert("Receta eliminada correctamente !!!");
 				self.location ="'.base_url().'inventario/consultar_receta"
 				</script>';
 			}

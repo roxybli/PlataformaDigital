@@ -1,22 +1,5 @@
  <script src="<?=base_url() ?>plantilla/mtl/material.min.js"></script>
  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
- <style type="text/css">
-     .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #8e24aa;
-        padding: 10px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-     }
-     .etiqueta{
-        color: black;
-     }
-
- </style>
  <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
@@ -63,7 +46,7 @@
                                                           </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Nombre de la usuaria</label>
+                                                                <label class="etiquetaa">Nombre de la usuaria</label>
                                                                     <div class="input-group">
                                                                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -72,7 +55,7 @@
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Seleccione el tipo de usuaria</label>
+                                                                <label class="etiquetaa">Seleccione el tipo de usuaria</label>
                                                                     <div class="input-group">
                                                                         <select class="form-control" id="tipo" name="tipo">
                                                                             <?php
@@ -92,7 +75,7 @@
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Apellido de la usuaria</label>
+                                                                <label class="etiquetaa">Apellido de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -101,7 +84,7 @@
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Nombre de Usuaria para iniciar en la Plataforma</label>
+                                                                <label class="etiquetaa">Nombre de Usuaria para iniciar en la Plataforma</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="nomuser" name="nomuser" placeholder="Nombre de usuario" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -113,7 +96,7 @@
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Contraseña para la usuaria</label>
+                                                                <label class="etiquetaa">Contraseña para la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" onkeyup="this.value=NumText(this.value)" minlength="8" required>
                                                                     </div>
@@ -122,7 +105,7 @@
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Dirección de la usuaria</label>
+                                                                <label class="etiquetaa">Dirección de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -134,7 +117,7 @@
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Número de teléfono de la usuaria</label>
+                                                                <label class="etiquetaa">Número de teléfono de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" onkeypress="return numeros(event, 'num')" required>
                                                                     </div>
@@ -143,7 +126,7 @@
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Número de DUI de la usuaria</label>
+                                                                <label class="etiquetaa">Número de DUI de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="dui" name="dui" placeholder="# DUI" onkeypress="return numeros(event, 'num')" required>
                                                                     </div>
@@ -156,7 +139,7 @@
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Seleccione el año de ingreso a la institución de la usuaria</label>
+                                                                <label class="etiquetaa">Seleccione el año de ingreso a la institución de la usuaria</label>
                                                                     <div class="input-group">
                                                                     <select id="Año_Ingreso" name="Año_Ingreso" class="form-control" required>
                                                                         <?php
@@ -203,7 +186,6 @@
                 if(registro.length>0){
                     $('#pass').val('');
                     swal("Error","El nombre de usuario ya existe","error");
-                    //alert("El nombre de usuario ya existe");
                     document.getElementById('btnGuardar').disabled=true;
                      $('#nomuser').addClass('caja');
                 }

@@ -2,33 +2,6 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald|Sawarabi+Mincho" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans+Condensed:300|Oswald|Sawarabi+Mincho" rel="stylesheet">
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 10px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-     .contenido {
-    text-align: justify;
-    color: #000;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Sawarabi Mincho', sans-serif;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: large;
-     }
-     p{
-        color: #000;
-     }
-     
-</style>
-
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
 <div class="container-fluid contenido" style="width: 90%">

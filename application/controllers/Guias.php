@@ -21,7 +21,7 @@ class Guias extends CI_Controller {
 	    $bool = $this->Guias_Model->Insertar_Guia($nombre_documento,$nombre_Imagen, $datos);
 	     if($bool){
 	    	echo '<script type="text/javascript">
-				 alert("Operacion realizada con exito !!");
+				
 				self.location ="'.base_url().'Guias"
 				</script>';
 	    }
@@ -88,7 +88,7 @@ class Guias extends CI_Controller {
 		}
 		else{
 				echo '<script type="text/javascript">
-					alert("ERROR");
+					alert("ERROR no se pudo eliminar");
 					self.location ="'.base_url().'Guias/Gestionar"
 					</script>';
 			}

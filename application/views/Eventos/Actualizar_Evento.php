@@ -1,20 +1,6 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-    
-</style>
 <?php 
 foreach ($eventos->result() as $event) {
     # code...

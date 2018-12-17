@@ -5410,6 +5410,9 @@ label {
   text-transform: capitalize;
   border-radius: 3px;
 }
+thead tr{
+  background: #CED8F6;
+}
 thead tr th {
   color: #455a64;
   font-weight: 500;
@@ -6961,3 +6964,261 @@ tbody tr td:last-child {
 .card:hover .hover-atras {
     display: block;
 }
+
+/*mis estilos*/
+p {
+    color: #000000;
+}
+ .TituloUser{
+        display: block;
+        margin: 0 auto;
+        background-color: #512da8;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        border-radius: 98;
+        width: 100%;
+        font-weight: bold;
+     }
+      #div12{
+        margin: 12px;
+        /*background-color: #acc90d;*/
+
+        
+            }
+    #Titulo{
+        display: block;
+        background-color: #000d5a;
+        color: #fff;
+        text-align: center;
+        font-family: 'Ranga';
+    }
+    #filtros{
+
+    }
+    #formato{
+        color: #000;
+
+    }
+    #baner{
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: 400px;
+    }
+    .bordes{
+        display: block;
+        margin: 0 auto;
+        border-style: solid;
+        border-color: #f2efef;
+        border-width: 1px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    #perfil{
+        display: block;
+        margin: 0 auto;
+        color: #fff;
+        background-color: #000d5a;
+    }
+    .images{
+        height: 200px;
+        width: 100%;
+    }
+    #perfil:hover{
+        background-color: #0C853A;
+    }
+    .letra-menu{
+
+        color: white;
+        font-size: 18px;
+        margin: 10;
+    }
+    #ln:hover{
+        background-color: #000d5a;
+
+    }
+     .degradado {
+        background: -webkit-linear-gradient(#33691e, #dcedc8); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#33691e, #dcedc8); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#33691e, #dcedc8); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#33691e, #dcedc8); /* Standard syntax */
+        color: white;
+}
+.degradado_lineal {
+background: -webkit-linear-gradient(left, #004d40 , #80cbc4); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(right, #004d40 , #80cbc4); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(right, #004d40 , #80cbc4); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, #004d40 , #80cbc4); /* Standard syntax */
+text-align: center;
+color: #fff;
+padding: 25px;
+height: 100px
+}
+.contenido{
+    text-align: justify;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
+
+
+}
+.encabezado{
+    display: block; 
+    margin: 0 auto;
+    text-align: right;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size:'Medium';
+}
+.DivDescarga a:hover{
+    background-color: #00bcd4;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+ #info{
+        padding: 20px 50px;
+    }
+    #info, p{
+   font-family: 'Rubik', sans-serif;
+    color: #000d5a;
+    }
+    #Negocio{
+        font-family: 'Rubik', sans-serif;
+        
+    }
+    header{text-align:center;}
+        article img{max-height:180px;}
+        article p,footer p{text-align:center;}
+
+      #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+    .etiquetas{
+      color: #000;
+      font-size: large;
+     }
+    .color {
+      background-color: #808e95;
+     }
+         .emisor{
+        background-color:  #CEE3F6;
+       color: #000000;
+
+    }
+    .receptor{
+        background-color: #BEF781;
+        color: #000000;
+    }
+        .imgRedonda {
+    width:90px;
+    height:90px;
+    border-radius:150px;
+}
+  .ImageInicio{
+        margin: 0 auto;
+     }
+     .encabezados{
+        text-align: center;
+        margin: 10px;
+        display: block;
+        color: white;
+        font-weight: bold;
+     }
+    .etiqueta{
+        color: white;
+        font-weight: bold;
+     }
+     .btnCenter{
+      text-align: center;
+     }
+     #siguiente{
+      
+        background-color:#4CAF50;
+        color: #FFFFFF;
+     }
+    #anterior{ 
+        background-color:#FF5252;
+        color: #FFFFFF;
+     }
+     .subirImg{
+      background-color: #FF4081;
+      margin: 0 auto;
+      color: white;
+      font-weight: bold;
+      padding: 20px;
+     }
+     .subirImg:hover{
+      background-color: #FF5252;
+      color: white;
+     }
+     .ImgPerfil{
+      margin: 0 auto;
+      padding: 10px;
+     }
+     .indicaciones{
+      display: block;
+      color: white;
+      text-align: justify-all;
+     }
+     .subirImgG{
+      background-color: #536DFE;
+      margin: 0 auto;
+      color: white;
+      font-weight: bold;
+      padding: 20px;
+     }
+          .encabezado1{
+        display: block;
+        background-color:#4a148c;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+
+     }
+     .encabezado2{
+        background-color:#d32f2f;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+
+     }
+     .encabezado3{
+        background-color:#880e4f;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+
+     }
+     #divP{
+        padding: 10px;
+     }
+      .etiquetaa{
+        color: black;
+     }
+       .caja{
+        border-color: #ffe033;
+        background-color:#f7d4d0;
+     }
+     .seleccionada{
+        background-color:#d0d6f7;
+     }
+     .btnCenter1{
+      text-align: center;
+      padding: 10px;
+     }
+      .imgs {
+        width: 300px;
+        height: 300px;
+    }
+     #Ingresos, #Egresos, #procesarIE{
+        display: none;
+    }

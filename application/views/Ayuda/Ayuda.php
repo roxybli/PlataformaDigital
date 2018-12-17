@@ -2,32 +2,6 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald|Sawarabi+Mincho" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans+Condensed:300|Oswald|Sawarabi+Mincho" rel="stylesheet">
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 10px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-     .contenido {
-    text-align: justify;
-    color: #000;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Sawarabi Mincho', sans-serif;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: large;
-     }
-     p{
-        color: #000;
-     }
-     
-</style>
  <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
                     <h3 class="text-primary">Inicio</h3> </div>
@@ -65,7 +39,7 @@
             <p ><strong>¿Cómo veo los eventos próximos a realizarse?</strong></p>
             <p>Dentro de la sección calendario de eventos se busca la fecha indicada y se hace doble clic para ver abajo todos los eventos de ese día.</p><br>  
      <p ><strong>¿Puedo descargar el manual de usuario de esta plataforma?</strong></p>
-     <a href="<?= base_url()?>plantilla/Documentos/MANUALDEUSUARIO-PLATAFORMACM.pdf" class ="btn btn-info btn-md" style="color:white; padding:15px;" target="_blank"><i class="fa fa-download fa-2x" ></i> Descargar Documento</a><br>
+     <a href="<?= base_url()?>plantilla/Documentos/MANUALDEUSUARIO-PLATAFORMACM.pdf" class ="btn btn-info btn-md" style="color:white; padding:15px;" target="_blank"><i class="fa fa-download fa-2x" ></i> Descargar Documento</a><br><br><br>
             <strong><p> ¿Cómo uso las aplicaciones empresariales?</strong></p>
             <p> En el siguiente video te mostramos como es su uso.</p>
             <iframe width="560" height="315" align="center" src="https://www.youtube.com/embed/X8FtUMeIjBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; " allowfullscreen></iframe>

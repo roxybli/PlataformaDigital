@@ -65,8 +65,7 @@ class Insumos extends CI_Controller {
 			if ($bool)
 			{
 				echo '<script type="text/javascript">
-				alert("Insumos guardados correctamente !!!");
-				self.location ="'.base_url().'insumos/"
+				self.location ="'.base_url().'insumos/insumosExistentes"
 				</script>';
 			}
 		}
@@ -97,7 +96,7 @@ class Insumos extends CI_Controller {
 			if ($bool)
 			{
 				echo '<script type="text/javascript">
-				alert("Insumo actualizado correctamente !!!");
+				
 				self.location ="'.base_url().'insumos/insumosExistentes"
 				</script>';
 			}
@@ -117,7 +116,6 @@ class Insumos extends CI_Controller {
 			if ($bool)
 			{
 				echo '<script type="text/javascript">
-				alert("Insumo eliminado correctamente !!!");
 				self.location ="'.base_url().'insumos/insumosExistentes"
 				</script>';
 			}
@@ -204,7 +202,8 @@ class Insumos extends CI_Controller {
 		        <table class='table table table-bordered'>
 		        <thead class='active' >
 		        <tr >
-			        <th>Nombre</th>
+		       		 
+			        <th>Nombre del insumo</th>
 			        <th>Cantidad</th>
 			        <th>Precio</th>
 			        <th>Monto</th>
@@ -213,17 +212,18 @@ class Insumos extends CI_Controller {
 		        </tr>
 		        </thead>
 		        <tbody>";
-	          $totalInsumos = 0;   
+	          $totalInsumos = 0; 
+	          $ime=1;  
 	         foreach ($datos->result() as $fila)
 	        {
-	            
 	            $nombre = $fila->Nombre_Insumo ;
 				$cantidad = $fila->Existencia_Insumo;
 				$precio = $fila->Precio_Insumo;
 				$medida = $fila->Medida_Insumo;
 				$tipo = $fila->Nombre_Tipo;
 				$totalInsumos = $totalInsumos + 1; 
-	            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $precio. "</td><td>".$precio*$cantidad."</td><td>" . $medida. "</td><td>" . $tipo. "</td></tr>";
+	            $html.="<tr><td>" . $nombre. "</td><td>" . $cantidad. "</td><td>" . $precio. "</td><td>".$precio*$cantidad."</td><td>" . $medida. "</td><td>" . $tipo. "</td></tr>";
+	             
 	        }
 	        $html .= "<tr>
 					<th colspan='5'>Total de insumos existentes </th>

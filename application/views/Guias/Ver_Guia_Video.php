@@ -1,17 +1,5 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 95%;
-        font-weight: bold;
-     }
-</style>
+
 <div><br>   
 <div class="card TituloUser">   
  <h3 class="responsive" style="color:white; font-weight:bold;">Guias Multimedia</h3>  

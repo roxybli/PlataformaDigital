@@ -83,6 +83,7 @@ class Perfiles_Model extends CI_Model
 			$correo=$datos['correo'];
 
 			$sql="INSERT INTO tbl_Perfiles_Empresariales(FK_Usuaria, Nombre_Negocio, Direccion_Negocio, Descripcion_Negocio, FK_Rubro, Foto_Perfil, Foto1, Foto2, Foto3, Telefono, Correo) VALUES ('$id_usuaria', '$nombreN', '$direccionN', '$descripcionN', '$rubro', '$foto_perfil', '$foto1', '$foto2', '$foto3', '$telefono', '$correo')";
+
 			if($this->db->query($sql)){
 
 				return true;
@@ -123,6 +124,18 @@ class Perfiles_Model extends CI_Model
 				return false;
 			}
 		}
+
+	}
+
+	public function verFotoPerfil($id)
+	{
+	$sql="SELECT Foto_Perfil FROM tbl_perfiles_empresariales WHERE $id";
+	$result= $this->db->query($sql);
+		if ($result->num_rows() > 0)
+		 {
+			return $result->row();
+		 }
+		return null;
 
 	}
 	public function Ver_Perfil($id, $cantidad){

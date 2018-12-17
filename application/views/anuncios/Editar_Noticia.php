@@ -6,35 +6,8 @@
 <script type="text/javascript">
     tinymce.init({ selector:'textarea' });
 </script>
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-</style>
 <?php
-/*
-if(isset($_POST['btn'])){
-    //print_r($_FILES);
-    //obtener datos de la imagen
-    $nombre=$_FILES['imagenN']['name'];
-    $tempo= $_FILES['imagenN']['tmp_name'];
-    $dir="plantilla/images/imagenesA/";
-    //echo "NOmbre".$nombre."<br> url".$tempo;
-    move_uploaded_file($tempo, $dir.$nombre);
-    $imagenconvert= file_get_contents($dir.$nombre);
-    //echo "longitud del archivo".$imagenconvert;
 
-    //echo "<img src='data:image/jpg; base64>,".base64_encode($imagenconvert)."'";
-}
-*/
 foreach ($Noticia->result() as $Noti) {
     # code...
 }
@@ -256,6 +229,10 @@ $.fn.datepicker.dates['es'] = {
                 language:'es',
 
             });
-
-
+</script>
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker( "option", "dateFormat", 'dd/mm/yy');    // Le pasamos el formato de la fecha
+    });
 </script>

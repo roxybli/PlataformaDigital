@@ -80,20 +80,12 @@ class Controlie extends CI_Controller {
 		{ 
 			if ($datos['ingresosN'][$i]!="")
 			{
-				/*echo '<script type="text/javascript">
-				alert("Error: No ingresaste todos los datos !!!");
-				self.location ="'.base_url().'controlie/"
-				</script>';
-				break;*/
+				
 				$contadorIngresosN = $contadorIngresosN+1;
 			}
 			if ($datos['ingresosD'][$i]!="")
 			{
-				/*echo '<script type="text/javascript">
-				alert("Error: No ingresaste todos los datos !!!");
-				self.location ="'.base_url().'controlie/"
-				</script>';
-				break;*/
+				
 				$contadorIngresosD = $contadorIngresosD+1;
 			}
 		}
@@ -104,29 +96,17 @@ class Controlie extends CI_Controller {
 		{ 
 			if ($datos['egresosN'][$i]!="")
 			{
-				/*echo '<script type="text/javascript">
-				alert("Error: No ingresaste todos los datos !!!");
-				self.location ="'.base_url().'controlie/"
-				</script>';
-				break;*/
+				
 				$contadorEgresosN = $contadorEgresosN+1;
 			}
 
 			if ($datos['egresosD'][$i]!="")
 			{
-				/*echo '<script type="text/javascript">
-				alert("Error: No ingresaste todos los datos !!!");
-				self.location ="'.base_url().'controlie/"
-				</script>';
-				break;*/
+				
 				$contadorEgresosD = $contadorEgresosD+1;
 			}
 		}
-		/*var_dump($datos['egresosN']);
-		echo "<br>Ingreso N ".$contadorIngresosN."<br>";
-		echo "Ingreso D ".$contadorIngresosD."<br>";
-		echo "Egreso N ".$contadorEgresosN."<br>";
-		echo "Egreso D ".$contadorEgresosD;*/
+		
 
 		if (sizeof($datos['ingresosN'])== $contadorIngresosN && sizeof($datos['ingresosD'])== $contadorIngresosD
 			&& sizeof($datos['egresosN'])== $contadorEgresosN && sizeof($datos['egresosD'])== $contadorEgresosD)
@@ -150,7 +130,6 @@ class Controlie extends CI_Controller {
 					{
 						//$fecha = $datos['fechaIE'];
 						echo '<script type="text/javascript">
-						alert("Datos guardados correctamente !!!");
 						self.location ="'.base_url().'controlie/procesarIE"
 						</script>';
 
@@ -200,7 +179,6 @@ class Controlie extends CI_Controller {
 			{
 				$fecha = $datos['fechaEgresos'];
 				echo '<script type="text/javascript">
-				alert("Operación realizada exitosamente !!!");
 				self.location ="'.base_url().'controlie/validarEgresos?f='.$fecha.'"
 				</script>';
 

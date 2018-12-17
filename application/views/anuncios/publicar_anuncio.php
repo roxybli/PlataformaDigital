@@ -5,19 +5,6 @@
 <script type="text/javascript">
     tinymce.init({ selector:'textarea' });
 </script>
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-</style>
 <?php
 ?>
 <!-- Bread crumb -->
@@ -197,6 +184,8 @@ $.fn.datepicker.dates['es'] = {
                 months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
                 monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
                 };
+
+
     $('#fecha').datepicker({
                 format: 'd-m-y',
                 language:'es',
@@ -214,4 +203,10 @@ $.fn.datepicker.dates['es'] = {
             });
 
 
+</script>
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker( "option", "dateFormat", 'dd/mm/yy');    // Le pasamos el formato de la fecha
+    });
 </script>

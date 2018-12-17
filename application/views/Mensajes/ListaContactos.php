@@ -1,10 +1,4 @@
-<style type="text/css">
-    .imgRedonda {
-    width:90px;
-    height:90px;
-    border-radius:150px;
-}
-</style>
+
 <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
                     <h3 class="text-primary">Inicio</h3> </div>

@@ -1,17 +1,4 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 10px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-</style>
 <?php 
 foreach ($Guia->result() as $guia) {
 }
@@ -42,7 +29,7 @@ foreach ($Guia->result() as $guia) {
                                     <h6 class="card-subtitle" style="color: #000000">Usted puede descargar los datos en los siguientes formatos copiar, CSV, Excel, PDF & Print</h6>
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead >
-                                            <tr>
+                                            <tr >
                                                 <th> No</th>
                                                 <th>Titulo</th>
                                                 <th>Publicada por</th>
@@ -51,16 +38,6 @@ foreach ($Guia->result() as $guia) {
                                                 <th>Operacion</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Titulo</th>
-                                                <th>Publicada por</th>
-                                                <th>Fecha de publicacion</th>
-                                                <th>Tipo de publicacion</th>
-                                                <th>Operacion</th>
-                                            </tr>
-                                        </tfoot>
                                         <tbody>
                                         <?php
                                         $ime=1;

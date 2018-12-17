@@ -17,7 +17,7 @@ class Eventos extends CI_Controller {
         $bool=$this->Calendario_Model->Insertar($datos);
         if($bool){
             echo '<script type="text/javascript">
-                        alert("Evento agregado exitoxamente!!!");
+                        
                         self.location ="'.base_url().'Eventos/"
                         </script>';
         }
@@ -54,7 +54,7 @@ class Eventos extends CI_Controller {
         $bool=$this->Calendario_Model->EliminarEvento($id);
         if($bool){
            echo '<script type="text/javascript">
-                        alert("Evento eminado!!!");
+                        
                         self.location ="'.base_url().'Eventos/"
                         </script>';
 
@@ -83,7 +83,7 @@ class Eventos extends CI_Controller {
         $bool=$this->Calendario_Model->Editar($datos);
         if($bool){
             echo '<script type="text/javascript">
-                        alert("Evento editado!!!");
+                       
                         self.location ="'.base_url().'Eventos/"
                         </script>';
         }

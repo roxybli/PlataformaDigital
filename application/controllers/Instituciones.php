@@ -18,7 +18,7 @@ class Instituciones extends CI_Controller {
 		$bool=$this->Instituciones_Model->insertarInstituciones($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Institución insertada con éxito");
+				
 				self.location ="'.base_url().'/Instituciones"
 				</script>';
 		}
@@ -35,7 +35,7 @@ class Instituciones extends CI_Controller {
 		$bool=$this->Instituciones_Model->editarInstituciones($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Institución editada con exito");
+				
 				self.location ="'.base_url().'/Instituciones"
 				</script>';
 		}

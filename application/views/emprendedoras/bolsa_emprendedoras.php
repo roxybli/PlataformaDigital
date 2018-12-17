@@ -5,60 +5,7 @@
 <style type="text/css">
     #div12{
         margin: 40px;
-        /*background-color: #acc90d;*/
-
             }
-    #Titulo{
-        display: block;
-        background-color: #000d5a;
-        color: #fff;
-        text-align: center;
-        font-family: 'Ranga';
-    }
-    #filtros{
-
-    }
-    #formato{
-        color: #000;
-    }
-    #baner{
-        display: block;
-        margin: 0 auto;
-        width: 90%;
-        height: 400px;
-    }
-    .bordes{
-        display: block;
-        margin: 0 auto;
-        border-style: solid;
-        border-color: #f2efef;
-        border-width: 1px;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-    #perfil{
-        display: block;
-        margin: 0 auto;
-        color: #fff;
-        background-color: #000d5a;
-    }
-    .images{
-        height: 200px;
-        width: 100%;
-    }
-    #perfil:hover{
-        background-color: #0C853A;
-    }
-    .letra-menu{
-
-        color: white;
-        font-size: 18px;
-        margin: 10;
-    }
-    #ln:hover{
-        background-color: #000d5a;
-
-    }
 </style>
   <main class="mdl-layout__content">
     <div class="page-content">

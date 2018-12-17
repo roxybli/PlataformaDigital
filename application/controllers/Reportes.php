@@ -43,15 +43,13 @@ class Reportes extends CI_Controller {
 			table td{
 			    border:1px solid #000;
 			    padding:10px;
-			    text-align:center;  
+			    text-align:left;  
 			}
 
 
 			p {
 			    text-align:center;
 			}
-
-
 			img {
 			    text-align:left;
 			    float:left;

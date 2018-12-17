@@ -109,6 +109,8 @@ $(function(){
 	    }
 	});
 
+		// Funcion para la cantidad de insumos a insertar
+
 	$("#numeroInsumos").click(function(){
 		//alert($("#nombreProducto").val());
 		if ($("#cantidadInsumos").val() != "")

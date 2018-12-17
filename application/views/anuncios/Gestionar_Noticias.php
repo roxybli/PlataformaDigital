@@ -1,17 +1,4 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
-<style type="text/css">
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-</style>
 <?php 
 foreach ($Anuncios->result() as $noti) {
 }
@@ -51,16 +38,6 @@ foreach ($Anuncios->result() as $noti) {
                                                 <th>Operación</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Título</th>
-                                                <th>Institución</th>
-                                                <th>Publicada por</th>
-                                                <th>Fecha de publicación</th>
-                                                <th>Operación</th>
-                                            </tr>
-                                        </tfoot>
                                         <tbody>
                                         <?php
                                         $ime=1;
@@ -115,8 +92,6 @@ foreach ($Anuncios->result() as $noti) {
         },
         function(isConfirm){
             if (isConfirm) {
-
-                swal("Eliminada!!", "Registro eliminado con exito !!", "success");
                 document.location= '<?= base_url()?>Anuncios/eliminarAnuncio?id='+idU;
             }
             else {

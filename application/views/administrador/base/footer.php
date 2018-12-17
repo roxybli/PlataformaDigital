@@ -2,11 +2,11 @@
         </div>
         <!-- End Page wrapper  -->
     </div>
-      <!-- <div class="row justify-content-center">
-                          footer 
+     <div class="row justify-content-center">
+                         
                             <footer >Copyright <a href="#!">UES-FMO</a> &copy; <?php //echo date("Y");?></footer>
-                             End footer 
-                    </div>-->
+                             
+                    </div>
     <!-- End Wrapper -->
     <!-- All Jquery -->
      <script src="<?=base_url() ?>plantilla/componentes/js/jquery-1.11.0.min.js"></script>

@@ -8,77 +8,7 @@
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
   <link rel="stylesheet" href="<?= base_url()?>/plantilla/componentes/js/lightbox/css/lightbox.min.css">
-  <style>
-        header{text-align:center;}
-        article img{max-height:180px;}
-        article p,footer p{text-align:center;}
-  </style>
-<style type="text/css">
-    #div12{
-        margin: 12px;
-        /*background-color: #acc90d;*/
-            }
-    #Titulo{
-        display: block;
-        background-color: #000d5a;
-        color: #fff;
-        text-align: center;
-        font-family: 'Ranga';
-    }
-    #baner{
-        display: block;
-        margin: 0 auto;
-        width: 90%;
-        height: 400px;
-    }
-    .images{
-        height: 300px;
-        width: 100%;
-    }
-    #perfil:hover{
-        background-color: #0C853A;
-    }
-    .letra-menu{
 
-        color: white;
-        font-size: 18px;
-        margin: 10;
-    }
-    #ln:hover{
-        background-color:  #0C853A;
-
-    }
-    #info{
-        padding: 20px 50px;
-    }
-    #info, p{
-   
-    /*font-family: 'Acme', sans-serif;
-   font-family: 'Merienda', cursive;
-   font-family: 'Poiret One', cursive;
-   font-family: 'Gloria Hallelujah', cursive;
-   font-family: 'Lora', serif;*/
-   font-family: 'Rubik', sans-serif;
-    color: #000d5a;
-    }
-    #Negocio{
-        font-family: 'Rubik', sans-serif;
-        
-    }
-
-         .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 10px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-
-    </style>
     <?php
     foreach ($perfil->result() as $Perfil) {
         # code...
@@ -131,34 +61,29 @@
                     ?>
                     <!--<a onclick="MostrarW(<?php echo $Perfil->Telefono?>)"><i class="fa fa-whatsapp"></i></a>
                     -->
-                    <a data-toggle="modal" data-target="#ModalMensaje" title="Iniciar chat en la plataforma"><i class="fa fa-envelope" ></i></a>
+                    <a data-toggle="modal" data-target="#ModalMensaje" title="Enviar comentario a la emprendedora"><i class="fa fa-envelope" ></i></a>
                     <div  class="clrear">
                     </div>
                 </div>
         </div>
             <div id="info">
                 <div>
-                    <img src="<?=  base_url()?>plantilla/images/ubicacion.png">
-                   Dirección <a style="display:inline-block; padding: 10px;  "href=" <?php echo $Perfil->Direccion_Negocio?>" target="_blank"> Ver en google maps</a></div>
+                    <img src="<?=  base_url()?>plantilla/images/ubicacion.png">Dirección <a style="display:inline-block; padding: 10px; color: #FF0000 "href=" <?php echo $Perfil->Direccion_Negocio?>" target="_blank"> Ver en google maps</a></div>
                     <div>
-                    <img src="<?= base_url()?>plantilla/images/chica.png" style="display:inline-block;">
-                    <p style="display:inline-block; padding: 5px; ">Propietaria: <?php echo $Perfil->Nombre.' '.$Perfil->Apellido?></p>
+                    <img src="<?= base_url()?>plantilla/images/chica.png" style="display:inline-block;">Propietaria:<p style="display:inline-block; padding: 5px; "> <?php echo $Perfil->Nombre.' '.$Perfil->Apellido?></p>
                     </div>
                      <div>
-                    <img src="<?= base_url()?>plantilla/images/rubro.png" style="display:inline-block;">
-                    <p style="display:inline-block; ">Rubro: <?php echo $Perfil->Nombre_Rubro?></p>
+                    <img src="<?= base_url()?>plantilla/images/rubro.png" style="display:inline-block;"> Rubro:<p style="display:inline-block; "><?php echo $Perfil->Nombre_Rubro?></p>
                     </div>
                     <div>
-                    <img src="<?= base_url()?>plantilla/images/sede.png" style="display:inline-block;">
-                    <p style="display:inline-block; padding: 5px; ">Sede: <?php echo $Perfil->Nombre_Sede?></p>
+                    <img src="<?= base_url()?>plantilla/images/sede.png" style="display:inline-block;">Sede: <p style="display:inline-block; padding: 5px; "> <?php echo $Perfil->Nombre_Sede?></p>
                     </div>
                     <div>
-                    <img src="<?= base_url()?>plantilla/images/whatsapp.png" style="display:inline-block;">
-                    <p style="display:inline-block; padding: 5px; ">Teléfono:: <?php echo $Perfil->Telefono?></p>
+                    <img src="<?= base_url()?>plantilla/images/whatsapp.png" style="display:inline-block;">Teléfono:<p style="display:inline-block; padding: 5px; "><?php echo $Perfil->Telefono?></p>
                     </div>
                     <div>
-                    <img src="<?= base_url()?>plantilla/images/sobre.png" style="display:inline-block;"> Correo electrónico:
-                    <p style="display:inline-block;    "><?php echo $Perfil->Correo?></p>
+                    <img src="<?= base_url()?>plantilla/images/sobre.png" style="display:inline-block; text-align: left; margin: 4px">Correo_electrónico:
+                    <p style="display:inline-block;padding: 5px;">  <?php echo $Perfil->Correo?></p>
                     </div>
             </div>
     </div>
@@ -221,7 +146,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background-color:#000d5a; opacity:80;">
-        <h5 class="modal-title" id="exampleModalLongTitle" style="color:white;">Enviame un mensaje</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color:white;">Enviame un Comentario</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -251,15 +176,13 @@
                          <div class="col-md-12">
                         <div class="form-group">
                             <div class="input-group"> 
-                                
-                                <textarea type="text" class="form-control"  id="Contenido_Mensaje" name="Contenido_Mensaje" placeholder="Contenido" onkeypress="this.value=NumText(this.value)" required >
-                                    
+                                <textarea type="text" class="form-control" id="Contenido_Mensaje" name="Contenido_Mensaje" placeholder="Contenido" o required >
                                 </textarea>
                             </div>
                         </div>
                         </div>
-                        <div class="col-md-12">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Emprendedoras/'">Cancelar</button>
+                        <div class="col-md-12" align="right">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="location.href='<?=base_url()?>Emprendedoras/'">Regresar</button>
                             <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" style="margin:5;" aria-hidden="true"></i> Enviar</button>
                         </div>
                 </div>

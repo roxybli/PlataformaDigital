@@ -1,48 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oswald|Sawarabi+Mincho" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans+Condensed:300|Oswald|Sawarabi+Mincho" rel="stylesheet">
-<style type="text/css">
-    .degradado {
-        background: -webkit-linear-gradient(#33691e, #dcedc8); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(#33691e, #dcedc8); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(#33691e, #dcedc8); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#33691e, #dcedc8); /* Standard syntax */
-        color: white;
-}
-.degradado_lineal {
-background: -webkit-linear-gradient(left, #004d40 , #80cbc4); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(right, #004d40 , #80cbc4); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(right, #004d40 , #80cbc4); /* For Firefox 3.6 to 15 */
-background: linear-gradient(to right, #004d40 , #80cbc4); /* Standard syntax */
-text-align: center;
-color: #fff;
-padding: 25px;
-}
-.contenido{
-    text-align: justify;
-    color: #000;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Sawarabi Mincho', sans-serif;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-
-}
-.encabezado{
-    display: block; 
-    margin: 0 auto;
-    color: white;
-    font-family: 'Oswald', sans-serif;
-}
-.DivDescarga a:hover{
-    background-color: #000;
-    width: 300px;
-    height: 100px;
-    text-align: center;
-}
-p {
-    color: #000000;
-}
-</style>
 <div class="container-fluid">
     <?php
         foreach ($Guia->result() as $GuiaU) {

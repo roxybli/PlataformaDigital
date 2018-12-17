@@ -1,29 +1,5 @@
  <script src="<?=base_url() ?>plantilla/mtl/material.min.js"></script>
  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
- <style type="text/css">
-     .TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #8e24aa;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 100%;
-        font-weight: bold;
-     }
-     .etiqueta{
-        color: black;
-     }
-     .caja{
-        border-color: #ffe033;
-        background-color:#f7d4d0;
-     }
-     .seleccionada{
-        background-color:#d0d6f7;
-     }
- </style>
  <!-- Bread crumb -->
 <?php
 
@@ -79,7 +55,7 @@ foreach ($info->result() as $Info) {
                                                           </div>
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar el nombre de la usuaria</label>
+                                                                <label class="etiquetaa">Editar el nombre de la usuaria</label>
                                                                     <div class="input-group">
                                                                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?= $Info->Nombre?>" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -88,7 +64,7 @@ foreach ($info->result() as $Info) {
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar el tipo de usuaria</label>
+                                                                <label class="etiquetaa">Editar el tipo de usuaria</label>
                                                                     <div class="input-group">
                                                                         <select class="form-control" id="tipo" name="tipo" required>
                                                                         <option class="seleccionada" value="<?= $Info->fk_Tipo_Usuaria?>"><?= $Info->Tipo?></option>
@@ -109,7 +85,7 @@ foreach ($info->result() as $Info) {
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar el apellido de la usuaria</label>
+                                                                <label class="etiquetaa">Editar el apellido de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" value="<?= $Info->Apellido?>" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -118,7 +94,7 @@ foreach ($info->result() as $Info) {
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar Nombre de Usuaria para iniciar en la Plataforma</label>
+                                                                <label class="etiquetaa">Editar Nombre de Usuaria para iniciar en la Plataforma</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="nomuser" name="nomuser" placeholder="Nombre de usuario" value="<?= $Info->Nom_User?>" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -130,7 +106,7 @@ foreach ($info->result() as $Info) {
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar la contraseña para la usuaria</label>
+                                                                <label class="etiquetaa">Editar la contraseña para la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" value="<?= $Info->Pass?>" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -139,7 +115,7 @@ foreach ($info->result() as $Info) {
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar la direccion de la usuaria</label>
+                                                                <label class="etiquetaa">Editar la direccion de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección" value="<?= $Info->Direccion?>" onkeyup="this.value=NumText(this.value)" required>
                                                                     </div>
@@ -151,7 +127,7 @@ foreach ($info->result() as $Info) {
                                                         <div class="row ">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar el número de teléfono de la usuaria</label>
+                                                                <label class="etiquetaa">Editar el número de teléfono de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" value="<?= $Info->Telefono?>"  onkeypress="return numeros(event, 'num')" required>
                                                                     </div>
@@ -160,7 +136,7 @@ foreach ($info->result() as $Info) {
                                                             <!--/span-->
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                <label class="etiqueta">Editar el número de DUI de la usuaria</label>
+                                                                <label class="etiquetaa">Editar el número de DUI de la usuaria</label>
                                                                     <div class="input-group">
                                                                         <input type="text" class="form-control" id="dui"  name="dui" placeholder="# DUI" value="<?= $Info->Dui?>"  onkeypress="return numeros(event, 'num')" required>
                                                                     </div>

@@ -1,70 +1,4 @@
  <script src="<?=base_url() ?>plantilla/componentes/js/CrearPerfil.js"></script>
- <style type="text/css">
-.TituloUser{
-        display: block;
-        margin: 0 auto;
-        background-color: #512da8;
-        padding: 20px;
-        text-align: center;
-        color: white;
-        border-radius: 98;
-        width: 60%;
-        font-weight: bold;
-     }
-     .ImageInicio{
-        margin: 0 auto;
-     }
-     .encabezado{
-        text-align: center;
-        margin: 10px;
-        display: block;
-        color: white;
-        font-weight: bold;
-     }
-    .etiqueta{
-        color: white;
-        font-weight: bold;
-     }
-     .btnCenter{
-      text-align: center;
-     }
-     #siguiente{
-      
-        background-color:#4CAF50;
-        color: #FFFFFF;
-     }
-    #anterior{ 
-        background-color:#FF5252;
-        color: #FFFFFF;
-     }
-     .subirImg{
-      background-color: #FF4081;
-      margin: 0 auto;
-      color: white;
-      font-weight: bold;
-      padding: 20px;
-     }
-     .subirImg:hover{
-      background-color: #FF5252;
-      color: white;
-     }
-     .ImgPerfil{
-      margin: 0 auto;
-      padding: 10px;
-     }
-     .indicaciones{
-      display: block;
-      color: white;
-      text-align: justify-all;
-     }
-     .subirImgG{
-      background-color: #536DFE;
-      margin: 0 auto;
-      color: white;
-      font-weight: bold;
-      padding: 20px;
-     }
- </style>
  <!-- Bread crumb -->
  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
             <div class="row page-titles">
@@ -98,7 +32,7 @@
 					                                <form class="FormPerfil" enctype="multipart/form-data" action="<?=base_url()?>Perfiles/registroPerfil" method="post" id="FormPerfil">  
                                                     <!--INICIO DEL DIV1DATOS--> 
                                                     <div id="DivDatos" class="card" style="background-color:#0097a7; display:none">
-                                                    <h3 class="encabezado" >Registro de datos del negocio</h3>
+                                                    <h3 class="encabezados" >Registro de datos del negocio</h3>
                                                      <div class="row">
                                                           <!--/span-->
                                                             <div class="col-md-6">
@@ -186,7 +120,7 @@
                                                     <!--FINAL DEL DIV1 -->   
 													<!--INICIO DEL DIV DESCRIPCION LARGA Y SERVICIOS PRESTADOS-->               
                                                        <div id="DivDescripcion" class="card row" style="background-color:#00BCD4; display:none;">
-                                                             <h3 class="encabezado">Registro de datos del negocio</h3>
+                                                             <h3 class="encabezados">Registro de datos del negocio</h3>
                                                              <div class="row">
                                                                     <!--/span-->
                                                             <div class="col-md-6">
@@ -300,7 +234,7 @@
                                                             <!--FIN DEL DIV DESCRIPCION LARGA Y SERVICIOS PRESTADOS-->													
                                                     <!--INICIO DEL DIV2IMAGEN DE PERFIL -->               
                                                        <div id="Div2Imagenes" class="card row" style="background-color:#00BCD4; display:none;">
-                                                             <h3 class="encabezado">Seleccione el Logo de su negocio</h3>
+                                                             <h3 class="encabezados">Seleccione el Logo de su negocio</h3>
                                                              <div class="row">
                                                                     <input hidden class="btn btn-success" type="file" name="imagenPerfil" id="imagenPerfil">
                                                                     <a onclick="SubirImgPerfil()" style="color:white" class="btn subirImg"><i class="fa fa-cloud-upload"></i> Seleccionar imagen</a>
@@ -320,7 +254,7 @@
 
                                                             <!--FIN DEL DIV PARA LA IMAGENES-->
                                                          <div id="DivImagesGaleria" class="card" style="display:none; background-color:#00BCD4;">
-                                                              <h3 class="encabezado">Agregue imagenes para mostrar en su perfil</h3>
+                                                              <h3 class="encabezados">Agregue imagenes para mostrar en su perfil</h3>
                                                               <p class="indicaciones"><b>Indicaciones:</b> Por politicas de la organizacion solo se permiten tres imagenes por lo que ya se muestran los espacios establecidos para cada una,  estas las puede cambiar cuando desee despues de creado su perfil</p>
                                                               <div class="row">
                                                                   <div class="col-md-4 btnCenter">

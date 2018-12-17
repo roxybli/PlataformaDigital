@@ -71,11 +71,9 @@ public function __construct()
 	public function validar()
 	{
 		$this->load->model('Usuarias_Model');
-		/*$datos = $this->input->post();
-		var_dump($datos);'*/
 		$nombre= $_POST['nomuser'];
 		$password= $_POST['pass'];
-		//$valordesncriptado=$this->encrypt->decode($valorencriptado);
+		
 		$fila = $this->Usuarias_Model->validarUsuaria($nombre);
 		if ($fila != null)
 		{
@@ -83,15 +81,27 @@ public function __construct()
 			$foto = $this->Usuarias_Model->obtenerFotoReporte($id);
 			if ($fila->Pass == $password)
 			{
+
 				$data = array(
 					'usuario'=> $nombre,
 					'id'=> $fila->pk_Id_Usuaria,
 					'login'=> TRUE,
 					);
+				if ($foto) {
 					$data2 = array(
 					'fotoUsuaria'=> $foto->Foto_Perfil,
 					'nombreNegocio'=> $foto->Nombre_Negocio,
-					);
+					); 
+				}
+				else
+				 {
+				 	$data2 = array(
+					'fotoUsuaria'=> base_url()."plantilla/images/card/user.png",
+					'nombreNegocio'=> "Sin negocio registrado",
+					); 
+				}
+				
+					
 
 				$data3 = array(
 					'nombre'=> $fila->Nombre." ".$fila->Apellido,

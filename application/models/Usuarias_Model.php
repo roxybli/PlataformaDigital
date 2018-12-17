@@ -182,7 +182,7 @@ class Usuarias_model extends CI_Model{
 	{
 		//$sql="SELECT * FROM tbl_usuario WHERE nomusuario='".$nombre."' LIMIT 1";
 		$sql  = "SELECT * FROM tbl_Perfiles_Empresariales WHERE FK_Usuaria='$id'";
- 		$result= $this->db->query($sql);
+		$result= $this->db->query($sql);
 		if ($result->num_rows() > 0)
 		 {
 			return $result->row();

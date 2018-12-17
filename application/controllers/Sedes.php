@@ -18,7 +18,7 @@ class Sedes extends CI_Controller {
 		$bool=$this->Sedes_Model->insertarSedes($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Sede insertada con éxito");
+				
 				self.location ="'.base_url().'/Sedes"
 				</script>';
 		}
@@ -35,7 +35,7 @@ class Sedes extends CI_Controller {
 		$bool=$this->Sedes_Model->editarSedes($datos);
 		if($bool){
 			echo '<script type="text/javascript">
-				alert("Sede editada con exito");
+				
 				self.location ="'.base_url().'/Sedes"
 				</script>';
 		}
