@@ -44,14 +44,24 @@ var form_validation = function() {
                         email: !0
                     },
                     "val-password": {
-                        required: !0,
+                        
                         minlength: 5
                     },
                     "val-confirm-password": {
-                        required: !0,
+                        
                         minlength: 5,
                         equalTo: "#val-password"
                     },
+                      "pass4": {
+                        
+                        minlength: 5
+                    },
+                    "pass1": {
+                       
+                        minlength: 5,
+                        equalTo: "#pass4"
+                    },
+                       
                     "val-select2": {
                         required: !0
                     },
@@ -118,13 +128,20 @@ var form_validation = function() {
                     },
                     "val-email": "Por favor, introduce una dirección de correo electrónico válida",
                     "val-password": {
-                        required: "Por favor ingrese una contraseña",
+                        
                         minlength: "Su contraseña debe tener al menos 5 caracteres"
                     },
                     "val-confirm-password": {
-                        required: "Por favor ingrese una contraseña",
                         minlength: "Su contraseña debe tener al menos 5 caracteres",
                         equalTo: "Por favor ingrese la misma contraseña"
+                    },
+                      "pass4": {
+                       
+                        minlength: "Su contraseña debe tener al menos 5 caracteres"
+                    },
+                    "pass1": { 
+                        minlength: "Su contraseña debe tener al menos 5 caracteres",
+                        equalTo: "Por favor ingrese la contraseña actual"
                     },
                     "val-select2": "¡Por favor seleccione un valor!",
                     "val-select2-multiple": "Por favor seleccione al menos 2 valores!",

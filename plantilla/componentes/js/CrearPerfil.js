@@ -93,8 +93,8 @@ $(document).ready(function(){
                 rules: {
                     nombreN: "required",
                     rubro: "required",
-					desN: "required",
-					servicio1: "required",
+					          desN: "required",
+				          	servicio1: "required",
                     descripcionN: "required",
                     telefono: "required",
                     correo: "required",

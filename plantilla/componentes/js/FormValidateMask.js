@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
 	$('#telefono').mask("503-9999-9999");
 	$('#dui').mask("99999999-9");
 
@@ -41,4 +42,41 @@ $(document).ready(function(){
 		
 				}
 			});
+$("#f1").validate({
+           rules: {
+               pass1: { 
+                 required: true,
+                    minlength: 6,
+                    maxlength: 10
+               } , 
+
+                   pass: { 
+                     minlength: 6,
+                     maxlength: 10
+               }
+               , 
+                   pass3: { 
+                    equalTo: "#pass",
+                     minlength: 6,
+                     maxlength: 10
+               }
+           },
+     messages:{
+         pass1: { 
+                 required:"Password Requerido",
+                 minlength: "Minimo 6 caracteres",
+                 maxlength: "Maximo 10 caracteres"
+               },
+       pass2: { 
+         minlength: "Minimo 6 caracteres",
+         maxlength: "Maximo 10 caracteres"
+       }.
+        pass: { 
+                 required:"Password Requerido",
+                 equalTo: "El password debe ser igual al anterior",
+                 minlength: "Minimo 6 caracteres",
+                 maxlength: "Maximo 10 caracteres"
+               },
+     }
 });
+}

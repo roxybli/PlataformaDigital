@@ -7103,6 +7103,9 @@ height: 100px
       color: #000;
       font-size: large;
      }
+     .etiquetass{
+      color: #000;
+     }
     .color {
       background-color: #808e95;
      }
@@ -7222,3 +7225,4 @@ height: 100px
      #Ingresos, #Egresos, #procesarIE{
         display: none;
     }
+     

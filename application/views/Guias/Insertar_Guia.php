@@ -318,3 +318,9 @@ function ValidarImagen(obj){
 }
 
 </script>
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker( "option", "dateFormat", 'dd/mm/yy');    // Le pasamos el formato de la fecha
+    });
+</script>

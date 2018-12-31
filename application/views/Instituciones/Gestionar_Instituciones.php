@@ -16,9 +16,6 @@
     <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
-
-
-
 <!-- Modal insert -->
 <div class="modal fade" id="ModalInsert" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -45,7 +42,6 @@
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
                 </div>
-
             </form>
         </div>
       </div>
@@ -79,7 +75,6 @@
                         <button type="submit" class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Editar</button>
                     </div>
                 </div>
-
             </form>
       </div>
       <div class="modal-footer">
@@ -88,8 +83,6 @@
     </div>
   </div>
 </div>
-
-
                             <div class="card TituloUser">
                                     <h3 class="responsive" style="color:white; font-weight:bold;">Gestión de Instituciones</h3>  
                                 </div>

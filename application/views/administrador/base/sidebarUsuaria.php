@@ -34,7 +34,7 @@
                                 <li><a href="<?=base_url() ?>Guias/Cargar_Guias?v=2">videos</a></li>
                             </ul>
                         </li> 
-                        <li> <a class="has-arrow-inicio " href="<?=base_url() ?>Emprendedoras/" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Reportes</span></a>
+                        <li> <a class="has-arrow-inicio "  href="<?=base_url()?>ReportesEU" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Reportes</span></a>
                         </li> 
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-window-restore"></i><span class="hide-menu">Aplicaciones Empresariales</span></a>
                             <ul aria-expanded="false" class="collapse">

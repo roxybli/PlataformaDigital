@@ -1,12 +1,3 @@
-     
-        </div>
-        <!-- End Page wrapper  -->
-    </div>
-     <div class="row justify-content-center">
-                         
-                            <footer >Copyright <a href="#!">UES-FMO</a> &copy; <?php //echo date("Y");?></footer>
-                             
-                    </div>
     <!-- End Wrapper -->
     <!-- All Jquery -->
      <script src="<?=base_url() ?>plantilla/componentes/js/jquery-1.11.0.min.js"></script>
@@ -38,9 +29,7 @@
 
     <script src="<?=base_url() ?>plantilla/componentes/js/jquery.validate.js"></script>
     <script src="<?=base_url() ?>plantilla/componentes/js/jquery.maskedinput.js"></script>
-
-    <script src="<?=base_url() ?>plantilla/componentes/js/FormValidateMask.js"></script>
-
+    <script src="<?=base_url() ?>plantilla/componentes/js/jquery.validate.js"></script>
     <!--FIN DE LOS ARCHIVOS PARA VALIDAR-->
     <!-- scripit DataTab-->
     <script src="<?=base_url() ?>plantilla/componentes/js/lib/datatables/datatables.min.js"></script>
@@ -83,7 +72,10 @@
                 window.location.href = 'home.php';
                 }
         </script>
-
+     
+                         
+                            <footer style="padding: 5px; text-align: center;">Copyright <a href="#!">UES-FMO</a> &copy; <?php //echo date("Y");?></footer>
+                            
 </body>
 
 </html>

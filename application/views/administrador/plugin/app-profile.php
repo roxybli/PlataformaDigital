@@ -1,4 +1,4 @@
-
+<script src="<?=base_url() ?>plantilla/componentes/js/FormValidateMask.js"></script>
 <?php 
 foreach ($info as $fila) {
 }
@@ -78,11 +78,11 @@ foreach ($user->result() as $fila2) {
                             </div>
                         </div>
                     </div>
-                     <div class="row" id="MenuCard">
+                     <div class="row" id="MenuCard" style="margin: 20px">
                     <div class="col-md-6">
                             <div class="CardItem card" style="background-color:#8e24aa; color:white; height:100px;">
                                 <a href="<?=base_url() ?>Contactos/">
-                                <div class="textIcon">
+                                <div class="textIcon" style="color: white">
                                     <img class="iconImage"  src="<?= base_url()?>plantilla/images/usuario.png">
                                     Chat
                                 </div>
@@ -92,7 +92,7 @@ foreach ($user->result() as $fila2) {
                     <div class="col-md-6">
                             <div class="CardItem card" style="background-color:#00897b; color:white; height:100px;">
                                 <a href="<?=base_url() ?>Emprendedoras/">
-                                <div class="textIcon">
+                                <div class="textIcon" style="color: white">
                                     <img class="iconImage"  src="<?= base_url()?>plantilla/images/carro.png">
                                     Bolsa de emprendedoras
                                 </div>
@@ -104,7 +104,7 @@ foreach ($user->result() as $fila2) {
                         
                             <div  class="CardItem card" style="background-color:#512da8; color:white; height:100px;">
                                     <a href="<?=base_url() ?>inventario/productos_disponibles">
-                                    <div class="textIcon">
+                                    <div class="textIcon" style="color: white">
                                         <img class="iconImage"  src="<?= base_url()?>plantilla/images/navegador.png">
                                         Productos en Inventario
                                     </div>
@@ -117,7 +117,7 @@ foreach ($user->result() as $fila2) {
                      <div class="col-md-6">
                             <div class="CardItem card" style="background-color:#d81b60; color:white; height:100px;">
                                 <a href="<?=base_url() ?>controlie/balances">
-                                <div class="textIcon">
+                                <div class="textIcon" style="color: white">
                                     <img class="iconImage"  src="<?= base_url()?>plantilla/images/navegador.png">
                                     Balances de ingresos y egresos
                                 </div>
@@ -128,10 +128,10 @@ foreach ($user->result() as $fila2) {
                 </div>
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-60">
-                        <div class="card">
+                    <div class="col-lg-20">
+                        <div class="card" style="margin-left: 40px">
                             <div class="card-body">
-                                <div class="card-two">
+                                <div class="card-two" style="width: auto;">
                                     <header>
                                         <div class="avatar">
                                             <img style="height: 150px; width: 150px;" src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto_Perfil;?>" alt="Imagen de perfil" />
@@ -139,27 +139,27 @@ foreach ($user->result() as $fila2) {
                                     </header>
                                   <br><br><br>  <h3 style="color: #000"><?php echo "Encargada del negocio: <br>".$fila->Nombre." ".$fila->Apellido?></h3>
                                     <div class="desc" style="color: #000">
-                                        <h4 style="color: #000">Sede</h4><?php echo $fila->Nombre_Sede;?>
-                                    </div>
-                                  
+                                        <h3 style="color: #000">Sede</h3><?php echo $fila->Nombre_Sede;?>
+                                    </div>  
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
                     <!-- Column -->
                     <div class="col-lg-12">
-                        <div class="card">
+                        <div class="card" style="margin-left: 40px">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs profile-tab" role="tablist">
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Mi negocio</a> </li>
                                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Información</a> </li>
-                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Editar Información</a> </li>
+                                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Editar Información </a> </li>
+                               <!-- <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settingss" role="tab">Editar Información del Negocio</a> </li>-->
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <div class="card-body">
-                                        <div class="profiletimeline">
+                                        <div class="profiletimeline" >
                                             <div class="sl-item">
                                                 <div class="sl-left"> <img src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto_Perfil;?>" alt="Imagen de perfil" class="img-circle" /> </div>
                                                 <div class="sl-right">
@@ -168,19 +168,19 @@ foreach ($user->result() as $fila2) {
                                                         <div class="row">
                                                             <div class="col-lg-3 col-md-6 m-b-20 imgs"><img style="height:150px;" src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto1;?>" class="img-responsive radius" />
                                                             <div style="padding:10px;">
-                                                            <a data-toggle="modal" data-target="#ModalMensaje"  onclick="editI(1)" class="btn btn-success">Editar imagen</a>   
+                                                            <a style="color:white;" data-toggle="modal" data-target="#ModalMensaje"  onclick="editI(1)" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Editar imagen</a>   
                                                             </div>
 
                                                             </div>
                                                             <div class="col-lg-3 col-md-6 m-b-20"><img style="height:150px;" src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto2;?>" class="img-responsive radius" />
                                                              <div style="padding:10px;">
-                                                            <a data-toggle="modal" data-target="#ModalMensaje" onclick="editI(2)" class="btn btn-success">Editar imagen</a>   
+                                                            <a style="color:white;" data-toggle="modal" data-target="#ModalMensaje" onclick="editI(2)" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Editar imagen</a>   
                                                             </div>
                                                             
                                                             </div>
                                                             <div class="col-lg-3 col-md-6 m-b-20"><img style="height:150px;" src="<?=base_url() ?>plantilla/img_perfil/<?php echo $fila->Foto3;?>" class="img-responsive radius" />
                                                              <div style="padding:10px;">
-                                                            <a data-toggle="modal" data-target="#ModalMensaje" onclick="editI(3)" class="btn btn-success">Editar imagen</a>   
+                                                            <a style="color:white;" data-toggle="modal" data-target="#ModalMensaje" onclick="editI(3)" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Editar imagen</a>   
                                                             </div>
                                                             </div>
                                                         </div>
@@ -213,23 +213,22 @@ foreach ($user->result() as $fila2) {
                                             </div>
                                         </div>
                                         <hr>
-                                        <p class="m-t-30"><?php  echo $fila->Descripcion_Negocio;?></p>
-                                </div>
-                                </div>
+                                        <p class="m-t-30"><?php  echo $fila->Descripcion_Negocio;?></p></div>
+                                    </div>
                                 <div class="tab-pane" id="settings" role="tabpanel">
                                     <div class="row ">
                                     <div class="col-sm-12">
                                         <div class="card">
                                                 <div class="card-title">
-                                                    <h4>Editar información personal</h4>
+                                                    <h2 align="center">Editar información personal</h2>
                                                 </div>
                                                 <div class="form-validation">
                                                         <!-- Bread crumb -->
-                                                                    <form class="form-valide" action="<?=base_url()?>Perfiles/EditarUsuaria" method="post">                             
+                                                                    <form class="form-valide" name="f1" id="f1"action="<?=base_url()?>Perfiles/EditarUsuaria" method="post">
                                                                         <div class="row ">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Nombre </span>
+                                                                                <span class="etiquetass">Nombre </span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="val-name" name="nombre" placeholder="Nombre" value="<?php echo $fila2->Nombre;?>" onkeyup="this.value=NumText(this.value)">
                                                                                         <input type="text" hidden name="id_usuaria" value="<?php echo $fila2->pk_Id_Usuaria;?>">
@@ -238,7 +237,7 @@ foreach ($user->result() as $fila2) {
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Apellido </span>
+                                                                                <span class="etiquetass">Apellido </span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="val-lastname " name="apellido" placeholder="Apellido" value="<?php echo $fila2->Apellido;?>" onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
@@ -250,86 +249,92 @@ foreach ($user->result() as $fila2) {
                                                                         <div class="row ">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Nombre de usuario </span>
+                                                                                <span class="etiquetass">Nombre de usuario </span>
                                                                                     <div class="input-group">
-                                                                                        <input type="text" class="form-control" id="val-direccion " name="nomuser" placeholder="Nombre de usuario" value="<?php echo $fila2->Nom_User;?>" onkeyup="this.value=NumText(this.value)">
+                                                                                        <input type="text" class="form-control" id="val-direccion " name="nomuser" placeholder="Nombre de usuario" value="<?php echo $fila2->Nom_User;?>" disabled>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                             <!--/span-->
-                                                                       
+                                                                        
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span> Contraseña Actual</span>
+                                                                                <span class="etiquetass">Dirección </span>
                                                                                     <div class="input-group">
-                                                                                        <input type="password" onclick="cambiarPW()" class="form-control" id="val-pass1" name="pass1" placeholder="Contraseña" onkeyup="this.value=NumText(this.value)">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                             <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                <span>Contraseña Nueva </span>
-                                                                                    <div class="input-group">
-                                                                                        <input onclick="cambiarPW()"
-                                                                                        type="password" class="form-control" id="val-pass2 " name="pass2" placeholder="Contraseña"  onkeyup="this.value=NumText(this.value)">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                             <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                <span>Repita Contraseña Nueva </span>
-                                                                                    <div class="input-group">
-                                                                                        <input type="password" onclick="cambiarPW()" class="form-control" id="val-pass3 " name="pass" placeholder="Contraseña" onkeyup="this.value=NumText(this.value)">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!--/span <?php echo $fila2->Pass;?>"-->
-                                                                            </div>
-                                                                        <!--/row-->
-                                                                        <div class="row ">
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                <span>Dirección </span>
-                                                                                    <div class="input-group">
-                                                                                        <input type="text" class="form-control" id="val-phoneus " name="direccion" placeholder="Dirección" value="<?php echo $fila2->Direccion;?>" onkeyup="this.value=NumText(this.value)">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <!--/span-->
-                                                                       
-                                                                            <div class="col-md-6">
-                                                                                <div class="form-group">
-                                                                                <span>Teléfono </span>
-                                                                                    <div class="input-group">
-                                                                                        <input type="text" class="form-control" id="" name="telefono" placeholder="Telefono" value="<?php echo $fila2->Telefono;?>" onkeypress="return numeros(event, 'num')" >
+                                                                                        <input type="text" class="form-control" id="val-direccion " name="direccion" placeholder="Dirección" value="<?php echo $fila2->Direccion;?>" onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                             <!--/span-->
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span># DUI </span>
+                                                                                <span class="etiquetass">Teléfono </span>
+                                                                                    <div class="input-group">
+                                                                                        <input type="text" class="form-control" id="" name="val-phoneus" placeholder="Telefono" value="<?php echo $fila2->Telefono;?>" onkeypress="return numeros(event, 'num')" >
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--/span-->
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                <span class="etiquetass">Número de DUI </span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="val-username" name="dui" placeholder="# DUI" value="<?php echo $fila2->Dui;?>" disabled>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <!--/span-->
-                                                                        </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                <span class="etiquetass"> Contraseña Actual</span>
+                                                                                    <div class="input-group">
+                                                                                        <input type="password"  class="form-control" id="pass1" name="pass1" placeholder="Contraseña" onkeyup="this.value=NumText(this.value)" >
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                             <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                <span class="etiquetass">Contraseña Nueva </span>
+                                                                                    <div class="input-group">
+                                                                                        <input 
+                                                                                        type="password" class="form-control" id="val-password" name="pass" placeholder="Contraseña Nueva"  onkeyup="this.value=NumText(this.value)">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                             <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                <span class="etiquetass">Repita Contraseña Nueva </span>
+                                                                                    <div class="input-group">
+                                                                                        <input type="password"  class="form-control"  placeholder="Contraseña Nueva " id="val-confirm-password" name="val-confirm-password" onkeyup="this.value=NumText(this.value)"  >
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>   
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group">
+                                                                                
+                                                                                    <div class="input-group">
+                                                                                        <input type="hidden"  class="form-control"  placeholder="Contraseña Nueva " id="pass4" name="pass4"  value="<?php echo $fila2->Pass;?>">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>                 
                                                                         <!--/row-->
-                                                                        <div class="col-md-12">
-                                                                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-floppy-o"></i> Editar</button>  
+                                                                      <div class="col-md-12"align="right">
+                                                                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-floppy-o" ></i> Editar</button>  
                                                                         </div>
+                                                                            </div></div>
+                                                                            <!--/span-->
+                                                                        <!--/row-->
                                                                     </form>
-                                                                    </div>
+              
+                                                <div class="card-title">
+                                                    <h2 align="center">Editar Información del negocio</h2>
+                                                </div>
                                                                     <div class="form-validation">
                                                         <!-- Bread crumb -->
-                                                         <h4>Editar Información del negocio</h4>
-                                                                    <form class="form-valide" action="<?=base_url()?>Perfiles/EditarPerfil" method="post">                             
+                                                                    <form class="form-valide" action="<?=base_url()?>Perfiles/EditarPerfil" method="post">                    
                                                                         <div class="row ">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Nombre del negocio </span>
+                                                                                <span class="etiquetass">Nombre del negocio </span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="val-name" name="nombre_n" placeholder="Nombre" value="<?php echo $fila->Nombre_Negocio;?>" onkeyup="this.value=NumText(this.value)">
                                                                                         <input type="text" hidden name="id_usuaria" value="<?php echo $fila->FK_Usuaria;?>">
@@ -338,9 +343,9 @@ foreach ($user->result() as $fila2) {
                                                                             </div>
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Dirección del Negocio </span>
+                                                                                <span class="etiquetass">Dirección del Negocio </span>
                                                                                     <div class="input-group">
-                                                                                        <input type="text" class="form-control" id="val-lastname " name="direcion_n" placeholder="Apellido" value="<?php echo $fila->Direccion_Negocio;?>"  onkeyup="this.value=NumText(this.value)">
+                                                                                        <input type="text" class="form-control" id="val-direccion " name="direcion_n" placeholder="Apellido" value="<?php echo $fila->Direccion_Negocio;?>"  onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -348,10 +353,9 @@ foreach ($user->result() as $fila2) {
                                                                             </div>
                                                                         <!--/row-->
                                                                         <div class="row ">
-
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Rubro</span>
+                                                                                <span class="etiquetass">Rubro</span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="val-direccion " name="nomuser" placeholder="Nombre de usuario" value="<?php echo $fila->Nombre_Rubro;?>" disabled>
                                                                                     </div>
@@ -360,9 +364,9 @@ foreach ($user->result() as $fila2) {
                                                                             <!--/span-->
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Descripción </span>
+                                                                                <span class="etiquetass">Descripción </span>
                                                                                     <div class="input-group">
-                                                                                        <textarea type="text" class="form-control" id="val-municipio " name="descripcion_n" placeholder="Descripción" value="<?php echo $fila->Descripcion_Negocio;?>" onkeypress="this.value=NumText(this.value)"></textarea>
+                                                                                        <input type="text" class="form-control" id="val-municipio " name="descripcion_n" placeholder="Descripción" value="<?php echo $fila->Descripcion_Negocio;?>" onkeypress="this.value=NumText(this.value)"></input>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -372,7 +376,7 @@ foreach ($user->result() as $fila2) {
                                                                         <div class="row ">
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Dirección </span>
+                                                                                <span class="etiquetass">Dirección </span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="val-phoneus " name="direccion_n" placeholder="Direccion" value="<?php echo $fila->Direccion_Negocio;?>"  onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
@@ -382,7 +386,7 @@ foreach ($user->result() as $fila2) {
                                                                        
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Teléfono </span>
+                                                                                <span class="etiquetass">Teléfono </span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="" name="telefono_n" placeholder="Telefono_n" value="<?php echo $fila->Telefono;?>" onkeypress="return numeros(event, 'num')" >
                                                                                     </div>
@@ -391,26 +395,24 @@ foreach ($user->result() as $fila2) {
                                                                             <!--/span-->
                                                                             <div class="col-md-6">
                                                                                 <div class="form-group">
-                                                                                <span>Correo </span>
+                                                                                <span class="etiquetass">Correo electrónico </span>
                                                                                     <div class="input-group">
                                                                                         <input type="text" class="form-control" id="val-username" name="Correo_n" placeholder="Correo" value="<?php echo $fila->Correo;?>" onkeyup="this.value=NumText(this.value)">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
+                                                                            
                                                                             <!--/span-->
-                                                                        </div>
+                                                                       
                                                                         <!--/row-->
-                                                                        <div class="col-md-12">
+                                                                        <div class="col-md-12" align="right">
                                                                         <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-floppy-o"></i> Editar</button>  
                                                                         </div>
-                                                                    </form>
-                                                                    </div>
-
                                                         <!-- End Bread crumb -->
                                                                         </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div> </form>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -423,7 +425,7 @@ foreach ($user->result() as $fila2) {
     <div class="modal-content">
       <div class="modal-header" >
         <h5 class="modal-title" id="exampleModalLongTitle" style="color:black;">Editar Imagen</h5>
-        <a onclick="Limpiar()"  class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
+        <a class="btn btn-secondary" onclick="Limpiar()" href="<?= base_url()?>Login/home" style="color:white" data-dismiss="modal">Regresar</a>
         </a>
       </div>
       <div class="modal-body">
@@ -437,11 +439,8 @@ foreach ($user->result() as $fila2) {
         </div>
        <form class="form-valide" enctype="multipart/form-data" action="<?= base_url()?>Perfiles/editarImagen?c=1" method="POST" id="mensaje" name="mensaje">
                 <input type="file" hidden name="imagen" id="imagen1" onchange="cambio(this)"> 
-            <div class="row btnCente1" id="DivBotones1" style="display:none;"> 
-                
-                    <a onclick="Limpiar()"  class="btn btn-secondary" data-dismiss="modal">Cancelar</a>
+            <div class="row btnCente1" id="DivBotones1" style="display:none;" align="right"> 
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
-                
             </div>
         </form> 
        </div>
@@ -452,10 +451,8 @@ foreach ($user->result() as $fila2) {
                 <input type="file" hidden name="imagen" id="imagen2" onchange="cambio2(this)">
 
             </div>
-            <div class="row btnCenter1" id="DivBotones2" style="display:none;"> 
-                
-                    <a onclick="Limpiar()" class="btn btn-secondary" data-dismiss="modal">Cancelar</a>   
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
+            <div class="row btnCenter1" id="DivBotones2" style="display:none;" align="right">  
+                    <button type="submit" style="color:white" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
                 
             </div>
         </form> 
@@ -466,8 +463,7 @@ foreach ($user->result() as $fila2) {
                 <a onclick="SubirImg(3)" style="color:white"  class="btn subirImgG"><i class="fa fa-cloud-upload"></i> Seleccionar imagen</a>
                 <input type="file" hidden name="imagen" id="imagen3" onchange="cambio3(this)">
             </div>
-            <div class="row btnCenter1" id="DivBotones3" style="display:none;"> 
-                    <a  class="btn btn-secondary" onclick="Limpiar()" data-dismiss="modal">Cancelar</a> 
+            <div class="row btnCenter1" id="DivBotones3" style="display:none;" align="right"> 
                     <button type="submit" class="btn btn-primary"><i class="fa fa-picture-o" style="margin:5;" aria-hidden="true"></i> Guardar</button>
                 
             </div>
@@ -483,24 +479,6 @@ foreach ($user->result() as $fila2) {
 </div>
 
 <script type="text/javascript">
-
-    function cambiarPW(){
-    var p1 = document.getElementById("val-pass3").value;
-    var p2 = document.getElementById("val-pass2").value;
-    var p3 = document.getElementById("val-pass3").value;
-        if (p1 != p2) 
-        {
-      alert("Las Contraseñas deben de coincidir");
-      return false;
-    } 
-    else 
-    {
-      p3=pass;
-      return true; 
-    }
-
-    }
-
     function editI(v){
         //alert('hola');
         if(v==1){
@@ -527,6 +505,7 @@ function Limpiar() {
     document.getElementById('form1').style.display = 'none';
     document.getElementById('form2').style.display = 'none';
     document.getElementById('form3').style.display = 'none';
+    document.getElementById('ModalMensaje').style.display='none';
     $('#imagen1').val("");
     $('#imagen2').val("");
     $('#imagen3').val("");
@@ -558,7 +537,7 @@ function cambio3(inu){
 function ValidarImagen(obj, v){
     var uploadFile = obj.files[0];
     if (!window.FileReader) {
-        alert('El navegador no soporta la lectura de archivos');
+       sweetAlert("Accion no permitida","El navegador no soporta la lectura de archivos", "error");
         return;
     }
 
@@ -570,7 +549,7 @@ function ValidarImagen(obj, v){
         img.onload = function () {
             if (this.width.toFixed(0) != 720 && this.height.toFixed(0) != 540) {
                 //alert('Las medidas deben ser: 200 * 200');
-                sweetAlert("Accion no permitida", "Tamaño de la imagen no permitida el tamaño requerido es de 720px x 540px", "error");
+                sweetAlert("Acción no permitida", "Tamaño de la imagen no permitida el tamaño requerido es de 720px x 540px", "error");
                 $('#imagen1').val("");
                 $('#imagen2').val("");
                 $('#imagen3').val("");
@@ -587,7 +566,7 @@ function ValidarImagen(obj, v){
                 document.getElementById('DivBotones').style.display='none';       
             }
             else {
-                alert('Imagen correcta:)');
+                sweetAlert("Imagen Correcta", "haz subido una Imagen", "success");
                 document.getElementById('DivImagen').innerHTML='<img class=" img-responsive radius" src="'+URL.createObjectURL(uploadFile)+'"  width="100" height="100" id="vista" alt="Imagen a publicar"/>';
                 document.getElementById('DivBotones1').style.display='block';
                 document.getElementById('DivBotones2').style.display='block';

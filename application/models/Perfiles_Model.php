@@ -53,13 +53,12 @@ class Perfiles_Model extends CI_Model
 			$nombre=$data['nombre'];
 			$apellido=$data['apellido'];
 			$nomuser=$data['nomuser'];
-			$pass=$data['pass'];
 			$direccion=$data['direccion'];
 			$telefono=$data['telefono'];
+			$pass=$data['pass'];
 			$sql="UPDATE tbl_Usuarias SET Nombre='$nombre', Apellido='$apellido', Nom_User='$nomuser', Pass='$pass', Direccion='$direccion', Telefono='$telefono' WHERE pk_Id_Usuaria= '$id'";
 			if($this->db->query($sql)){
 				return true;
-
 			}
 			else{
 				return false;
