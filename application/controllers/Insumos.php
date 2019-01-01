@@ -33,12 +33,10 @@ class Insumos extends CI_Controller {
 		$this->load->view('administrador/base/header');
 		$this->load->view('administrador/inventario/insumos/insumos_existentes', $data);
 		$this->load->view('administrador/base/footer2');
-
 	}
 
 	public function guardarInsumos()
 	{
-
 		$datos = $this->input->post();
 		for ($i=0; $i < sizeof($datos['nombreInsumos']); $i++)
 		{ 

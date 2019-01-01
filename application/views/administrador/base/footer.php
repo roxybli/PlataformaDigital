@@ -74,7 +74,7 @@
         </script>
      
                          
-                            <footer style="padding: 5px; text-align: center;">Copyright <a href="#!">UES-FMO</a> &copy; <?php //echo date("Y");?></footer>
+                           <!-- <footer style="padding: 5px; text-align: center;">Copyright <a href="#!">UES-FMO</a> &copy; <?php //echo date("Y");?></footer>-->
                             
 </body>
 

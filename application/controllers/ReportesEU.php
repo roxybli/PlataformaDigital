@@ -12,6 +12,13 @@ class ReportesEU extends CI_Controller {
 		$this->load->view('ReportesU/Crear_Reportes', $data);
 		$this->load->view('administrador/base/footer');
 	}
+
+	public function ReportesPDF()
+	{
+		$this->load->view('administrador/base/header');
+		$this->load->view('ReportesE/Crear_ReportesE');
+		$this->load->view('administrador/base/footer');
+	}
 	public function ReporteGeneral(){
 		$dato = $this->input->POST();
 		$this->load->model('Reportes_Model');

@@ -101,18 +101,14 @@ foreach ($user->result() as $fila2) {
                             </div>
                     </div>
                     <div class="col-md-6">
-                        
                             <div  class="CardItem card" style="background-color:#512da8; color:white; height:100px;">
                                     <a href="<?=base_url() ?>inventario/productos_disponibles">
                                     <div class="textIcon" style="color: white">
                                         <img class="iconImage"  src="<?= base_url()?>plantilla/images/navegador.png">
                                         Productos en Inventario
                                     </div>
-                                    </a>
-                                    
-                                </div>
-                        
-                            
+                                    </a> 
+                                </div>    
                     </div>
                      <div class="col-md-6">
                             <div class="CardItem card" style="background-color:#d81b60; color:white; height:100px;">
