@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class ReportesEU extends CI_Controller {
+class ReportesEU extends CI_Controller 
+{
 	public function index()
 	{
 		$this->load->model('Usuarias_Model');
@@ -19,185 +20,40 @@ class ReportesEU extends CI_Controller {
 		$this->load->view('ReportesE/Crear_ReportesE');
 		$this->load->view('administrador/base/footer');
 	}
-	public function ReporteGeneral(){
-		$dato = $this->input->POST();
-		$this->load->model('Reportes_Model');
-		$data=$this->Reportes_Model->ReporteGeneral($dato);
-		if (sizeof($data->result())!=0) 
-		{
-			$this->load->library('M_pdf');
-	        //$data = [];
-	        $hoy = date("d / M / Y");
-	         foreach ($data->result() as $datos)
-		        {}
-			$html="
-			 <style>
-			table{
-			    border:1px solid #000;
-			    border-collapse:collapse;
-			    text-align:center;
-			    width:100%;
-			    
-			}
-			table th{
-			    border:1px solid #000;
-			    padding:10px;
-			    text-align:center;
-			    background-color:#000d5a;
-			    color:#fff;
-			    
-			}
-			table td{
-			    border:1px solid #000;
-			    padding:10px;
-			    text-align:left;  
-			}
-
-
-			p {
-			    text-align:center;
-			}
-			img {
-			    text-align:left;
-			    float:left;
-			    width: 100px;
-			    height: 110px;
-
-			}
-
-			#cabecera{
-				width: 1000px;
-			}
-			#img{
-				float:left;
-				margin-left: 30px;
-				width: 125px;
-			}
-			.textoCentral{
-				color: #000;
-				font-weight: bold;
-				float:right;
-				padding-left: 20px;
-				margin: 0 auto;
-				text-align: center;
-				line-height:: 50;
-				width: 475px;
-
-				line-height: 26px;
-			}
-			#totalDG{
-				 background-color: rgba(0, 0, 255, 0.2);
-			}
-			 </style>
-			 <div class='container'>
-			    <div id='cabecera'>
-					<div id='img'>
-						<img src='".base_url()."plantilla/images/LogoCiudadMujer.png'>
-				    </div>
-				    <div class='textoCentral'>";
-				    if($dato['sede']==""){
-						$html.="
-							    CIUDAD MUJER, EL SALVADOR<br>
-							    TODAS LAS SEDES<br>
-								    REPORTE GENERAL DE USUARIAS
-								    <br>FECHA DE CREACION: ".$hoy."</p>";
-
-					}
-					else{
-						$html .="
-							    CIUDAD MUJER, EL SALVADOR<br>
-							    SEDE: ".strtoupper($datos->Nombre_Sede)."<br>
-								    REPORTE GENERAL DE USUARIAS
-								    <br>FECHA DE CREACION: ".$hoy."</p>";
-
-					}
-
-				    $html.="</div>
-			    			</div>";
-			$html .= "<br>
-			    <strong style='font-weight: bold;'></strong>
-			</div>
-			<br> 
-			<div class='table-responsive container'>
-			        <table class='table table table-bordered'>
-			        <thead class='active' >
-			        <tr>
-			        	<th>No.</th>
-	                    <th>Nombre del negocio</th>
-	                    <th>Rubro</th>
-	                    <th>Propietaria</th>
-	                    <th>DUI</th>
-	                    <th>Direccion</th>
-	                    <th>Telefono</th>
-	                    <th>Sede</th>
-	                </tr>
-			        </thead>
-			        <tbody>";
-                        $contador=0;
-                        $ime=1;
-                        foreach ($data->result() as $filaDatos)
-                        {
-
-                           $html.="<tr>
-                           	<td>".$ime."</td>
-                           	<td>".$filaDatos->Nombre_Negocio."</td>
-                           	<td>".$filaDatos->Nombre_Rubro."</td>
-                           	<td>".$filaDatos->Nombre." ".$filaDatos->Apellido."</td>
-                           	<td>".$filaDatos->Dui."</td>
-                           	<td>".$filaDatos->Direccion."</td>
-                           	<td>".$filaDatos->Telefono."</td>
-                           	<td>".$filaDatos->Nombre_Sede."</td>
-                           </tr>";
-                           $ime++;
-                            }
-
-                      $html .=  "</tbody>";
-
-				$html .= "</table></div>";
-
-		 
-
-		         $pdfFilePath = "resumen de inventario.pdf";
-		         //load mPDF library
-		        $this->load->library('M_pdf');
-		         $mpdf = new mPDF('c', 'A4'); 
-
-		         $estilos=file_get_contents(base_url()."plantilla/css/bootstrap.min.css");
-		         //echo $estilos;
-		         $mpdf->SetDisplayMode('fullpage');
-		         $mpdf->WriteHTML($estilos,1);
-		 
-		        $mpdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-		       // $mpdf->SetFont('','',40); 
-		         $mpdf->shrink_tables_to_fit = 1;
-		       
-		        $mpdf->WriteHTML($html);
-
-
-		        $mpdf->Output($pdfFilePath, "I");
-
-				}
-			else
-			{
-				echo '<script type="text/javascript">
-					alert("No hay datos que mostrar !!!");
-					window.close();
-					self.location ="'.base_url().'Reportes/"
-					</script>';
-			}
-
+	public function Estadisticas()
+	{
+		$this->load->view('administrador/base/header');
+		$this->load->view('ReportesE/EstadisticasE');
+		$this->load->view('administrador/base/footer2');
 	}
-	public function ReportePor(){
+
+	public function ReportesPDFVentas()
+	{
+		$this->load->model('Usuarias_Model');
+		$dato = $this->input->POST();
+		$resultado2 =$this->Usuarias_Model->CargarSede();
+		$data=array('con2'=>$resultado2);
+		$this->load->view('administrador/base/header');
+		$this->load->view('ReportesE/ReportesPDF', $data);
+		$this->load->view('administrador/base/footer');
+	}
+
+	public function VentasEsta()
+	{
+		$this->load->Model("Inventario_Model");
+		$result = $this->Inventario_Model->obtenerVentasEs();
+		echo json_encode($result);
+	}
+
+	public function ReportePeriodoVentas()
+	{
+		$id = $this->session->userdata('id');
 		$dato = $this->input->POST();
 		$this->load->model('Reportes_Model');
-		$data=$this->Reportes_Model->ReportePorAño($dato);
-		//echo json_encode($data->result());
+		$data=$this->Reportes_Model->ReportePorPeriodoVentas($id, $dato);
 		if (sizeof($data->result())!=0) 
 		{
 			$this->load->library('M_pdf');
-
-	        //$data = [];
-
 	        $hoy = date("d / M / Y");
 	         foreach ($data->result() as $datos)
 		        {}
@@ -268,23 +124,14 @@ class ReportesEU extends CI_Controller {
 					<div id='img'>
 						<img src='".base_url()."plantilla/images/LogoCiudadMujer.png'>
 				    </div>
-				   <div class='textoCentral'>";
-				    if($dato['sede']==""){
-						$html.="
-							    CIUDAD MUJER, EL SALVADOR<br>
-							    TODAS LAS SEDES<br>
-								    REPORTE GENERAL DE USUARIAS DEL AÑO ".$dato['Año_Ingreso']."
-								    <br>FECHA DE CREACION: ".$hoy."</p>";
-
-					}
-					else{
-						$html .="
-							    CIUDAD MUJER, EL SALVADOR<br>
-							    SEDE: ".strtoupper($datos->Nombre_Sede)."<br>
-								    REPORTE GENERAL DE USUARIAS DEL AÑO ".$dato['Año_Ingreso']."
-								    <br>FECHA DE CREACION: ".$hoy."</p>";
-					}
-
+				<div class='textoCentral'>REPORTE DE VENTAS <br> DESDE ".$dato['Fecha_Venta']." AL ".$dato['Fecha_Fin']."
+			       ".strtoupper($this->session->userdata('nombreNegocio'))." <br>     
+		    ";
+		foreach ($datos->result() as $user)
+	        {}
+		$html .="
+		    <strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS REALIZADAS DE:<br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
+								<br>FECHA DE CREACION: ".$hoy."</p>";
 				    $html.="</div>
 			    </div>";
 			$html .= "<br>
@@ -292,44 +139,41 @@ class ReportesEU extends CI_Controller {
 			</div>
 			<br> 
 			<div class='table-responsive container'>
-			        <table class='table table table-bordered'>
+			             <table class='table table table-bordered'>
 			        <thead class='active' >
-			        <tr>
-			        	<th>No.</th>
-	                    <th>Nombre del negocio</th>
-	                    <th>Rubro</th>
-	                    <th>Propietaria</th>
-	                    <th>DUI</th>
-	                    <th>Direccion</th>
-	                    <th>Telefono</th>
-	                   
-	                </tr>
+			        <tr >
+				        <th>Producto</th>
+				        <th>Cantidad</th>
+				        <th>Fecha</th>
+				        <th>Monto</th>
+			        </tr>
 			        </thead>
 			        <tbody>";
-                        $contador=0;
-                        $ime=1;
-                        foreach ($data->result() as $filaDatos)
-                        {
-                           $html.="<tr>
-                           	<td>".$ime."</td>
-                           	<td>".$filaDatos->Nombre_Negocio."</td>
-                           	<td>".$filaDatos->Nombre_Rubro."</td>
-                           	<td>".$filaDatos->Nombre." ".$filaDatos->Apellido."</td>
-                           	<td>".$filaDatos->Dui."</td>
-                           	<td>".$filaDatos->Direccion."</td>
-                           	<td>".$filaDatos->Telefono."</td>
-                           	
-                           </tr>";
-                           $ime++;
-                            }
-
-                      $html .=  "</tbody>";
-
+		          $totalVendido = 0;
+		          $dinero =0; 
+		         foreach ($datos->result() as $fila)
+		        {
+		            $nombre = $fila->Nombre_Producto ;
+					$cantidad = $fila->Cantidad_Venta;
+					//$precio = $fila->Fecha_Venta;
+					$fecha = new DateTime($fila->Fecha_Venta);
+					$fecha = $fecha->format("d-m-Y");
+					$monto = $fila->Precio_Producto;
+					$totalVendido = $totalVendido + $cantidad;
+					$dinero = $dinero + ($monto*$cantidad);
+		            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $fecha. "</td><td>$" . $monto*$cantidad. "</td></tr>";
+		        }
+		        $html .= "<tr>
+						<th colspan='3'>Total de productos vendidos </th>
+						<th>$totalVendido</th>
+						</tr>";
+				$html .= "<tr>
+						<th colspan='3'>Total de dinero </th>
+						<th>$$dinero</th>
+						</tr>";
 				$html .= "</table></div>";
-
 		 
-
-		         $pdfFilePath = "resumen de inventario.pdf";
+		         $pdfFilePath = "resumen de ventas.pdf";
 		         //load mPDF library
 		        $this->load->library('M_pdf');
 		         $mpdf = new mPDF('c', 'A4'); 
@@ -354,22 +198,20 @@ class ReportesEU extends CI_Controller {
 				echo '<script type="text/javascript">
 					alert("No hay datos que mostrar !!!");
 					window.close();
-					self.location ="'.base_url().'Reportes/"
+					self.location ="'.base_url().'reportes/trabajosRealizados"
 					</script>';
 			}
 	}
-	public function ReportePeriodo(){
+public function ReportePorVentas(){
+		$id = $this->session->userdata('id');
 		$dato = $this->input->POST();
 		$this->load->model('Reportes_Model');
-		$data=$this->Reportes_Model->ReportePorPeriodo($dato);
-		//echo json_encode($data->result());
+		$data=$this->Reportes_Model->ReportePorPeriodoAÑOSVentas($id, $dato);
 		if (sizeof($data->result())!=0) 
 		{
 			$this->load->library('M_pdf');
-
-	        //$data = [];
-
 	        $hoy = date("d / M / Y");
+	        $fecha = date("d-m-Y");
 	         foreach ($data->result() as $datos)
 		        {}
 			$html="
@@ -436,71 +278,57 @@ class ReportesEU extends CI_Controller {
 			 </style>
 			 <div class='container'>
 			    <div id='cabecera'>
-					<div id='img'>
-						<img src='".base_url()."plantilla/images/LogoCiudadMujer.png'>
-				    </div>
-				     <div class='textoCentral'>";
-				    if($dato['sede']==""){
-						$html.="
-							    CIUDAD MUJER, EL SALVADOR<br>
-							    TODAS LAS SEDES<br>
-								REPORTE GENERAL DE USUARIAS DEL AÑO ".$dato['Año_Ingreso']." AL ".$dato['Año_Fin']."
-								<br>FECHA DE CREACION: ".$hoy."</p>";
-
-					}
-					else{
-						$html .="
-							    CIUDAD MUJER, EL SALVADOR<br>
-							    SEDE: ".strtoupper($datos->Nombre_Sede)."<br>
-								REPORTE GENERAL DE USUARIAS DEL AÑO ".$dato['Año_Ingreso']." AL ".$dato['Año_Fin']."
-								<br>FECHA DE CREACION: ".$hoy."</p>";
-					}
-
-				    $html.="</div>
-			    </div>";
-			$html .= "<br>
-			    <strong style='font-weight: bold;'></strong>
-			</div>
-			<br> 
+			    <div id='img'>
+				<img src='".base_url()."plantilla/img_perfil/".$this->session->userdata('fotoUsuaria')."'>
+		    </div><p style='font-weight: bold; text-align:right;'> FECHA DE CREACIÓN:  $fecha</p>
+		    <div class='textoCentral'>REPORTE DE VENTAS ".strtoupper($this->session->userdata('nombreNegocio'))." <br> DESDE EL AÑO ".$dato['Fecha_Venta']." AL ".$dato['Fecha_Fin']."    
+		    ";
+		foreach ($data->result() as $user)
+	        {}
+		$html .="
+		  <br><strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS DE:<br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
+		</div></div>
+			   
 			<div class='table-responsive container'>
 			        <table class='table table table-bordered'>
 			        <thead class='active' >
-			        <tr>
-			        	<th>No.</th>
-	                    <th>Nombre del negocio</th>
-	                    <th>Rubro</th>
-	                    <th>Propietaria</th>
-	                    <th>DUI</th>
-	                    <th>Direccion</th>
-	                    <th>Telefono</th>
-	                </tr>
+			        <tr >
+				        <th>Producto</th>
+				        <th>Cantidad</th>
+				        <th>Fecha</th>
+				        <th>Monto</th>
+			        </tr>
 			        </thead>
 			        <tbody>";
-                        $contador=0;
-                        $ime=1;
-                        foreach ($data->result() as $filaDatos)
-                        {
-                           $html.="<tr>
-                          	<td>".$ime."</td>
-                           	<td>".$filaDatos->Nombre_Negocio."</td>
-                           	<td>".$filaDatos->Nombre_Rubro."</td>
-                           	<td>".$filaDatos->Nombre." ".$filaDatos->Apellido."</td>
-                           	<td>".$filaDatos->Dui."</td>
-                           	<td>".$filaDatos->Direccion."</td>
-                           	<td>".$filaDatos->Telefono."</td>
-                           	
-                           </tr>";
-                           $ime++;
-                            }
-
-                      $html .=  "</tbody>";
-
+		          $totalVendido = 0;
+		          $dinero =0; 
+		         foreach ($data->result() as $fila)
+		        { 
+		            $nombre = $fila->Nombre_Producto;
+					$cantidad = $fila->Cantidad_Venta;
+					//$precio = $fila->Fecha_Venta;
+					$fecha = new DateTime($fila->Fecha_Venta);
+					$fecha = $fecha->format("d-m-Y");
+					$monto = $fila->Precio_Producto;
+					$totalVendido = $totalVendido + $cantidad;
+					$dinero = $dinero + ($monto*$cantidad);
+		            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $fecha. "</td><td>$" . $monto*$cantidad. "</td></tr>";
+		        }
+		        $html .= "<tr>
+						<th colspan='3'>Total de productos vendidos </th>
+						<th>$totalVendido</th>
+						</tr>";
+				$html .= "<tr>
+						<th colspan='3'>Total de dinero </th>
+						<th>$$dinero</th>
+						</tr>";
 				$html .= "</table></div>";
-		         $pdfFilePath = "resumen de inventario.pdf";
+		 
+		 
+		         $pdfFilePath = "resumen de ventas.pdf";
 		         //load mPDF library
 		        $this->load->library('M_pdf');
 		         $mpdf = new mPDF('c', 'A4'); 
-
 		         $estilos=file_get_contents(base_url()."plantilla/css/bootstrap.min.css");
 		         //echo $estilos;
 		         $mpdf->SetDisplayMode('fullpage');
@@ -511,19 +339,16 @@ class ReportesEU extends CI_Controller {
 		         $mpdf->shrink_tables_to_fit = 1;
 		       
 		        $mpdf->WriteHTML($html);
-
-
 		        $mpdf->Output($pdfFilePath, "I");
-
 				}
 			else
 			{
 				echo '<script type="text/javascript">
 					alert("No hay datos que mostrar !!!");
 					window.close();
-					self.location ="'.base_url().'Reportes/"
+					self.location ="'.base_url().'reportes/trabajosRealizados"
 					</script>';
 			}
 	}
-}
-?>
+	
+	}

@@ -83,95 +83,6 @@ public function guardarIE($datos=null, $idUsuario)
 	}
 
 
-
-/*
-public function guardarIE($datos=null, $idUsuario)
-	{
-		$ingresosN= $datos['ingresosN'];
-		$ingresosD= $datos['ingresosD'];
-		$egresosN= $datos['egresosN'];
-		$egresosD= $datos['egresosD'];
-		$fecha= $datos['fechaIE'];
-		$estadoE= $datos['estadoE'];
-
-		$ingresoTotal = 0;
-		$contadorI = 0;
-		$contadorE = 0;
-
-		if (sizeof($ingresosN) >0)
-		{
-			for ($i=0; $i < sizeof($ingresosN); $i++)
-			{ 
-				$sql="INSERT INTO tbl_Ingresos VALUES('','$idUsuario', '$ingresosN[$i]', '$ingresosD[$i]', '$fecha')";
-				
-				if ($this->db->query($sql))
-				{
-					$contadorI++;	
-				}
-
-				$ingresoTotal = $ingresoTotal + $ingresosD[$i];
-			}
-		}
-
-		if (sizeof($egresosN) >0)
-		{
-			for ($i=0; $i < sizeof($egresosN); $i++)
-			{ 
-				$sql2="INSERT INTO tbl_Egresos VALUES('','$idUsuario', '$egresosN[$i]', '$egresosD[$i]', '$fecha')";
-			
-				if ($this->db->query($sql2))
-				{
-					$contadorE++;	
-				}
-								/*else
-				{
-					$sql2="UPDATE tbl_Egresos set Cantidad_Egreso='$egresosD[$i]', Fecha_Egreso='$fecha' WHERE Pk_Id_Egreso='$estadoE[$i]'";
-			
-					if ($this->db->query($sql2))
-					{
-						$contadorE++;	
-					}
-				}
-			}
-		}
-
-
-
-		$sql3 = "INSERT INTO tbl_Balance VALUES('', '$idUsuario', '$fecha', '$ingresoTotal')";
-		$this->db->query($sql3); 	
-		if (($contadorI + $contadorE) == (sizeof($ingresosN) + sizeof($egresosN)))
-		{
-			$sql4 = "SELECT MAX(PK_Id_Balance) as idBalance FROM tbl_Balance";
-			$id = $this->db->query($sql4);
-			foreach ($id->result() as $idB)
-			{
-				$datoID = $idB->idBalance;
-			}
-
-			if (sizeof($egresosN) >0)
-			{
-				for ($i=0; $i < sizeof($egresosN); $i++)
-				{ 
-
-					$sql2="INSERT INTO tbl_Egresos VALUES('','$idUsuario', '$egresosN[$i]', '$egresosD[$i]', '$fecha')";
-					$sql5 = "INSERT INTO tbl_Ingresos_Egresos_Balance VALUES('$datoID', '$egreso', 'Gasto', '$ingreso')";
-				
-					if ($this->db->query($sql2))
-					{
-						$contadorE++;	
-					}
-				}
-			}
-
-			if ($this->db->query($sql5))
-			{
-					return true;
-			}
-
-		}
-		return false;
-	}*/
-
 	public function obtenerIngreso($fecha, $id)
 	{
 		$sql = "SELECT Total_Ingreso FROM tbl_Balance WHERE Fecha_Balance = '$fecha' AND FK_Id_Usuario='$id'";
@@ -262,8 +173,6 @@ public function guardarIE($datos=null, $idUsuario)
 	{
 		$sql = "SELECT b.Fecha_Balance, bie.Total_Ingreso, bie.Nombre_Operacion, e.Nombre_Egreso, e.Cantidad_Egreso, COUNT(*) as Operaciones FROM tbl_Balance as b INNER JOIN tbl_Ingresos_Egresos_Balance as bie on(b.PK_Id_Balance = bie.FK_Id_Balance) 
 		INNER JOIN tbl_Egresos as e ON(bie.FK_Id_Egreso= e.Pk_Id_Egreso) WHERE b.FK_Id_Usuario = '$id' GROUP BY b.Fecha_Balance";
-		/*$sql = "SELECT b.Fecha_Balance, bie.Total_Ingreso, bie.Total_Operacion, bie.Nombre_Operacion, e.Nombre_Egreso, e.Cantidad_Egreso FROM tbl_Balance as b INNER JOIN tbl_Ingresos_Egresos_Balance as bie
-				on(b.PK_Id_Balance = bie.FK_Id_Balance) INNER JOIN tbl_Egresos as e ON(bie.FK_Id_Egreso= e.Pk_Id_Egreso)";*/
 		$datos = $this->db->query($sql);
 		return $datos;
 	}

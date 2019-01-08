@@ -1,11 +1,6 @@
 <?php
 class Usuarias_model extends CI_Model{
 
-	public function __construct()
-	{
-		parent::__construct();
-		$this->load->library('Encrypt');
-	}
 	public function insertarTipo($data=null)
 	{
 		if($data!=null)

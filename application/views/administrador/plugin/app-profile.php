@@ -1,4 +1,3 @@
-<script src="<?=base_url() ?>plantilla/componentes/js/FormValidateMask.js"></script>
 <?php 
 foreach ($info as $fila) {
 }

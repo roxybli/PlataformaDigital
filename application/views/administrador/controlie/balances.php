@@ -46,10 +46,12 @@
                         $ime=1;
                             foreach ($datos->result() as $filaDatos)
                             {
+                                $fecha = new DateTime($filaDatos->Fecha_Balance);
+                                    $fecha = $fecha->format("d-m-Y");
                            ?> 
                                <tr>
                                     <td style="color: #000000"><?= $ime ?></td>
-                                    <td style="color: #000000"><?= $filaDatos->Fecha_Balance ?></td>
+                                    <td style="color: #000000"><?= $fecha ?></td>
                                     <td style="color: #000000">Balance correspondiene a esta fecha</td>
                                     <td style="color: #000000"><a href="<?= base_url() ?>controlie/detalleBalance?f=<?= $filaDatos->Fecha_Balance ?>" style="color: #ff0000">Ver detalles</a></td>
                                 </tr>

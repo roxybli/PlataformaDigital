@@ -470,11 +470,13 @@ class Inventario extends CI_Controller {
 		            
 		            $nombre = $fila->Nombre_Producto ;
 					$cantidad = $fila->Cantidad_Venta;
-					$precio = $fila->Fecha_Venta;
+					//$precio = $fila->Fecha_Venta;
+					$fecha = new DateTime($fila->Fecha_Venta);
+					$fecha = $fecha->format("d-m-Y");
 					$monto = $fila->Precio_Producto;
 					$totalVendido = $totalVendido + $cantidad;
 					$dinero = $dinero + ($monto*$cantidad);
-		            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $precio. "</td><td>$" . $monto*$cantidad. "</td></tr>";
+		            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $fecha. "</td><td>$" . $monto*$cantidad. "</td></tr>";
 		        }
 		        $html .= "<tr>
 						<th colspan='3'>Total de productos vendidos </th>

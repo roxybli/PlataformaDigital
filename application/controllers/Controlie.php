@@ -220,7 +220,7 @@ class Controlie extends CI_Controller {
 			$this->load->library('M_pdf');
 
 	        $data = [];
-
+			$fecha = date("d-m-Y");
 	        $hoy = date("dmyhis");
 			$html="
 			 <style>
@@ -318,8 +318,10 @@ class Controlie extends CI_Controller {
                         $ime=0;
                         foreach ($datos->result() as $filaDatos)
                         {
+                        	$fecha = new DateTime($filaDatos->Fecha_Balance);
+                                    $fecha = $fecha->format("d-m-Y");
                            $html .="<tr>
-                               <td class='text-primary'><span>$filaDatos->Fecha_Balance</span></td>
+                               <td class='text-primary'><span>$fecha</span></td>
                                <td class='text-primary'><span>$filaDatos->Nombre_Operacion - $filaDatos->Nombre_Egreso</span></td>
                                <td class='text-primary'><span>$".$filaDatos->Cantidad_Egreso."</span></td>";
                             if ($contador == 0)
