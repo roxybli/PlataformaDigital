@@ -51,6 +51,7 @@ class ReportesEU extends CI_Controller
 		$dato = $this->input->POST();
 		$this->load->model('Reportes_Model');
 		$data=$this->Reportes_Model->ReportePorPeriodoVentas($id, $dato);
+		$fecha = date("d-m-Y");
 		if (sizeof($data->result())!=0) 
 		{
 			$this->load->library('M_pdf');
@@ -119,15 +120,14 @@ class ReportesEU extends CI_Controller
 				 background-color: rgba(0, 0, 255, 0.2);
 			}
 			 </style>
-			 <div class='container'>
+			<div class='container'>
 			    <div id='cabecera'>
-					<div id='img'>
-						<img src='".base_url()."plantilla/images/LogoCiudadMujer.png'>
-				    </div>
-				<div class='textoCentral'>REPORTE DE VENTAS <br> DESDE ".$dato['Fecha_Venta']." AL ".$dato['Fecha_Fin']."
-			       ".strtoupper($this->session->userdata('nombreNegocio'))." <br>     
+			    <div id='img'>
+				<img src='".base_url()."plantilla/img_perfil/".$this->session->userdata('fotoUsuaria')."'>
+		    </div><p style='font-weight: bold; text-align:right;'> FECHA DE CREACIÓN:  $fecha</p>
+		    <div class='textoCentral'>REPORTE DE VENTAS ".strtoupper($this->session->userdata('nombreNegocio'))." <br> DESDE EL  ".$dato['Fecha_Venta']." AL ".$dato['Fecha_Fin']."    
 		    ";
-		foreach ($datos->result() as $user)
+		foreach ($data->result() as $user)
 	        {}
 		$html .="
 		    <strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS REALIZADAS DE:<br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
@@ -151,7 +151,7 @@ class ReportesEU extends CI_Controller
 			        <tbody>";
 		          $totalVendido = 0;
 		          $dinero =0; 
-		         foreach ($datos->result() as $fila)
+		         foreach ($data->result() as $fila)
 		        {
 		            $nombre = $fila->Nombre_Producto ;
 					$cantidad = $fila->Cantidad_Venta;
@@ -212,8 +212,6 @@ public function ReportePorVentas(){
 			$this->load->library('M_pdf');
 	        $hoy = date("d / M / Y");
 	        $fecha = date("d-m-Y");
-	         foreach ($data->result() as $datos)
-		        {}
 			$html="
 			 <style>
 			table{
@@ -286,7 +284,7 @@ public function ReportePorVentas(){
 		foreach ($data->result() as $user)
 	        {}
 		$html .="
-		  <br><strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS DE:<br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
+		  <br><strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS DE:<br> ".strtoupper($this->session->userdata('nombre'))." ".strtoupper($user->Apellido )."</strong><br></div>
 		</div></div>
 			   
 			<div class='table-responsive container'>

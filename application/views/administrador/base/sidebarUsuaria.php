@@ -34,10 +34,10 @@
                                 <li><a href="<?=base_url() ?>Guias/Cargar_Guias?v=2">videos</a></li>
                             </ul>
                         </li> 
-                        <li> <a class="has-arrow-inicio "  href="<?=base_url()?>ReportesEU" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Reportes</span></a>
+                        <li> <a class="has-arrow-inicio "  href="<?=base_url()?>ReportesEU" aria-expanded="false"><i class="fa fa-bar-chart f-s-20"></i><span class="hide-menu">Reportes</span></a>
                           <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?=base_url() ?>ReportesEU/ReportesPDF">Reportes PDF</a></li>
-                                <li><a href="<?=base_url() ?>ReportesEU/Estadisticas">Estadisticas</a></li>
+                                <li><a href="<?=base_url() ?>Estadisticas">Estadisticas</a></li>
                             </ul>
                         </li> 
                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-window-restore"></i><span class="hide-menu">Aplicaciones Empresariales</span></a>

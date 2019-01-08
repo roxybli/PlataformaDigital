@@ -53,7 +53,7 @@ class Reportes_Model extends CI_Model
 		{
 			$param1 = $param['Fecha_Venta'];
 			$param2 = $param['Fecha_Fin'];
-			$sql = "SELECT v.Cantidad_Venta, p.Nombre_Producto, v.Fecha_Venta FROM tbl_Venta as v INNER JOIN tbl_Inventario as i on(v.Fk_Id_Inventario = i.PK_Id_Inventario) INNER JOIN tbl_Productos as p on(i.FK_Id_Producto = p.PK_Id_Producto) INNER JOIN tbl_Usuarias as u ON(p.FK_Id_Usuario=u.pk_Id_Usuaria) WHERE p.FK_Id_Usuario='$id' AND v.Fecha_Venta BETWEEN $param1 AND $param2 ";
+			$sql = "SELECT v.Cantidad_Venta, p.Nombre_Producto,  p.Precio_Producto, v.Fecha_Venta FROM tbl_Venta as v INNER JOIN tbl_Inventario as i on(v.Fk_Id_Inventario = i.PK_Id_Inventario) INNER JOIN tbl_Productos as p on(i.FK_Id_Producto = p.PK_Id_Producto) INNER JOIN tbl_Usuarias as u ON(p.FK_Id_Usuario=u.pk_Id_Usuaria) WHERE p.FK_Id_Usuario='$id' AND v.Fecha_Venta BETWEEN '$param1' AND '$param2'";
 					$datos = $this->db->query($sql);
 					return $datos;
 		}
@@ -65,7 +65,7 @@ public function ReportePorPeriodoAÑOSVentas($id, $param=null)
 		{
 			$param1 = $param['Fecha_Venta'];
 			$param2 = $param['Fecha_Fin'];
-			$sql = "SELECT v.Cantidad_Venta, p.Nombre_Producto, v.Fecha_Venta
+			$sql = "SELECT v.Cantidad_Venta, p.Nombre_Producto, p.Precio_Producto,  v.Fecha_Venta
 					FROM tbl_Venta AS v
 					INNER JOIN tbl_Inventario AS i ON ( v.Fk_Id_Inventario = i.PK_Id_Inventario )
 					INNER JOIN tbl_Productos AS p ON ( i.FK_Id_Producto = p.PK_Id_Producto )

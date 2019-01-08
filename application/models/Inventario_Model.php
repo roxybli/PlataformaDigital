@@ -185,9 +185,9 @@ public function datosProducto($id)
 	}
 
 
-public function obtenerVentasEs($id)
+public function obtenerVentasEs($id,$inicio, $fin)
 	{
-				$sql = "SELECT v.Cantidad_Venta, p.Nombre_Producto FROM tbl_Venta as v INNER JOIN tbl_Inventario as i on(v.Fk_Id_Inventario = i.PK_Id_Inventario) INNER JOIN tbl_Productos as p on(i.FK_Id_Producto = p.PK_Id_Producto) INNER JOIN tbl_Usuarias as u ON(p.FK_Id_Usuario=u.pk_Id_Usuaria) WHERE p.FK_Id_Usuario='$id' AND DATE(Fecha_Venta) BETWEEN '$i' AND '$f' ";
+				$sql = "SELECT v.Cantidad_Venta, p.Nombre_Producto FROM tbl_Venta as v INNER JOIN tbl_Inventario as i on(v.Fk_Id_Inventario = i.PK_Id_Inventario) INNER JOIN tbl_Productos as p on(i.FK_Id_Producto = p.PK_Id_Producto) INNER JOIN tbl_Usuarias as u ON(p.FK_Id_Usuario=u.pk_Id_Usuaria) WHERE p.FK_Id_Usuario='$id' AND DATE(Fecha_Venta) BETWEEN '$inicio' AND '$fin' ";
 				$datos = $this->db->query($sql);
 				return $datos;
 	}

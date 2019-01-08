@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src=“https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js”> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
 </head>
 
@@ -26,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                   <select name="mesResumen" class="form-control" id="departamentoResumen" required>
+                                   <select name="mes1" class="form-control" id="mes1" required>
                                         <option value="">Selecciona un mes</option>
                                         <option value="01">Enero</option>
                                         <option value="02">Febrero</option>
@@ -43,7 +42,7 @@
                                     </select>  
                             </div>   
                             <div class="col-md-4">
-                                   <select name="mesResumen2" class="form-control" id="departamentoResumen2" required>
+                                   <select name="mes2" class="form-control" id="mes2" required>
                                         <option value="">Selecciona un mes</option>
                                         <option value="01">Enero</option>
                                         <option value="02">Febrero</option>
@@ -60,11 +59,11 @@
                                     </select>        
                                                         </div>  
                             
-                             <div class="card-title" style="padding-top: 20px; margin-left: 420px " align="right" >                                      
-                              <button type="button" id="btnBuscar1" class="btn btn-info" "><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Productos en proceso</button>
+                             <div class="card-title" style="padding-top: 20px; margin-left:670px " align="right" >                                      
+                              <button type="button" id="btnBuscar1" class="btn btn-info" "><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos y egresos</button>
                                  <button type="button" id="btnBuscar2" class="btn btn-info" "><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Inventario </button> 
-                                 <button type="button" id="btnBuscar3" class="btn btn-info"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Insumos </button>
-                                <button type="button" id="btnBuscar4" class="btn btn-info"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Ventas</button>
+                                 
+                                <button type="button" id="btnBuscar3" class="btn btn-info"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Ventas</button>
                                   </div></div>
                                  </form>
 
@@ -112,17 +111,17 @@ var myChart = new Chart(ctx, {
 });
 </script> 
                              <!-- <div style="padding: 40px"><div id="contenedor-grafico">
-                                  <div class="col-md-12" align="right" >
-                                     <button type="button" id="btnBuscar" class="btn btn-primary"><i class="fa fa-share-square-o f-s-20" style="margin:10px;"></i>Graficar</button>       
-                                                        </div>                                                                    
+                                                                                                      
                                                                 <canvas id="myChart" width="80" height="30"></canvas>
                                                                 </div> 
                                                                 <script>
+                                                                    var inicio= $('#mes1').val();
+                                                                    var fin= $('#mes2').val();
                                                                     var parNombre = [];
                                                                      var parCantidad = [];
                                                                     var bgColor = [];
                                                                     var bgBorder = [];
-                                                                  $('#btnBuscar').click(function()
+                                                                  $('#btnBuscar1').click(function()
                                                                 {
                                                                 $.post("<?php echo base_url();?>ReportesEU/VentasEsta",
                                                                 function(data){

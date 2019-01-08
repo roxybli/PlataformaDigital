@@ -140,15 +140,19 @@ class Anuncios extends CI_Controller {
 	public function BuscarFecha(){
 
 		$datos = $this->input->POST();
-		if($tipo=$this->session->userdata('login')){
+		if($this->session->userdata('login')){
 			$this->load->view('administrador/base/header');
 		}
 		else{
 			$this->load->view('administrador/base/headerVisitante');
 		}
-		$this->load->model('Anuncios_Model');
+		$this->load->model('Anuncios_Model'); 
 		$anuncio=$this->Anuncios_Model->AnunciosFecha($datos);
-		$datos = array('Anuncios'=>$anuncio);
+		$this->load->model('Instituciones_Model');
+		$institucion=$this->Instituciones_Model->verInstituciones();
+		$datos = array('Anuncios'=>$anuncio, 'Instituciones'=>$institucion);
+		//echo json_encode($anuncio->result());
+		//$data = array('Anuncios'=>$anuncio);
 		$this->load->view('anuncios/lista_anuncios',$datos);
 		$this->load->view('administrador/base/footer');
 	}
