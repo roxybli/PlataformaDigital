@@ -72,7 +72,7 @@
                         <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">
                     </div>
                     <div class="inventarioTitle">
-                        <p><h3  class="text-center blanco"> Productos disponibles </h3></p>
+                        <p><h3  class="text-center blanco"> Inventario </h3></p>
                     </div>
             </div>
             </a>

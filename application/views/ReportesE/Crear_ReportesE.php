@@ -33,7 +33,7 @@
                 </a>
             </div>
         <div class="col-md-4 ">
-            <a target="_blank" href="<?=base_url() ?>inventario/reporteInventario">
+            <a href="<?=base_url() ?>ReportesEU/ReportesPDFInventario">
                 <div class="divColorVerde">
                     <div class="inventarioIMG">
                         <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">

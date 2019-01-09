@@ -38,8 +38,8 @@ if($this->session->userdata('login'))
                                     <p>Este reporte genera un documento de registro de ventas según la fecha seleccionada en el cual se muestra la siguiente información:</p>
                                     <ul>
                                     <li>- Producto </li>
+                                    <li>- Precio del Producto </li>
                                     <li>- Cantidad</li>
-                                    <li>- Fecha de venta</li>
                                     <li>- Monto de la venta</li>
                                     <li>- Total de productos vendidos</li>
                                     </ul>
@@ -85,8 +85,8 @@ if($this->session->userdata('login'))
                                     <p>Este reporte genera un documento de registro de ventas según el año seleccionada en el cual se muestra la siguiente información:</p>
                                     <ul>
                                     <li>- Producto </li>
+                                    <li>- Precio del Producto </li>
                                     <li>- Cantidad</li>
-                                    <li>- Fecha de venta</li>
                                     <li>- Monto de la venta</li>
                                     <li>- Total de productos vendidos</li>
                                     </ul>
@@ -145,6 +145,7 @@ if($this->session->userdata('login'))
                                      <p>Este reporte genera un documento de registro de ventas general en el cual se muestra la siguiente información:</p>
                                     <ul>
                                     <li>- Producto </li>
+                                    <li>- Precio del Producto </li>
                                     <li>- Cantidad</li>
                                     <li>- Fecha de venta</li>
                                     <li>- Monto de la venta</li>

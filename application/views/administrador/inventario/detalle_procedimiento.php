@@ -71,9 +71,9 @@
                             <tr>
                                 <td style="color: #000000"><span><?= $filaProcedimientos->Nombre_Insumo ?></span></td>
                                 <td style="color: #000000"><span><?= $filaProcedimientos->Precio_Insumo ?></span></td>
-                                <td><input type="text" name="existenciaInsumo[]"  value="<?= $filaProcedimientos->Existencia_Insumo ?>" readonly>
-                                 <input type="hidden" name="idInsumos[]"  value="<?= $filaProcedimientos->PK_Id_Insumo?>" </td>
-                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" readonly></span></td>
+                                <td><input type="text" name="existenciaInsumo[]"  value="<?= $filaProcedimientos->Existencia_Insumo ?>" id ="existencia" min="1" readonly>
+                                 <input type="hidden" name="idInsumos[]" id ="existencia" value="<?= $filaProcedimientos->PK_Id_Insumo?>"> </td>
+                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" id="crear" readonly></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Medida_Insumo ?></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Direccion ?></span></td>
                             </tr>
@@ -84,7 +84,12 @@
                         ?>
                         </tbody>
                     </table>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Crear Producto nuevo</button>
+                      <div class="form-group" id="botonC" align="right">
+                        <p></p>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i><span class="fa fa-share-square-o f-s-20 oculto" id="btnCrear"></span> Crear Producto nuevo</button> 
+                </div>
+ 
+
                 </div>
                 </form>
             </div>
@@ -92,3 +97,6 @@
     </div>
 </div>
 </div>
+<script type="text/javascript">
+ 
+</script>

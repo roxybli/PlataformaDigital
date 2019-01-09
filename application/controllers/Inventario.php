@@ -312,15 +312,15 @@ class Inventario extends CI_Controller {
 		foreach ($datos->result() as $user)
 	        {}
 		$html .="
-		  <br><strong style='font-weight: bold; text-align:center;'>RESUMEN DE PRODUCTOS EN IVENTARIO DE:<br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div><br>
+		  <br><strong style='font-weight: bold; text-align:center;'>PROPIETARIA: ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div><br>
 		</div></div>			        
 			<div class='table-responsive container'>
 			        <table class='table table table-bordered'>
 			        <thead class='active' >
 			        <tr >
 				        <th>Producto</th>
-				        <th>Cantidad</th>
 				        <th>Precio</th>
+				        <th>Cantidad</th>
 				        <th>Monto</th>
 			        </tr>
 			        </thead>
@@ -336,10 +336,10 @@ class Inventario extends CI_Controller {
 					$monto = $fila->Precio_Producto;
 					$totalVendido = $totalVendido + $cantidad;
 					$dinero = $dinero + ($monto*$cantidad);
-		            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $precio. "</td><td>$" . $monto*$cantidad. "</td></tr>";
+		            $html.="<tr><td>" . $nombre . "</td><td>" . $precio. "</td><td>" . $cantidad. "</td><td>$" . $monto*$cantidad. "</td></tr>";
 		        }
 		        $html .= "<tr>
-						<th colspan='3'>Total de productos terminados </th>
+						<th colspan='3'>Total de productos en inventario </th>
 						<th>$totalVendido</th>
 						</tr>";
 				$html .= "<tr>
@@ -348,7 +348,7 @@ class Inventario extends CI_Controller {
 						</tr>";
 				$html .= "</table></div>";
 		 
-		         $pdfFilePath = "resumen de inventario.pdf";
+		         $pdfFilePath = "resumen_inventario.pdf";
 		         //load mPDF library
 		        $this->load->library('M_pdf');
 		         $mpdf = new mPDF('c', 'A4'); 
@@ -446,7 +446,7 @@ class Inventario extends CI_Controller {
 		foreach ($datos->result() as $user)
 	        {}
 		$html .="
-		    <strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS REALIZADAS DE:<br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
+		    <strong style='font-weight: bold; text-align:center;'>PROPIETARIA:".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
 		</div>
 			</div>
 			<br>
@@ -457,6 +457,7 @@ class Inventario extends CI_Controller {
 			        <thead class='active' >
 			        <tr >
 				        <th>Producto</th>
+				        <th>Precio</th>
 				        <th>Cantidad</th>
 				        <th>Fecha</th>
 				        <th>Monto</th>
@@ -476,19 +477,19 @@ class Inventario extends CI_Controller {
 					$monto = $fila->Precio_Producto;
 					$totalVendido = $totalVendido + $cantidad;
 					$dinero = $dinero + ($monto*$cantidad);
-		            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $fecha. "</td><td>$" . $monto*$cantidad. "</td></tr>";
+		            $html.="<tr><td>" . $nombre . "</td><td>" . $monto. "</td><td>" . $cantidad. "</td><td>" . $fecha. "</td><td>$" . $monto*$cantidad. "</td></tr>";
 		        }
 		        $html .= "<tr>
-						<th colspan='3'>Total de productos vendidos </th>
+						<th colspan='4'>Total de productos vendidos </th>
 						<th>$totalVendido</th>
 						</tr>";
 				$html .= "<tr>
-						<th colspan='3'>Total de dinero </th>
+						<th colspan='4'>Total de dinero </th>
 						<th>$$dinero</th>
 						</tr>";
 				$html .= "</table></div>";
 		 
-		         $pdfFilePath = "resumen de ventas.pdf";
+		         $pdfFilePath = "resumen_de_ventas_general.pdf";
 		         //load mPDF library
 		        $this->load->library('M_pdf');
 		         $mpdf = new mPDF('c', 'A4'); 
@@ -586,7 +587,7 @@ class Inventario extends CI_Controller {
 			    foreach ($datos->result() as $user)
 		        {}
 			$html .="
-			    <strong style='font-weight: bold;'>RESUMEN DE PRODUCTOS EN PROCESO DE: <br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
+			    <br><strong style='font-weight: bold;'>PROPIETARIA: ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
 			    </div>
 			</div>
 			<br>
@@ -596,9 +597,9 @@ class Inventario extends CI_Controller {
 			        <table class='table table table-bordered'>
 			        <thead class='active' >
 			        <tr >
-				        <th>Producto</th>
-				        <th>Cantidad</th>
+				        <th>Producto</th> 
 				        <th>Precio</th>
+				        <th>Cantidad</th>
 				        <th>Monto</th>
 			        </tr>
 			        </thead>
@@ -614,7 +615,7 @@ class Inventario extends CI_Controller {
 					$monto = $fila->Precio_Producto * $cantidad;
 					$totalProceso = $totalProceso + $cantidad;
 					$dinero = $dinero + $monto;
-		            $html.="<tr><td>" . $nombre . "</td><td>" . $cantidad. "</td><td>" . $precio. "</td><td>$" . $monto. "</td></tr>";
+		            $html.="<tr><td>" . $nombre . "</td><td>" . $precio. "</td><td>" . $cantidad. "</td><td>$" . $monto. "</td></tr>";
 		        }
 		        $html .= "<tr >
 						<th colspan='3' >Total de productos en proceso </th>
@@ -626,7 +627,7 @@ class Inventario extends CI_Controller {
 						</tr>";
 				$html .= "</table></div>";
 		 
-		         $pdfFilePath = "resumen de productos en proceso.pdf";
+		         $pdfFilePath = "resumen_productos_en_proceso.pdf";
 		         //load mPDF library
 		        $this->load->library('M_pdf');
 		         $mpdf = new mPDF('c', 'A4'); 
@@ -651,28 +652,7 @@ class Inventario extends CI_Controller {
 					</script>';
 			}
 	}
-public function estadisticaMensualVR()
-	{
-		$this->load->view('administrador/base/header');
-		$this->load->view('administrador/inventario/estadisticas_mv');
-		$this->load->view('administrador/base/footer2');
-	}
-public function estadisticaVR()
-	{
-			$d = $this->input->post();
-			$mes =$d['mesResumen'];
-			$a = date('Y');
-			$fechaI = $a.'-'.$mes.'-01';
-			$fechaF = $a.'-'.$mes.'-31';
-			$id = $this->session->userdata('id');
-			$this->load->model("Inventario_Model");
-			$datos = $this->Inventario_Model->obtenerVentas($id);
-			$ventas = $this->Inventario_Model->estadisticasVR($id, $fechaI, $fechaF);
-			$data = array('ventas' => $ventas,'datos'=>$datos);
-			$this->load->view('administrador/base/header');
-			$this->load->view('administrador/inventario/ventas_estadisticas', $data);
-			$this->load->view('administrador/base/footer2');		
-	}
+
 	public function datosProducto()
 	{
 		$id = $_GET['i'];

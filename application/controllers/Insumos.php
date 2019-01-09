@@ -193,7 +193,7 @@ class Insumos extends CI_Controller {
 		foreach ($datos->result() as $user)
 	        {}
 		$html .="
-		  <br><strong style='font-weight: bold; text-align:center;'>DESCRIPCIÓN DE INSUMOS DE: <br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div><br>
+		  <br><strong style='font-weight: bold; text-align:center;'>PROPIETARIA: <br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div><br>
 		</div>    
 		<div class='table-responsive container'>
 		      
@@ -229,7 +229,7 @@ class Insumos extends CI_Controller {
 					</tr>";
 			$html .= "</table></div>";
 	 
-	         $pdfFilePath = "resumen de insumos.pdf";
+	         $pdfFilePath = "resumen_insumos.pdf";
 	         //load mPDF library
 	        $this->load->library('M_pdf');
 	         $mpdf = new mPDF('c', 'A4'); 

@@ -59,16 +59,6 @@ class Controlie extends CI_Controller {
 		$this->load->view('administrador/controlie/resumen_ie');
 		$this->load->view('administrador/base/footer2');
 	}
-
-	public function estadisticaMensualIE()
-	{
-
-		$this->load->view('administrador/base/header');
-		$this->load->view('administrador/controlie/estadisticas_ie');
-		$this->load->view('administrador/base/footer2');
-	}
-
-
 	public function guardarDatos()
 	{
 		$datos = $this->input->post();
@@ -297,7 +287,7 @@ class Controlie extends CI_Controller {
 		        {}
 
 			$html .= "<br>
-			    <strong style='font-weight: bold;text-align:center;'>RESUMEN DE INGRESOS Y EGRESOS DE: ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div><br>
+			    <strong style='font-weight: bold;text-align:center;'>PROPIETARIA: ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div><br>
 			    </div>
 			</div>
 			<div class='table-responsive container'>
@@ -349,7 +339,7 @@ class Controlie extends CI_Controller {
 
 		 
 
-		         $pdfFilePath = "resumen de inventario.pdf";
+		         $pdfFilePath = "resumen_balances_ingresos_egresos.pdf";
 		         //load mPDF library
 		        $this->load->library('M_pdf');
 		         $mpdf = new mPDF('c', 'A4'); 
@@ -495,7 +485,7 @@ class Controlie extends CI_Controller {
 				    foreach ($ingresos->result() as $user) 
 				    {}
 				$html .= "<br><br><br>
-				<strong style='font-weight: bold; text-align:center;'>RESUMEN DE INGRESOS Y EGRESOS DE:".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )." <br>
+				<strong style='font-weight: bold; text-align:center;'>PROPIETARIA:".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )." <br>
 				    CORRESPONDIENTE AL MES DE: ".strtoupper($meses[$mes-1])."</strong></div>
 				</div>
 				<br>   
@@ -541,7 +531,7 @@ class Controlie extends CI_Controller {
 	                            <td class='text-center'>$".$totalE."</td>
 	                        </tr>";
 					$html .= "</table></div>";
-			         $pdfFilePath = "resumen de ingresos y egresos.pdf";
+			         $pdfFilePath = "resumen_ingresos_y_egresos.pdf";
 			         //load mPDF library
 			        $this->load->library('M_pdf');
 			         $mpdf = new mPDF('c', 'A4'); 

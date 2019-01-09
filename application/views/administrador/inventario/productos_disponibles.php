@@ -4,12 +4,12 @@
      </div>
 
      <div class="col-md-5 align-center">
-        <h3 style="color: #fff">Productos terminados</h3>
+        <h3 style="color: #fff">Productos en Inventario</h3>
      </div>
 
     <div class="col-md-3 align-self-center">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javascript:void(0)">Productos disponibles</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Productos en Inventario</a></li>
             <li class="breadcrumb-item active">home</li>
         </ol>
     </div>

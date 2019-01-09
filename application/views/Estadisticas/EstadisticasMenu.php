@@ -36,16 +36,16 @@
                         </div> 
                     </div> 
                              <div class="card-title" style="padding-top: 20px; margin-left:570px " align="right" >                                      
-                              <a  id="btningresos" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos</a>
-                               <a  id="btnegresos" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Egresos</a>
-                                 <a  id="btnInventario" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Inventario </a> 
-                                <a  id="btnVentas" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px; color:white;"></i>Ventas</a>
+                              <a  id="btningresos" class="btn btn-info" style="color:white;"onclick="eliminar()""><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos</a>
+                               <a  id="btnegresos" class="btn btn-info" style="color:white;"onclick="eliminar()""><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Egresos</a>
+                                 <a  id="btnInventario" class="btn btn-info" style="color:white;"onclick="eliminar()"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Inventario </a> 
+                                <a  id="btnVentas" class="btn btn-info" style="color:white;" onclick="eliminar()"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px; color:white;"></i>Ventas</a>
                                   </div></div>
                                  </form>
 
     <div class="card" > 
         <div style="padding: 40px">
-            <div id="contenedor-grafico">                            
+            <div id="contenedor_grafico">                            
                 <canvas id="myChart" width="400" height="150"></canvas>
             </div>
     </div>
@@ -142,8 +142,7 @@
     });
         });
 
-        //evento para ingresos y egresos
-           //EVENTO PARA ESTADICTICAS DE INVENTARIO
+           //EVENTO PARA ESTADICTICAS DE INGRESOS
         $('#btningresos').on('click', function(){
             var fechaI = $('#fechaInicial').val();
             var fechaF =$('#fechaFinal').val();
@@ -198,7 +197,9 @@
                     //Eliminamos y creamos la etiqueta canvas
                     //$('#myChart').remove();
                     //$('#contenedor_grafico').append("<canvas id='myChart' width='400' height='150'></canvas>");
-                    var ctx = $("#myChart");
+                    var canvas = document.getElementById("myChart");
+                    var ctx = canvas.getContext("2d");
+                    //var ctx = $("#myChart");
 
                     var barGraph = new Chart(ctx, {
                         type: 'bar',
@@ -233,7 +234,7 @@
 
         });
 
-        //EVENTO PARA ESTADICTICAS DE INVENTARIO
+        //EVENTO PARA ESTADICTICAS DE EGRESOS
         $('#btnegresos').on('click', function(){
             var fechaI = $('#fechaInicial').val();
             var fechaF =$('#fechaFinal').val();
@@ -288,7 +289,9 @@
                     //Eliminamos y creamos la etiqueta canvas
                     //$('#myChart').remove();
                     //$('#contenedor_grafico').append("<canvas id='myChart' width='400' height='150'></canvas>");
-                    var ctx = $("#myChart");
+                      var canvas = document.getElementById("myChart");
+                    var ctx = canvas.getContext("2d");
+                    //var ctx = $("#myChart");
 
                     var barGraph = new Chart(ctx, {
                         type: 'bar',
@@ -304,9 +307,9 @@
                                         }
                                     }],
                                 xAxes:[{
+                                                                    
                                     categoryPercentage: 0.1,
                                     barThickness : 70
-
                                 }]
 
                                 }
@@ -344,9 +347,9 @@
                     }
                     else{
                         for (var i = 0; i < registros.length; i++) {
-
+                            
                         Productos.push(registros[i].Nombre_Producto);
-                        Cantidad.push(registros[i].Existencia_Producto);
+                        Cantidad.push(registros[i].suma);
                         var r = Math.random() * 255;
                         r = Math.round(r);
                         var g = Math.random() * 255;
@@ -365,7 +368,8 @@
                         labels: Productos,
                         datasets : [
                             {
-                                label: 'Productos en inventario',
+
+                                label: ' Productos en inventario',
                                 backgroundColor: bgColor,
                                 borderColor: bgBorder,
                                 hoverBackgroundColor: 'rgba(38, 210, 145, 1)',
@@ -377,28 +381,31 @@
                     //Eliminamos y creamos la etiqueta canvas
                     //$('#myChart').remove();
                     //$('#contenedor_grafico').append("<canvas id='myChart' width='400' height='150'></canvas>");
-                    var ctx = $("#myChart");
+                    var canvas = document.getElementById("myChart");
+                    var ctx = canvas.getContext("2d");
+                    //var ctx = $("#myChart");
 
                     var barGraph = new Chart(ctx, {
                         type: 'bar',
                         data: chartdata,
+                        
                         options: {
-
-                            scales: {
+                       
+                         scales: {
                                 yAxes: [{
-
                                     ticks: {
 
                                         beginAtZero:true
                                         }
                                     }],
                                 xAxes:[{
-                                    categorySpacing: 0,
                                     categoryPercentage: 0.1,
                                     barThickness : 70
+
                                 }]
 
                                 }
+
                         }
             });
                     }
@@ -410,6 +417,7 @@
     });
 
         });
+
 
 
     })
@@ -433,4 +441,10 @@
                 format: 'yyyy-mm-dd',
                 language:'es',
             });
+function eliminar() {
+ document.getElementById('contenedor_grafico').innerHTML='';
+ document.getElementById('contenedor_grafico').innerHTML='<div id="contenedor_grafico"> <canvas id="myChart" width="400" height="150"></canvas></div>';
+}
+
+
 </script>

@@ -61,6 +61,13 @@ var form_validation = function() {
                         minlength: 5,
                         equalTo: "#pass4"
                     },
+                      "existencia": {
+                        minlength: 1
+                    },
+                    "crear": {
+                        minlength: 1
+                       
+                    },
                        
                     "val-select2": {
                         required: !0
@@ -142,6 +149,14 @@ var form_validation = function() {
                     "pass1": { 
                         minlength: "Su contraseña debe tener al menos 5 caracteres",
                         equalTo: "Por favor ingrese la contraseña actual"
+                    },
+                    "existencia": {
+                       
+                        minlength: "la existencia debe tener al menos 1 insumo"
+                    },
+                    "crear": { 
+                        minlength: "el producto a crear debe tener al menos 1 insumo"
+                        
                     },
                     "val-select2": "¡Por favor seleccione un valor!",
                     "val-select2-multiple": "Por favor seleccione al menos 2 valores!",

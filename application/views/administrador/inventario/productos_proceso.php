@@ -38,7 +38,6 @@
                                 <th style="color: #000000">Producto</th>
                                 <th style="color: #000000">Cantidad</th>
                                 <th style="color: #000000">Precio</th>
-                                <th style="color: #000000">Lugar</th>
                                 <th style="color: #000000">Estado</th>
                                 <th style="color: #000000">Creado Por</th>
                                 <th style="color: #000000">Acción</th>
@@ -56,7 +55,6 @@
                                 <td ><?= $filaProducto->Nombre_Producto ?></td>
                                 <td><?= $filaProducto->Existencia_Producto ?></td>
                                 <td>$<?= $filaProducto->Precio_Producto ?></td>
-                                <td><?= $filaProducto->Lugar_Existencia?></td>
                                 <td><?= $filaProducto->Estado?></td>
                                 <td><?= $filaProducto->Nombre. " ". $filaProducto->Apellido ?></td>
                                 <td>                                
