@@ -57,7 +57,12 @@ class ReportesEU extends CI_Controller
 			$this->load->library('M_pdf');
 	        $hoy = date("d / M / Y");
 	         foreach ($data->result() as $datos)
-		        {}
+		        {
+		        	$fecha1 = new DateTime($datos->Fecha_Venta);
+                	 $fecha1 = $fecha1->format("d-m-Y");
+					$fecha2 = new DateTime($datos->Fecha_Fin);
+                	 $fecha2 = $fecha2->format("d-m-Y");
+                }
 			$html="
 			 <style>
 			table{
@@ -123,16 +128,17 @@ class ReportesEU extends CI_Controller
 			<div class='container'>
 			    <div id='cabecera'>
 			    <div id='img'>
+			      
 				<img src='".base_url()."plantilla/img_perfil/".$this->session->userdata('fotoUsuaria')."'>
 		    </div><p style='font-weight: bold; text-align:right;'> FECHA DE CREACIÓN:  $fecha</p>
-		    <div class='textoCentral'>REPORTE DE VENTAS ".strtoupper($this->session->userdata('nombreNegocio'))." <br> DESDE EL  ".$dato['Fecha_Venta']." AL ".$dato['Fecha_Fin']."    
+		    <div class='textoCentral'>REPORTE DE VENTAS ".strtoupper($this->session->userdata('nombreNegocio'))." <br> DESDE EL  ".$fecha1." AL ".$fecha2."    
 		    ";
 		foreach ($data->result() as $user)
 	        {}
 		$html .="
-		    <strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS REALIZADAS DE:<br> ".strtoupper($user->Nombre)." ".strtoupper($user->Apellido )."</strong><br></div>
-								<br>FECHA DE CREACION: ".$hoy."</p>";
-				    $html.="</div>
+		    <br><strong style='font-weight: bold; text-align:center;'>RESUMEN DE VENTAS DE:<br> ".strtoupper($this->session->userdata('nombre'))." ".strtoupper($user->Apellido )."</strong><br></div>
+		</div></div>
+				   </div>
 			    </div>";
 			$html .= "<br>
 			    <strong style='font-weight: bold;'></strong>

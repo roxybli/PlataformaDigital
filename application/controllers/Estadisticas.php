@@ -28,6 +28,20 @@ class Estadisticas extends CI_Controller {
 		$datos = $this->Estadisticas_Model->EstadicticasInventario($fechaI, $fechaF);
 		echo json_encode($datos->result());
 	}
+	public function EstadisticasIngresos(){
+		$fechaI=$this->input->GET('FechaInicial');
+		$fechaF=$this->input->GET('FechaFinal');
+		$this->load->model('Estadisticas_Model');
+		$datos = $this->Estadisticas_Model->EstadicticasCIngresos($fechaI, $fechaF);
+		echo json_encode($datos->result());
+	}
+	public function EstadisticasEgresos(){
+		$fechaI=$this->input->GET('FechaInicial');
+		$fechaF=$this->input->GET('FechaFinal');
+		$this->load->model('Estadisticas_Model');
+		$datos = $this->Estadisticas_Model->EstadicticasCEgresos($fechaI, $fechaF);
+		echo json_encode($datos->result());
+	}
 
 }
 ?>

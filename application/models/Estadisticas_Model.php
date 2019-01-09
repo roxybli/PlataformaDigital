@@ -20,12 +20,37 @@ class Estadisticas_Model extends CI_Model
 		$id= $this->session->userdata('id');
 		$sql="SELECT p.Nombre_Producto, i.Existencia_Producto
 			FROM tbl_inventario AS i
-			INNER JOIN tbl_productos AS p ON i.FK_Id_Producto = p.Pk_Id_Producto WHERE p.FK_Id_Usuario =24
+			INNER JOIN tbl_productos AS p ON i.FK_Id_Producto = p.Pk_Id_Producto WHERE p.FK_Id_Usuario =$id
 			AND i.Fecha_Creacion
 			BETWEEN '$fechaI'
 			AND '$fechaF'";
 		$resultado = $this->db->query($sql);
 		return $resultado;
 		}
+	public function EstadicticasCIngresos($fechaI, $fechaF){
+		$id= $this->session->userdata('id');
+		$sql="SELECT Nombre_Ingreso,  SUM(Cantidad_Ingreso) AS suma
+			FROM tbl_ingresos
+			WHERE FK_Id_Usuario =$id
+			AND Fecha_Ingreso
+			BETWEEN '$fechaI'
+			AND '$fechaF'
+			GROUP BY Nombre_Ingreso";
+		$resultado = $this->db->query($sql);
+		return $resultado;
+		}
+		public function EstadicticasCEgresos($fechaI, $fechaF){
+		$id= $this->session->userdata('id');
+		$sql="SELECT Nombre_Egreso, SUM( Cantidad_Egreso ) AS suma
+				FROM tbl_egresos
+				WHERE FK_Id_Usuario =$id
+				AND Fecha_Egreso
+				BETWEEN '$fechaI'
+				AND '$fechaF'
+				GROUP BY Nombre_Egreso";
+		$resultado = $this->db->query($sql);
+		return $resultado;
+		}
+
 }
 ?>

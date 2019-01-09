@@ -3,7 +3,7 @@
  <!-- Bread crumb -->
             <div class="row page-titles" style="background:#000d5a;">
     <div class="col-md-3 align-self-center">
-        <a href="<?= base_url() ?>controlie/balances"><h3 class="text-primary"><i class="fa fa-chevron-left"></i> Volver</h3></a>
+        <a href="#"><h3 class="text-primary"><i class="fa fa-chevron-left"></i> Inicio</h3></a>
     </div>
 
     <div class="col-md-6 align-center">

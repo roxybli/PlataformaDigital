@@ -35,10 +35,10 @@
                         </div> 
                         </div> 
                     </div> 
-                             <div class="card-title" style="padding-top: 20px; margin-left:670px " align="right" >                                      
-                              <button type="button" id="btnBuscar1" class="btn btn-info" "><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos y egresos</button>
-                                 <a  id="btnInventario" class="btn btn-info" "><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Inventario </a> 
-                                 
+                             <div class="card-title" style="padding-top: 20px; margin-left:570px " align="right" >                                      
+                              <a  id="btningresos" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos</a>
+                               <a  id="btnegresos" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Egresos</a>
+                                 <a  id="btnInventario" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Inventario </a> 
                                 <a  id="btnVentas" class="btn btn-info" style="color:white;"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px; color:white;"></i>Ventas</a>
                                   </div></div>
                                  </form>
@@ -96,7 +96,97 @@
                         labels: Productos,
                         datasets : [
                             {
-                                label: Productos,
+                                label: 'Total de Productos Vendidos',
+                                backgroundColor: bgColor,
+                                borderColor: bgBorder,
+                                hoverBackgroundColor: 'rgba(38, 210, 145, 1)',
+                                hoverBorderColor: 'rgba(200, 200, 200, 1)',
+                                data: Cantidad,
+                                borderWidth: 0.3
+                            }
+                        ]
+                    };
+                    //Eliminamos y creamos la etiqueta canvas
+                    //$('#myChart').remove();
+                    //$('#contenedor_grafico').append("<canvas id='myChart' width='400' height='150'></canvas>");
+                    var ctx = $("#myChart");
+
+                    var barGraph = new Chart(ctx, {
+                        type: 'bar',
+                        data: chartdata,
+                        options: {
+                                scales: {
+                                yAxes: [{
+                                    
+                                    ticks: {
+
+                                        beginAtZero:true
+                                        }
+                                    }],
+                                xAxes:[{
+
+                                   
+                                    barThickness : 73
+
+                                }]
+                        
+                                }
+                        }
+            });
+                    }
+                    
+        },
+        error: function(data) {
+            console.log(data);
+        }
+    });
+        });
+
+        //evento para ingresos y egresos
+           //EVENTO PARA ESTADICTICAS DE INVENTARIO
+        $('#btningresos').on('click', function(){
+            var fechaI = $('#fechaInicial').val();
+            var fechaF =$('#fechaFinal').val();
+            //alert(fechaI+fechaF);
+            $.ajax({
+                url: "<?= base_url()?>Estadisticas/EstadisticasIngresos?FechaInicial="+fechaI+"&FechaFinal="+fechaF,
+                method: "GET",
+                success: function(data) {
+                    var registros = eval(data);
+                    console.log('datos'+data);
+                    var Productos = [];
+                    var Cantidad = [];
+                    var bgColor = [];
+                    var bgBorder = [];
+                    if(registros.length==0){
+                        //alert("error")
+                        swal("Error", "No se encontraron registros en las fechas que selecciono", "error");
+                    }
+                    else{
+                        for (var i = 0; i < registros.length; i++) {
+                            
+                        Productos.push(registros[i].Nombre_Ingreso);
+                        Cantidad.push(registros[i].suma);
+                        var r = Math.random() * 255;
+                        r = Math.round(r);
+                        var g = Math.random() * 255;
+                        g = Math.round(g);
+                        var b = Math.random() * 255;
+                        b = Math.round(b);
+                        bgColor.push('rgba('+r+','+g+','+b+', 0.7)');
+                        bgBorder.push('rgba('+r+','+g+','+b+', 3)');
+
+                        console.log(registros[i].Nombre_Ingreso);
+                    }
+                    console.log(Productos);
+                    console.log(Cantidad);
+
+                    var chartdata = {
+                        labels: Productos,
+                        datasets : [
+                            {
+
+                                label: ' Total de Ingreso',
                                 backgroundColor: bgColor,
                                 borderColor: bgBorder,
                                 hoverBackgroundColor: 'rgba(38, 210, 145, 1)',
@@ -113,21 +203,24 @@
                     var barGraph = new Chart(ctx, {
                         type: 'bar',
                         data: chartdata,
+                        
                         options: {
-
-                            scales: {
+                       
+                         scales: {
                                 yAxes: [{
-
                                     ticks: {
 
                                         beginAtZero:true
                                         }
                                     }],
                                 xAxes:[{
-                                    categorySpacing: 0 
+                                    categoryPercentage: 0.1,
+                                    barThickness : 70
+
                                 }]
 
                                 }
+
                         }
             });
                     }
@@ -137,8 +230,100 @@
             console.log(data);
         }
     });
+
         });
+
         //EVENTO PARA ESTADICTICAS DE INVENTARIO
+        $('#btnegresos').on('click', function(){
+            var fechaI = $('#fechaInicial').val();
+            var fechaF =$('#fechaFinal').val();
+            //alert(fechaI+fechaF);
+            $.ajax({
+                url: "<?= base_url()?>Estadisticas/EstadisticasEgresos?FechaInicial="+fechaI+"&FechaFinal="+fechaF,
+                method: "GET",
+                success: function(data) {
+                    var registros = eval(data);
+                    console.log('datos'+data);
+                    var Productos = [];
+                    var Cantidad = [];
+                    var bgColor = [];
+                    var bgBorder = [];
+                    if(registros.length==0){
+                        //alert("error")
+                        swal("Error", "No se encontraron registros en las fechas que selecciono", "error");
+                    }
+                    else{
+                        for (var i = 0; i < registros.length; i++) {
+                            
+                        Productos.push(registros[i].Nombre_Egreso);
+                        Cantidad.push(registros[i].suma);
+                        var r = Math.random() * 255;
+                        r = Math.round(r);
+                        var g = Math.random() * 255;
+                        g = Math.round(g);
+                        var b = Math.random() * 255;
+                        b = Math.round(b);
+                        bgColor.push('rgba('+r+','+g+','+b+', 0.7)');
+                        bgBorder.push('rgba('+r+','+g+','+b+', 3)');
+
+                        console.log(registros[i].Nombre_Egreso);
+                    }
+                    console.log(Productos);
+                    console.log(Cantidad);
+
+                    var chartdata = {
+                        labels: Productos,
+                        datasets : [
+                            {
+
+                                label: 'Total de Egreso',
+                                backgroundColor: bgColor,
+                                borderColor: bgBorder,
+                                hoverBackgroundColor: 'rgba(38, 210, 145, 1)',
+                                hoverBorderColor: 'rgba(200, 200, 200, 1)',
+                                data: Cantidad
+                            }
+                        ]
+                    };
+                    //Eliminamos y creamos la etiqueta canvas
+                    //$('#myChart').remove();
+                    //$('#contenedor_grafico').append("<canvas id='myChart' width='400' height='150'></canvas>");
+                    var ctx = $("#myChart");
+
+                    var barGraph = new Chart(ctx, {
+                        type: 'bar',
+                        data: chartdata,
+                        
+                        options: {
+                       
+                         scales: {
+                                yAxes: [{
+                                    ticks: {
+
+                                        beginAtZero:true
+                                        }
+                                    }],
+                                xAxes:[{
+                                    categoryPercentage: 0.1,
+                                    barThickness : 70
+
+                                }]
+
+                                }
+
+                        }
+            });
+                    }
+                    
+        },
+        error: function(data) {
+            console.log(data);
+        }
+    });
+
+        });
+
+         //EVENTO PARA ESTADICTICAS DE INVENTARIO
         $('#btnInventario').on('click', function(){
             var fechaI = $('#fechaInicial').val();
             var fechaF =$('#fechaFinal').val();
@@ -180,7 +365,7 @@
                         labels: Productos,
                         datasets : [
                             {
-                                label: Productos,
+                                label: 'Productos en inventario',
                                 backgroundColor: bgColor,
                                 borderColor: bgBorder,
                                 hoverBackgroundColor: 'rgba(38, 210, 145, 1)',
@@ -208,7 +393,9 @@
                                         }
                                     }],
                                 xAxes:[{
-                                    categorySpacing: 0 
+                                    categorySpacing: 0,
+                                    categoryPercentage: 0.1,
+                                    barThickness : 70
                                 }]
 
                                 }
@@ -223,6 +410,7 @@
     });
 
         });
+
 
     })
         $.fn.datepicker.dates['es'] = {
