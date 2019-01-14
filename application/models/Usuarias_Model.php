@@ -1,6 +1,7 @@
 <?php
 class Usuarias_model extends CI_Model{
 
+
 	public function insertarTipo($data=null)
 	{
 		if($data!=null)

@@ -729,6 +729,27 @@ h6.h1 {
 .footer > p a {
   color: #4680ff;
 }
+
+.carousel-control-prev-icon{
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+  position: absolute;
+  bottom: 0;
+}
+.carousel-control-next-icon {
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+  position: absolute;
+  bottom: 0;
+}
+
+
 .bar-hidden {
   overflow-X: hidden;
 }
@@ -7103,9 +7124,6 @@ height: 100px
       color: #000;
       font-size: large;
      }
-     .etiquetass{
-      color: #000;
-     }
     .color {
       background-color: #808e95;
      }
@@ -7225,4 +7243,3 @@ height: 100px
      #Ingresos, #Egresos, #procesarIE{
         display: none;
     }
-     
