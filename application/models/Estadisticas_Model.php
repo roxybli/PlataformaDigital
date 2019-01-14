@@ -55,6 +55,20 @@ class Estadisticas_Model extends CI_Model
 		return $resultado;
 		}
 
+public function EstadicticasTotalIE($fechaI, $fechaF){
+		$id= $this->session->userdata('id');
+		$sql="SELECT I.Nombre_Ingreso AS INGRESO, sum( I.Cantidad_Ingreso ) AS sumain, E.Nombre_Egreso AS EGRESO, sum( E.Cantidad_Egreso ) AS sumaeg
+			FROM tbl_ingresos AS I
+			INNER JOIN tbl_egresos AS E ON I.FK_Id_Usuario = E.FK_Id_Usuario
+			WHERE I.FK_Id_Usuario =$id
+			AND Fecha_Ingreso
+			AND Fecha_Egreso
+			BETWEEN '$fechaI'
+			AND 'fechaF'";
+			$resultado = $this->db->query($sql);
+		return $resultado;
+		}
+
 
 }
 ?>

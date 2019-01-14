@@ -42,7 +42,13 @@ class Estadisticas extends CI_Controller {
 		$datos = $this->Estadisticas_Model->EstadicticasCEgresos($fechaI, $fechaF);
 		echo json_encode($datos->result());
 	}
-		
+	public function EstadisticasTotalIE(){
+		$fechaI=$this->input->GET('FechaInicial');
+		$fechaF=$this->input->GET('FechaFinal');
+		$this->load->model('Estadisticas_Model');
+		$datos = $this->Estadisticas_Model->EstadicticasTotalIE($fechaI, $fechaF);
+		echo json_encode($datos->result());
+	}
 
 }
 ?>

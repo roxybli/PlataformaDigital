@@ -31,18 +31,17 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label style="color: #000000">Cuantos Productos creará  </label>
-                        <input type="text" onkeypress="return numeros(event, 'num')" class="form-control" name="cantidadProducto" placeholder="¿Cuántos Productos creará ?"  value="1" id="cantidadProducto" required>
+                        <input type="text" onkeypress="return numeros(event, 'num')" class="form-control" name="cantidadProducto" placeholder="¿Cuántos Productos creará ?"   id="cantidadProducto" required>
                     </div>
                     <div class="col-md-6">
                         <label style="color: #000000">fecha de creación  </label>
-                        <input type="text" name="fechaProducto" class="form-control" id="fechaIE" required="true" name="" placeholder="Fecha">
+                        <input type="text" name="fechaProducto" class="form-control" id="fechaIE"  name="" placeholder="Fecha" required>
                     </div>
                 </div>
             </div>
             <div class="card-body">
 
-            <form id="detalleProcedimiento" method="post" action="<?= base_url() ?>inventario/guardarProducto">               
-            
+            <form id="detalleProcedimiento" method="post" action="<?= base_url() ?>inventario/guardarProducto">
             <input type="hidden" value="" id="CP" name="cantidadProducto" >
             <input value="" type="hidden" id="FP" name="fechaProducto">
             <?php 
@@ -76,7 +75,7 @@
                                 <td style="color: #000000"><span><?= $filaProcedimientos->Precio_Insumo ?></span></td>
                                 <td><input type="text" name="existenciaInsumo[]"  value="<?= $filaProcedimientos->Existencia_Insumo ?>" id ="existencia" min="1" readonly>
                                  <input type="hidden" name="idInsumos[]" id ="existencia" value="<?= $filaProcedimientos->PK_Id_Insumo?>"> </td>
-                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" id="crear" maxlength="" readonly></span></td>
+                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" id="crear" readonly></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Medida_Insumo ?></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Direccion ?></span></td>
                             </tr>
@@ -91,7 +90,10 @@
                         <p></p>
                     <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i><span class="fa fa-share-square-o f-s-20 oculto" id="btnCrear"></span> Crear Producto nuevo</button> 
                 </div>
- 
+  <div class="form-group oculto" id="mensajeError">
+        <p></p>
+          <h3 class="text-danger">La cantidad a vender, debe ser menor que la de existencia !!!</h3>
+        </div>
 
                 </div>
                 </form>
@@ -101,23 +103,25 @@
 </div>
 </div>
 <script type="text/javascript">
- function Validar(){
-
-    var existenciaInsumo = get.documentbyid
- }
-$("#crear").change(function() {
+  $("#crear").change(function() {
         existencia = $("#existencia").val();
-        cantidad = $(this).val();
+        cantidadV = $(this).val();
 
-if (cantidad> existenciaInsumo)
-{
- sweetAlert("Accion no permitida", "Tamaño de la imagen tiene que ser de 720*540px", "error");
-}
-else
+        if (cantidadV > existencia)
         {
-         $("#botonCrear").fadeIn(); 
+          $("#mensajeError").fadeIn();
+          $(this).val("");
+        }
+        else
+        {
+         $("#btnCrear").fadeIn(); 
         }
 
-}
+     })
+
+     $("#crear").click(function() {
+        $(".oculto").slideUp();
+
+     })
 
 </script>

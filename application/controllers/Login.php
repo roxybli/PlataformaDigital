@@ -58,7 +58,6 @@ class Login extends CI_Controller {
 				$verr=$this->Rubros_Model->verRubros();
 				$data= array('rubros'=>$verr);
 				$this->load->view('administrador/base/header');
-				//$this->load->view('administrador/base/home');
 				$this->load->view('perfiles/Insertar_Perfil',$data);
 				$this->load->view('administrador/base/footer');
 			}

@@ -36,10 +36,11 @@
                         </div> 
                     </div> 
                              <div class="card-title" style="padding-top: 20px; margin-left:570px " align="right" >                                      
-                              <a  id="btningresos" class="btn btn-info" style="color:white;"onclick="eliminar()""><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos</a>
-                               <a  id="btnegresos" class="btn btn-info" style="color:white;"onclick="eliminar()""><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Egresos</a>
                                  <a  id="btnInventario" class="btn btn-info" style="color:white;"onclick="eliminar()"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px"></i>Inventario </a> 
                                 <a  id="btnVentas" class="btn btn-info" style="color:white;" onclick="eliminar()"><i class="fa fa-bar-chart f-s-20" style="margin:10px;width: 20px; color:white;"></i>Ventas</a>
+                                 <a  id="btningresos" class="btn btn-info" style="color:white;"onclick="eliminar()""><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos</a>
+                               <a  id="btnegresos" class="btn btn-info" style="color:white;"onclick="eliminar()""><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Egresos</a>
+                                <a  id="btnTIE" class="btn btn-info" style="color:white;"onclick="eliminar()""><i class="fa fa-bar-chart f-s-20" style="margin:10px; width: 20px"></i>Ingresos y Egresos</a>
                                   </div></div>
                                  </form>
 
@@ -106,9 +107,6 @@
                             }
                         ]
                     };
-                    //Eliminamos y creamos la etiqueta canvas
-                    //$('#myChart').remove();
-                    //$('#contenedor_grafico').append("<canvas id='myChart' width='400' height='150'></canvas>");
                     var ctx = $("#myChart");
 
                     var barGraph = new Chart(ctx, {
@@ -141,7 +139,6 @@
         }
     });
         });
-
            //EVENTO PARA ESTADICTICAS DE INGRESOS
         $('#btningresos').on('click', function(){
             var fechaI = $('#fechaInicial').val();
@@ -194,12 +191,8 @@
                             }
                         ]
                     };
-                    //Eliminamos y creamos la etiqueta canvas
-                    //$('#myChart').remove();
-                    //$('#contenedor_grafico').append("<canvas id='myChart' width='400' height='150'></canvas>");
                     var canvas = document.getElementById("myChart");
                     var ctx = canvas.getContext("2d");
-                    //var ctx = $("#myChart");
 
                     var barGraph = new Chart(ctx, {
                         type: 'bar',
