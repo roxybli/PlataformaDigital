@@ -185,7 +185,7 @@ function ValidarImagen(obj, v){
         img.onload = function () {
             if (this.width.toFixed(0) != 720 && this.height.toFixed(0) != 540) {
                 //alert('Las medidas deben ser: 200 * 200');
-                sweetAlert("Accion no permitida", "Tamanio de la imagen no permitida", "error");
+                sweetAlert("Accion no permitida", "Tamaño de la imagen no permitida", "error");
                 // $("#imagen1").val('');
                  if(v==1){
                     $("#imagen1").val('');

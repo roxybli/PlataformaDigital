@@ -11,6 +11,9 @@
 </div>
 <div class="container-fluid">
 <div class="row">
+    <div class="card TituloUser">
+                                    <h3 class="responsive" style="color:white; font-weight:bold;">Crear Productos</h3>
+                                </div>
     <div class="col-lg-12">
         <div class="card">
             <div class="card-title">
@@ -73,7 +76,7 @@
                                 <td style="color: #000000"><span><?= $filaProcedimientos->Precio_Insumo ?></span></td>
                                 <td><input type="text" name="existenciaInsumo[]"  value="<?= $filaProcedimientos->Existencia_Insumo ?>" id ="existencia" min="1" readonly>
                                  <input type="hidden" name="idInsumos[]" id ="existencia" value="<?= $filaProcedimientos->PK_Id_Insumo?>"> </td>
-                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" id="crear" readonly></span></td>
+                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" id="crear" maxlength="" readonly></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Medida_Insumo ?></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Direccion ?></span></td>
                             </tr>
@@ -98,5 +101,23 @@
 </div>
 </div>
 <script type="text/javascript">
- 
+ function Validar(){
+
+    var existenciaInsumo = get.documentbyid
+ }
+$("#crear").change(function() {
+        existencia = $("#existencia").val();
+        cantidad = $(this).val();
+
+if (cantidad> existenciaInsumo)
+{
+ sweetAlert("Accion no permitida", "Tamaño de la imagen tiene que ser de 720*540px", "error");
+}
+else
+        {
+         $("#botonCrear").fadeIn(); 
+        }
+
+}
+
 </script>
