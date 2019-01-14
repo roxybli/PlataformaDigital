@@ -83,9 +83,7 @@ class Usuarias_model extends CI_Model{
 				$sede=$this->session->userdata('id_sede');
 				$sql="SELECT u.*, s.Nombre_Sede, t.Descripcion AS Tipo FROM tbl_Usuarias AS u INNER JOIN tbl_Sedes AS s ON u.FK_Sede=s.pk_Id_Sede INNER JOIN tbl_Tipos_Usuarias AS t ON u.fk_Tipo_Usuaria = t.pk_Id_Tipo WHERE u.FK_Sede='$sede' AND u.fk_Tipo_Usuaria != 1";
 			}
-		//$sede=$this->session->userdata('id_sede');
 		
-		//echo $sql ."la sede es:". $sede;
 		$res=$this->db->query($sql);
 		return $res;	
 	}

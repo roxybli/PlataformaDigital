@@ -20,18 +20,6 @@
     <div class="container-fluid bg" style="height:615px">
     <!-- Start Page Content -->
     <div class="row divCentrado">
-        <div class="col-md-4 contenedorInventario" >
-                <a target="_blank" href="<?=base_url() ?>insumos/reporteInsumos" ">
-                    <div class="divColorVerde">
-                    <div class="inventarioIMG">
-                        <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">
-                    </div>
-                        <div class="inventarioTitle">
-                            <p><h3  class="text-center blanco"> Insumos </h3></p>
-                        </div>
-                </div>
-                </a>
-            </div>
         <div class="col-md-4 ">
             <a href="<?=base_url() ?>ReportesEU/ReportesPDFInventario">
                 <div class="divColorVerde">
@@ -44,9 +32,35 @@
             </div>
             </a>
         </div>
-
-    
         <div class="col-md-4 ">
+                    <a  href="<?=base_url() ?>ReportesEU/ReportesPDFVentas">
+                        <div class="divColorVerde">
+                            <div class="inventarioIMG">
+                                <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">
+                            </div>
+                            <div class="inventarioTitle">
+                                <p><h3  class="text-center blanco"> Ventas </h3></p>
+                            </div>
+                    </div>
+                    </a>
+                </div>
+<div class="col-md-4 contenedorInventario" >
+                <a target="_blank" href="<?= base_url() ?>insumos/reporteInsumos" >
+                    <div class="divColorVerde">
+                    <div class="inventarioIMG">
+                        <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">
+                    </div>
+                        <div class="inventarioTitle">
+                            <p><h3  class="text-center blanco"> Insumos </h3></p>
+                        </div>
+                </div>
+                </a>
+            </div>
+            </div>
+    
+        
+        <div class="row divCentrado">
+            <div class="col-md-4 ">
             <a target="_blank" href="<?=base_url() ?>inventario/reporteInventarioEnProceso">
                 <div class="divColorVerde">
                     <div class="inventarioIMG">
@@ -57,22 +71,10 @@
                     </div>
             </div>
             </a>
-        </div> </div>
-        <div class="row divCentrado">
-        <div class="col-md-4 ">
-            <a  href="<?=base_url() ?>ReportesEU/ReportesPDFVentas">
-                <div class="divColorVerde">
-                    <div class="inventarioIMG">
-                        <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">
-                    </div>
-                    <div class="inventarioTitle">
-                        <p><h3  class="text-center blanco"> Ventas </h3></p>
-                    </div>
-            </div>
-            </a>
-        </div>
+        </div> 
+        
    <div class="col-md-4 ">
-            <a target="_blank" href="<?=base_url() ?>controlie/resumenIE">
+            <a href="<?=base_url() ?>controlie/balances">
                 <div class="divColorVerde">
                     <div class="inventarioIMG">
                         <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">
@@ -84,7 +86,7 @@
             </a>
         </div>
            <div class="col-md-4 ">
-            <a target="_blank" href="<?=base_url() ?>controlie/balances">
+            <a target="_blank" href="<?=base_url() ?>controlie/resumenIE">
                 <div class="divColorVerde" >
                     <div class="inventarioIMG">
                         <img  src="<?= base_url()  ?>plantilla/images/card/Inventario.png" class="img img-rounded" height="140">

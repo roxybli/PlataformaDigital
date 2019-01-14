@@ -234,7 +234,7 @@ class Insumos extends CI_Controller {
 	        $this->load->library('M_pdf');
 	         $mpdf = new mPDF('c', 'A4'); 
 	         $estilos=file_get_contents(base_url()."plantilla/css/bootstrap.min.css");
-	         //echo $estilos;
+	        
 	         $mpdf->SetDisplayMode('fullpage');
 	         $mpdf->WriteHTML($estilos,1);
 	 
