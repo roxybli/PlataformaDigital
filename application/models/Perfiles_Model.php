@@ -42,23 +42,39 @@ class Perfiles_Model extends CI_Model
 		$validar=$this->db->query($sql);
 		return $validar;
 	}
+	 
 	public function cargarUsuaria($id){
 		$sql="SELECT * FROM tbl_Usuarias WHERE pk_Id_Usuaria ='$id'";
 		$usuarias= $this->db->query($sql);
 		return $usuarias;
 	}
+	
+	public function cargarUltimo(){
+		$sql="SELECT * FROM `tbl_eventos` ORDER BY id_evento DESC LIMIT 1";
+		$evento1= $this->db->query($sql);
+		return $evento1;	
+	}
+	
+	public function cargarPultimo(){
+		$sql="SELECT * FROM `tbl_eventos` ORDER BY id_evento DESC LIMIT 1,1";
+		$evento2= $this->db->query($sql);
+		return $evento2;	
+	}
+	
+	
 	public function editarUsuaria($data=null){
 		if($data!=null){
 			$id=$data['id_usuaria'];
 			$nombre=$data['nombre'];
 			$apellido=$data['apellido'];
 			$nomuser=$data['nomuser'];
+			$pass=$data['pass'];
 			$direccion=$data['direccion'];
 			$telefono=$data['telefono'];
-			$pass=$data['pass'];
 			$sql="UPDATE tbl_Usuarias SET Nombre='$nombre', Apellido='$apellido', Nom_User='$nomuser', Pass='$pass', Direccion='$direccion', Telefono='$telefono' WHERE pk_Id_Usuaria= '$id'";
 			if($this->db->query($sql)){
 				return true;
+
 			}
 			else{
 				return false;
