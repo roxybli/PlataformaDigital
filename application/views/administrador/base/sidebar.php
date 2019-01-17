@@ -51,6 +51,7 @@
                                 </li>-->
                                 <li><a href="<?=base_url() ?>Anuncios/publicar_anuncios">Publicar noticias</a>
                                 <li><a href="<?=base_url() ?>Anuncios/GestionarNoticias">Gestionar noticias</a></li>
+								<li><a href="<?=base_url() ?>Anuncios/GestionarBorradores">Gestionar borradores</a></li>
                                 </li>
                             </ul>
                         </li>

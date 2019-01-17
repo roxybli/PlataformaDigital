@@ -31,7 +31,7 @@ class Calendario_Model extends CI_Model{
 	}
 	
 	public function verUltimoEvento(){
-		$sql="SELECT * FROM `tbl_eventos` WHERE `Estado_Evento` <> 'Leido'";
+		$sql="SELECT * FROM `tbl_eventos` WHERE `Estado_Evento`IS null";
 		$res = $this->db->query($sql);
 		return $res->result();
 	}
