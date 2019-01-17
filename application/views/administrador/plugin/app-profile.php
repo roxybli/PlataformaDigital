@@ -21,12 +21,21 @@ foreach ($user->result() as $fila2) {
             <div class="container-fluid">
             <div class="row">
             <?php
+			foreach($ultimo->result() as $Ultimo){
+				
+			}
+			
+			foreach($pultimo->result() as $Pultimo){
+				
+			}
+			
             foreach ($ingreso->result() as $Ingresos) {
                 # code...
             }
             foreach ($N_mens->result() as $NumM) {
                 # code...
             }
+
             foreach ($NumC->result() as $NumCo) {
                 # code...
             }
@@ -78,7 +87,7 @@ foreach ($user->result() as $fila2) {
                             </div>
                         </div>
                     </div>
-                     <div class="row" id="MenuCard">
+                    <div class="row" id="MenuCard">
                     <div class="col-md-6">
                             <div class="CardItem card" style="background-color:#8e24aa; color:white; height:100px;">
                                 <a href="<?=base_url() ?>Contactos/">
@@ -128,8 +137,10 @@ foreach ($user->result() as $fila2) {
                 </div>
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-60">
-                        <div class="card">
+					
+					<div class="col-lg-9">
+					
+						<div class="card">
                             <div class="card-body">
                                 <div class="card-two">
                                     <header>
@@ -143,12 +154,12 @@ foreach ($user->result() as $fila2) {
                                     </div>
                                   
                             </div>
+							
+							
                         </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-12">
-                        <div class="card">
+                     </div>
+					 
+					 <div class="card">
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs profile-tab" role="tablist">
                                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Mi negocio</a> </li>
@@ -413,10 +424,68 @@ foreach ($user->result() as $fila2) {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+					 
+					 
+					 </div>
+					
+					
+                    <div class="col-lg-3">
+
+					<!-- Ficha de eventos recientes -->					
+						<div class="card" style="float:right">
+                            <div class="card-body">
+                                <div class="card-two">
+                                    <header>
+                                            <img style="height: 50px; width: 50px;" src="<?=base_url() ?>plantilla/images/evento.png" />
+                                
+									<h2 style="color: #000">Ultimos eventos: </h1>
+                                    </header>
+									<br>
+									<hr>
+									<div id="carouselControls" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+									<div class="carousel-item active">
+									<h4 style="color: #000">Evento: </h4><?php echo $Ultimo->titulo_evento;?>
+								   <br><br><h4 style="color: #000">Fecha Inicio: </h4><?php echo $Ultimo->fecha_inicio;?>
+								   <br><br><h4 style="color: #000">Descripción: </h4><?php echo $Ultimo->contenido_evento;?>
+								   <br><br><h4 style="color: #000">Ubicación: </h4><?php echo $Ultimo->ubicacion;?>
+								   <br><br><h4 style="color: #000">Fecha Fin: </h4><?php echo $Ultimo->fecha_fin;?>
+									</div>
+									<div class="carousel-item">
+									 <h4 style="color: #000">Evento: </h4><?php echo $Pultimo->titulo_evento;?>
+								   <br><br><h4 style="color: #000">Fecha Inicio: </h4><?php echo $Pultimo->fecha_inicio;?>
+								   <br><br><h4 style="color: #000">Descripción: </h4><?php echo $Pultimo->contenido_evento;?>
+								   <br><br><h4 style="color: #000">Ubicación: </h4><?php echo $Pultimo->ubicacion;?>
+								   <br><br><h4 style="color: #000">Fecha Fin: </h4><?php echo $Pultimo->fecha_fin;?>
+									</div>
+									<!--
+									<div class="carousel-item">
+									<img class="d-block w-100" src="..." alt="Third slide">
+									</div>
+									-->
+									</div>
+									<a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+									<span class="sr-only">Anterior</span>
+									</a>
+									<a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Siguiente</span>
+									</a>
+									</div>
+            
+                            </div>
+							
+                        </div>
+                     </div>
+					 <!-- Ficha de eventos recientes -->		
+					 
+					 </div>
+				                  </div>
+
+										   
                                            </div>
-                                           </div>
-                                           </div>
+										   </div>
 <!-- Modal edit -->
 <div  class="modal fade" id="ModalMensaje" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
