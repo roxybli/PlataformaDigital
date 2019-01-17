@@ -4,12 +4,12 @@
      </div>
 
      <div class="col-md-5 align-center">
-        <h3 style="color: #fff">Productos terminados</h3>
+        <h3 style="color: #fff">Productos en Inventario</h3>
      </div>
 
     <div class="col-md-3 align-self-center">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="javascript:void(0)">Productos disponibles</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Productos en Inventario</a></li>
             <li class="breadcrumb-item active">home</li>
         </ol>
     </div>
@@ -17,8 +17,9 @@
 <div class="container-fluid">
 <div class="row">
     <div class="col-lg-12">
-        <div class="card">
+        <div class="card"> 
             <div class="card-title" align="right">
+           
                 <p><a href="<?= base_url() ?>/inventario/productosProceso" class="btn btn-info">Ver productos en proceso</a>
                 <a href="<?= base_url() ?>/inventario/ventasRealizadas" class="btn btn-info">Ventas realizadas</a>
                 <a target="_blank" href="<?= base_url() ?>inventario/reporteInventario" class="btn btn-danger"> Ver en PDF</a></p>

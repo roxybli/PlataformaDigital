@@ -3,13 +3,17 @@
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
 
 <link rel='stylesheet prefetch' href='<?= base_url()?>plantilla/componentes/css/chatU.css'>
-
-<div id="frame">
-	<div id="sidepanel">
+<div class="card TituloUser">
+<h3  class="responsive" style="color:white; font-weight:bold;">Chat de Emprendedoras </h3>
+</div>
+<div style="padding: 5px" style="width: auto;">
+	
+<div id="frame" style="width: auto;">
+	<div id="sidepanel" style="padding: 10px; ">
 		<div id="profile">
 			<div class="wrap">
 				<img id="profile-img" src="<?= base_url()?>plantilla/images/chica.png" class="online" alt="" />
-				<p><?php echo $this->session->userdata('nombre')?></p>
+				<p style="color: white"><?php echo $this->session->userdata('nombre')?></p>
 				
 				<div id="status-options">
 					<ul>
@@ -21,7 +25,7 @@
 			</div>
 		</div>
 	
-		<div id="contacts">
+		<div id="contacts" >
 			<ul>
 			<?php
 			foreach ($conta->result() as $info) {
@@ -31,21 +35,18 @@
 				$idRec = $info->Id_User_Contacto;
 				$NombreContacto="'".$info->Nombre_Contacto."'";
 				$foto = "'".$info->Foto_Contacto."'";
-
-
 			?>
-				<li class="contact">
+				<li class="contact" >
 					<a onclick="GuardarMsj(<?= $id?>, <?= $idEmi?>,<?= $idRec?>, <?= $NombreContacto?>, <?= $foto?>)">
 						<div class="wrap">
-							<span class="contact-status online"></span>
+							
 							<img src="<?php echo base_url().'plantilla/img_perfil/'.$info->Foto_Contacto?>" alt="" />
 							<div class="meta">
-								<p class="name"><?= $info->Nombre_Contacto?></p>
+								<p class="name" style="color: white"><?= $info->Nombre_Contacto?></p>
 								<!--<p class="preview">You just got LITT up, Mike.</p>-->
 							</div>
 						</div>
 					</a>
-					
 				</li>
 				<?php
 				}
@@ -64,36 +65,25 @@
 							<img src="<?php echo base_url().'plantilla/img_perfil/'.$infoA->Foto_Perfil?>" alt="" />
 							<div class="meta">
 								<p class="name"><?= $infoA->Nombre?></p>
-								<!--<p class="preview">You just got LITT up, Mike.</p>-->
 							</div>
 						</div>
 					</a>
-					
 				</li>
-
 				<?php
 				}
 			?>
 			</ul>
 		</div>
-		<div id="bottom-bar">			
+		<div id="bottom-bar" style="background: gray">			
 		</div>
 	</div>
 	<div class="content">
-		<div class="contact-profile">
+		<div class="contact-profile" align="left" style="width: auto; text-align: left;">
 			<img id="imgU" src="<?= base_url()?>plantilla/images/7.png" alt="" />
 			<p id="nombreContacto">Seleccione un chat</p>
 		</div>
-		<div class="messages">
+		<div class="messages" style="width: auto;">
 			<ul id="lisMsj">
-				<!--<li class="sent">
-					<img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-					<p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
-				</li>
-				<li class="replies">
-					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-					<p>When you're backed against the wall, break the god damn thing down.</p>
-				</li>-->
 			</ul>
 		</div>
 		<div>
@@ -104,13 +94,12 @@
 		<div class="message-input">
 			<div class="wrap">
 			<input type="text" placeholder="Escriba un mensaje..."  onkeyup="this.value=NumText(this.value)" />
-			
-			<button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+			<button class="submit "style="border-radius: 3px; color: "><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 			</div>
 		</div>
 	</div>
 </div>
-
+</div>
 <script >
 $(".messages").animate({ scrollTop: $(document).height() }, "fast");
 
@@ -194,7 +183,7 @@ function newMessage() {
 							$(".messages").animate({ scrollTop: $(document).height() }, "fast");
             			}
             			else {
-            				$('<li class="sent" ><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + registros[i]['Mensaje'] + '</p></li>').appendTo($('.messages ul'));
+            				$('<li class="sent" ><img src="<?= base_url()?>plantilla/images/chica.png" alt="" /><p>' + registros[i]['Mensaje'] + '</p></li>').appendTo($('.messages ul'));
 							$('.message-input input').val(null);
 							$('.contact.active .preview').html('<span>You: </span>' + registros[i]['Mensaje']);
 							$(".messages").animate({ scrollTop: $(document).height() }, "fast");
@@ -266,7 +255,7 @@ function NM(){
 							$(".messages").animate({ scrollTop: $(document).height() }, "fast");
             			}
             			else {
-            				$('<li class="sent" ><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + registros[i]['Mensaje'] + '</p></li>').appendTo($('.messages ul'));
+            				$('<li class="sent" ><img src="<?= base_url()?>plantilla/images/chica.png" alt="" /><p>' + registros[i]['Mensaje'] + '</p></li>').appendTo($('.messages ul'));
 							//$('.message-input input').val(null);
 							$('.contact.active .preview').html('<span>You: </span>' + registros[i]['Mensaje']);
 							$(".messages").animate({ scrollTop: $(document).height() }, "fast");

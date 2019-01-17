@@ -19,7 +19,6 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-title text-right">
-                <a href="<?= base_url() ?>inventario/estadisticaMensualVR" class="btn btn-primary"> Ver estadisticas</a>
                      <a target="_blank" href="<?= base_url() ?>inventario/reporteVentas" class="btn btn-danger"> Ver en PDF</a>
             </div>
             <div class="card-body">
@@ -46,8 +45,10 @@
 
                         <?php 
                         $ime=1;
+
                             foreach ($datos->result() as $filaProducto)
-                            {
+                            {$fecha = new DateTime($filaProducto->Fecha_Venta);
+                        $fecha = $fecha->format("d-m-Y");
                         ?>
                             <tr>
                                 <td><?= $ime ?></td>
@@ -55,12 +56,13 @@
                                 <td><?= $filaProducto->Cantidad_Venta ?></td>
                                 <td>$<?= $filaProducto->Precio_Producto ?></td>
                                 <td>$<?= $filaProducto->Cantidad_Venta * $filaProducto->Precio_Producto ?></td>
-                                <td><?= $filaProducto->Fecha_Venta ?></td>
+                                <td><?=  $fecha ?></td>
                                 
                             </tr>
 
                         <?php 
                         $ime++;
+                        
                             }
                             }
                         ?>

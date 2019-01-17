@@ -4,7 +4,7 @@
     </div>
 
      <div class="col-md-5 align-center">
-        <h3 style="color: #fff">Elije uno de los Rubros disponibles </h3>
+        <h3 style="color: #fff">Capital inicial </h3>
      </div>
 
     <div class="col-md-3 align-self-center">
@@ -23,6 +23,11 @@
                     <form method="post" action="<?= base_url() ?>capital/detalleCapital">
                         <div class="row">
                             <div class="col-md-10">
+                                <div>   
+                   <br> 
+                   <h3 style="color: #000"> El módulo de Capital Inicial funciona para que las emprendedoras tengan más información sobre los insumos y equipos necesarios para iniciar un negocio</h3><br>
+                    <h3> Elige un Rubro: </h3><br>
+                </div>
                                 <select name="rubro" class="form-control" required>
 
                                     <option value="">Elija uno de los siguientes rubros </option>
@@ -37,10 +42,11 @@
                                 </select>   
                                 
                             </div>
-                            <div class="col-md-2">
+                            
+                        </div>
+                        <div class="col-md-12" align="right">
                                 <button type="submit" class="btn btn-primary">Siguiente <i class="fa fa-angle-double-right f-s-20"></i></button>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>

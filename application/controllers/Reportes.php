@@ -351,7 +351,8 @@ class Reportes extends CI_Controller {
 					</script>';
 			}
 	}
-	public function ReportePeriodo(){
+	public function ReportePeriodo()
+	{
 		$dato = $this->input->POST();
 		$this->load->model('Reportes_Model');
 		$data=$this->Reportes_Model->ReportePorPeriodo($dato);

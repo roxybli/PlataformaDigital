@@ -110,7 +110,7 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-6 btnCenter">
-                                                                 <a onclick="Atras()" class="btn btn-secundary" id="anterior" ><i class="fa fa-arrow-left"></i> regresar</a> 
+                                                                 <a onclick="Atras()" class="btn btn-secundary" id="anterior" ><i class="fa fa-arrow-left"></i> Regresar</a> 
                                                              </div>
                                                         <div class="col-md-6 btnCenter">
                                                              <a onclick="siguiente()" class="btn btn-info" id="siguiente">Siguiente  <i class="fa fa-arrow-right"></i></a>

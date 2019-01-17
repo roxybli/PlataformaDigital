@@ -1,4 +1,3 @@
-
 <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
                     <h3 class="text-primary">Inicio</h3> </div>
@@ -22,9 +21,9 @@
                 <table class="table">
                       <thead>
                         <tr>
-                          <th scope="col">Foto</th>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Accion</th>
+                          <th scope="col" style="background: #fff">Foto</th>
+                          <th scope="col"style="background: #fff">Nombre</th>
+                          <th scope="col" style="background: #fff">Accion</th>
                           
                         </tr>
                       </thead>

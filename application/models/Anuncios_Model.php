@@ -203,7 +203,10 @@ public function listarInstituciones2(){
 		if ($datos!=null) {
 			$fechaI=$datos['FechaInicial'];
 			$fechaF=$datos['FechaFinal'];
-			$sql ="SELECT A.*, U.Nombre FROM tbl_Anuncios  AS A INNER JOIN tbl_Usuarias AS U ON A.FK_Id_Usuaria=U.pk_Id_Usuaria WHERE A.Fecha BETWEEN '$fechaI' AND '$fechaF'";
+			$sql ="SELECT A.*, I.Nombre_Institucion, U.Nombre
+			FROM tbl_Anuncios  AS A
+			INNER JOIN tbl_Usuarias AS U ON A.FK_Id_Usuaria=U.pk_Id_Usuaria
+			INNER JOIN tbl_instituciones AS I ON A.FK_Id_Institucion=I.Pk_Id_Institucion WHERE A.Fecha BETWEEN '$fechaI' AND '$fechaF'";
 			//echo $sql;
 			$res= $this->db->query($sql);
 			return  $res;

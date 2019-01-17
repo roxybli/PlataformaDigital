@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
 	$('#telefono').mask("503-9999-9999");
 	$('#dui').mask("99999999-9");
 
@@ -41,4 +42,5 @@ $(document).ready(function(){
 		
 				}
 			});
-});
+
+}

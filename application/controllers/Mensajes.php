@@ -61,11 +61,6 @@ class Mensajes extends CI_Controller {
 		$idEmisor=$this->input->POST('IdEmi');
 		$idReceptor=$this->input->POST('IdRe');
 		$mensaje=$this->input->POST('msj');
-		//$idContacto=6;
-		//$idEmisor=1;
-		//$idReceptor=1;
-		//$mensaje="Hola";
-		//$idContacto=6;
 		$this->load->model('Mensajes_Model');
 		$msj = $this->Mensajes_Model->InsertarMensajesContacto($idContacto, $idEmisor, $idReceptor, $mensaje);
 		echo json_encode($msj);

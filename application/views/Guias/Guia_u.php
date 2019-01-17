@@ -4,6 +4,8 @@
 <div class="container-fluid">
     <?php
         foreach ($Guia->result() as $GuiaU) {
+            $fecha = new DateTime($GuiaU->Fecha_Publicacion);
+                                    $fecha = $fecha->format("d-m-Y");
     ?>
     <div class="row">
         <div class="col-lg-12">
@@ -51,7 +53,7 @@
                                                         </div><br><br>
                                                          <div>
                                                             <div>
-                                                                 <span ><p style="color:#004d40;"><i class="fa fa-check" style="margin:10px; color:#004d40;"></i>Publicado por <?= $GuiaU->Nombre?><span><p style="color:#004d40;"><i class="fa fa-calendar" style="margin:10px; color:#004d40;"></i>Fecha de publicacion <?= $GuiaU->Fecha_Publicacion?></p><br></span></p><br></span>
+                                                                 <span ><p style="color:#004d40;"><i class="fa fa-check" style="margin:10px; color:#004d40;"></i>Publicado por <?= $GuiaU->Nombre?><span><p style="color:#004d40;"><i class="fa fa-calendar" style="margin:10px; color:#004d40;"></i>Fecha de publicacion <?= $fecha?></p><br></span></p><br></span>
                                                             </div>
                                                         </div>
                                                         </div>

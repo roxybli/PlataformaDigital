@@ -22,6 +22,8 @@ if($this->session->userdata('login')){
 }
    
         foreach ($Noticia->result() as $noti) {
+            $fecha = new DateTime($noti->Fecha);
+                                    $fecha = $fecha->format("d-m-Y");
     ?>
     <div class="row">
         <div class="col-lg-12">
@@ -52,7 +54,7 @@ if($this->session->userdata('login')){
                                                         <div> 
                                                             <span ><p style="color:#004d40; text-align: left;" ><i class="fa fa-check"></i> Publicado por <?= $noti->Nombre?></p></span>        
                                                             <span> <p style="color:#004d40;" ><i class="fa fa-building" ></i> Institución: <?= $noti->Nombre_Institucion?></p>
-                                                         <span><p style="color:#004d40; text-align: left; "><i class="fa fa-calendar" ></i> Fecha de publicación: <?= $noti->Fecha?></p></span>  
+                                                         <span><p style="color:#004d40; text-align: left; "><i class="fa fa-calendar" ></i> Fecha de publicación: <?= $fecha?></p></span>  
                                                          </div></div>
                                                 </div>
                                             </div>

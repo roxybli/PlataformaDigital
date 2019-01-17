@@ -11,6 +11,9 @@
 </div>
 <div class="container-fluid">
 <div class="row">
+    <div class="card TituloUser">
+                                    <h3 class="responsive" style="color:white; font-weight:bold;">Crear Productos</h3>
+                                </div>
     <div class="col-lg-12">
         <div class="card">
             <div class="card-title">
@@ -28,18 +31,17 @@
                 <div class="row">
                     <div class="col-md-6">
                         <label style="color: #000000">Cuantos Productos creará  </label>
-                        <input type="text" onkeypress="return numeros(event, 'num')" class="form-control" name="cantidadProducto" placeholder="¿Cuántos Productos creará ?"  value="1" id="cantidadProducto" required>
+                        <input type="text" onkeypress="return numeros(event, 'num')" class="form-control" name="cantidadProducto" placeholder="¿Cuántos Productos creará ?"   id="cantidadProducto" required>
                     </div>
                     <div class="col-md-6">
                         <label style="color: #000000">fecha de creación  </label>
-                        <input type="text" name="fechaProducto" class="form-control" id="fechaIE" required="true" name="" placeholder="Fecha">
+                        <input type="text" name="fechaProducto" class="form-control" id="fechaIE"  name="" placeholder="Fecha" required>
                     </div>
                 </div>
             </div>
             <div class="card-body">
 
-            <form id="detalleProcedimiento" method="post" action="<?= base_url() ?>inventario/guardarProducto">               
-            
+            <form id="detalleProcedimiento" method="post" action="<?= base_url() ?>inventario/guardarProducto">
             <input type="hidden" value="" id="CP" name="cantidadProducto" >
             <input value="" type="hidden" id="FP" name="fechaProducto">
             <?php 
@@ -71,9 +73,9 @@
                             <tr>
                                 <td style="color: #000000"><span><?= $filaProcedimientos->Nombre_Insumo ?></span></td>
                                 <td style="color: #000000"><span><?= $filaProcedimientos->Precio_Insumo ?></span></td>
-                                <td><input type="text" name="existenciaInsumo[]"  value="<?= $filaProcedimientos->Existencia_Insumo ?>" readonly>
-                                 <input type="hidden" name="idInsumos[]"  value="<?= $filaProcedimientos->PK_Id_Insumo?>" </td>
-                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" readonly></span></td>
+                                <td><input type="text" name="existenciaInsumo[]"  value="<?= $filaProcedimientos->Existencia_Insumo ?>" id ="existencia" min="1" readonly>
+                                 <input type="hidden" name="idInsumos[]" id ="existencia" value="<?= $filaProcedimientos->PK_Id_Insumo?>"> </td>
+                                <td><span><input type="text" name="cantidadInsumo[]" value="<?= $filaProcedimientos->Cantidad_Insumo ?>" class="calc" id="crear" readonly></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Medida_Insumo ?></span></td>
                                 <td  style="color: #000000"><span><?= $filaProcedimientos->Direccion ?></span></td>
                             </tr>
@@ -84,7 +86,15 @@
                         ?>
                         </tbody>
                     </table>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Crear Producto nuevo</button>
+                      <div class="form-group" id="botonC" align="right">
+                        <p></p>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i><span class="fa fa-share-square-o f-s-20 oculto" id="btnCrear"></span> Crear Producto nuevo</button> 
+                </div>
+  <div class="form-group oculto" id="mensajeError">
+        <p></p>
+          <h3 class="text-danger">La cantidad a vender, debe ser menor que la de existencia !!!</h3>
+        </div>
+
                 </div>
                 </form>
             </div>
@@ -92,3 +102,26 @@
     </div>
 </div>
 </div>
+<script type="text/javascript">
+  $("#crear").change(function() {
+        existencia = $("#existencia").val();
+        cantidadV = $(this).val();
+
+        if (cantidadV > existencia)
+        {
+          $("#mensajeError").fadeIn();
+          $(this).val("");
+        }
+        else
+        {
+         $("#btnCrear").fadeIn(); 
+        }
+
+     })
+
+     $("#crear").click(function() {
+        $(".oculto").slideUp();
+
+     })
+
+</script>

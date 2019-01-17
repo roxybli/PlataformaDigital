@@ -5,7 +5,7 @@
 if (sizeof($Anuncios->result())==0) {
     echo '<script type="text/javascript">
                 alert("No hay datos que mostrar !!!");
-                window.close();
+                self.location ="'.base_url().'Anuncios/"
                 </script>';
 }
 ?>
@@ -98,6 +98,8 @@ else
     <div class="row" id="DivBody">
           <?php
             foreach ($Anuncios->result() as $publicacion) {
+                $fecha = new DateTime($publicacion->Fecha);
+                                    $fecha = $fecha->format("d-m-Y");
             ?>
         <div class="col-lg-12" >
             <div class="card">
@@ -117,7 +119,7 @@ else
                                                         <div class="col-md-9 col-xs-12 alert" >
                                                             <p style="color:#000;"> <?php echo $publicacion->Descripcion_Noticia;?></p>
                                                              <p style="color:#000;"> <?php echo $publicacion->Nombre_Institucion;?></p>
-                                                            <span><p><i class="fa fa-check" style="margin:10px;"></i>Publicado por <?= $publicacion->Nombre?><span><p><i class="fa fa-calendar" style="margin:10px;"></i>Fecha de publicacion <?= $publicacion->Fecha?></p><br></span></p><br></span>
+                                                            <span><p><i class="fa fa-check" style="margin:10px;"></i>Publicado por <?= $publicacion->Nombre?><span><p><i class="fa fa-calendar" style="margin:10px;"></i>Fecha de publicacion <?= $fecha ?></p><br></span></p><br></span>
                                                             <a class="btn  btn-info" href="<?= base_url()?>Anuncios/VerAnuncios?id=<?= $publicacion->pk_Id_Anuncio?>" style="color:white;">Leer mas...</a>
                                                        </div>
                                                 </div>

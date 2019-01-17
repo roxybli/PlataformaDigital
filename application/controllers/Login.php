@@ -2,11 +2,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
-public function __construct()
-	{
-		parent::__construct();
-		$this->load->library('Encrypt');
-	}
+
 	public function index()
 	{
 		$this->load->view('logueo/header-login');
@@ -46,13 +42,15 @@ public function __construct()
 		else{
 			$ver=$this->Perfiles_Model->verificarPerfil($id);
 			$users=$this->Perfiles_Model->cargarUsuaria($id);
+			$ultimo=$this->Perfiles_Model->cargarUltimo();
+			$pultimo=$this->Perfiles_Model->cargarPultimo();
 			$ingreso = $this->Perfiles_Model->cargarIngresos();
 			$Nmens = $this->Perfiles_Model->cargarComentarios();
 			$NumC = $this->Perfiles_Model->cargarContactos();
 			//$info1 = array('info' => $ver);
 
 			if($ver){
-				$info1 = array('info' => $ver, 'user'=>$users, 'ingreso'=>$ingreso, 'N_mens'=>$Nmens, 'NumC'=>$NumC);
+				$info1 = array('info' => $ver, 'user'=>$users, 'ultimo' =>$ultimo, 'pultimo'=>$pultimo, 'ingreso'=>$ingreso, 'N_mens'=>$Nmens, 'NumC'=>$NumC);
 				$this->load->view('administrador/base/header');
 				$this->load->view('administrador/plugin/app-profile', $info1);
 				$this->load->view('administrador/base/footer');
@@ -62,7 +60,6 @@ public function __construct()
 				$verr=$this->Rubros_Model->verRubros();
 				$data= array('rubros'=>$verr);
 				$this->load->view('administrador/base/header');
-				//$this->load->view('administrador/base/home');
 				$this->load->view('perfiles/Insertar_Perfil',$data);
 				$this->load->view('administrador/base/footer');
 			}

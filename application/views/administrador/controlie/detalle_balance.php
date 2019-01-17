@@ -4,7 +4,7 @@
     </div>
 
     <div class="col-md-6 align-center">
-        <h3 style="color: #fff">Detalle del balance correspondiente a la fecha <?= $fecha ?></h3>
+        <h3 style="color: #fff">Detalle del Balance </h3>
      </div>
     <div class="col-md-3 align-self-center">
         <ol class="breadcrumb">
@@ -31,15 +31,15 @@
                     {
                 ?>
                     <table class="table detalleB" id="resumenB">
-                        <thead >
-                        <tr>
-                        <th>No</th>
-                            <th>Fecha</th>
-                            <th>Operación</th>
-                            <th>Egreso de dinero</th>
-                            <th>Ingreso</th>
-                            <th>Balance</th>
-                            <th></th>   
+                        <thead style="background:#bbc2d8">
+                        <tr >
+                             <th style="background:#bbc2d8">No</th>
+                            <th style="background:#bbc2d8">Fecha</th>
+                            <th style="background:#bbc2d8">Operación</th>
+                            <th style="background:#bbc2d8">Egreso de dinero</th>
+                            <th style="background:#bbc2d8">Ingreso</th>
+                            <th style="background:#bbc2d8">Balance</th>
+                            <th style="background:#bbc2d8"></th>   
                         </tr>
                         </thead>
                         <tbody>
@@ -49,11 +49,13 @@
                         $imei=1;
                             foreach ($datos->result() as $filaDatos)
                             {
+                                $fecha = new DateTime($filaDatos->Fecha_Balance);
+                                    $fecha = $fecha->format("d-m-Y");
                                 
                            ?> 
                                <tr>
                                 <td ><span><?= $imei ?></span></td>
-                                    <td ><span><?= $filaDatos->Fecha_Balance ?></span></td>
+                                    <td ><span><?= $fecha ?></span></td>
                                     <td ><span><?= $filaDatos->Nombre_Operacion ?> -<?= $filaDatos->Nombre_Egreso ?></span></td>
                                     <td ><span>$<?= $filaDatos->Cantidad_Egreso ?></span></td>
                             <?php 

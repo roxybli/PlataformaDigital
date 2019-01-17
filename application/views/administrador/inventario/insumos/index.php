@@ -38,9 +38,9 @@
                             <!--/span-->
                         </div>
                         <!--/row-->
-
-                        <button type="button" id="numeroInsumos" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20"></i> Aceptar</button>
-                    </form>
+                        <div align="right">
+                        <button type="button" id="numeroInsumos" class="btn btn-primary btn-flat m-b-30 m-t-30"><i class="fa fa-share-square-o f-s-20" ></i> Aceptar</button>
+                    </div></form>
                 </div>
 
             <form class="form-valide" method="post" action="<?= base_url() ?>insumos/guardarInsumos" id="tablaInsumos">

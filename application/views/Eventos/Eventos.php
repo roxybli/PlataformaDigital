@@ -47,9 +47,9 @@ thead tr{
     <div class="modal-content">
       <div class="modal-header" style="background-color:#512da8;">
         <h5 class="modal-title" id="exampleModalLongTitle" style="color:white;">Insertar un nuevo evento</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button>-->
       </div>
       <div class="modal-body">
        <div class="form-validation">
@@ -151,22 +151,7 @@ thead tr{
                 }
             });
        }
-      /*events: [
-        {
-          title  : 'event1',
-          start  : '2018-11-11'
-        },
-        {
-          title  : 'event2',
-          start  : '2018-11-11',
-          end    : '2010-11-11'
-        },
-        {
-          title  : 'event3',
-          start  : '2018-11-18',
-          
-        }
-      ]*/
+      
       
     });//FIN DEL CALENDARIO
 
@@ -185,11 +170,17 @@ thead tr{
           var registro  = eval(respuesta);
           var registros = eval(respuesta);
           var html ="";
+
+      
           if(registros.length>0){
+        
             //alert('hay');
             for (var i = 0; i < registro.length; i++) {
+
               html+=' <div class="row color"><div class="col-md-12 "><div class="card"> <div class="card-body"> <p style="color: #04B486">'+registro[i]['titulo_evento']+'</p>'
               if(registro[i]['fecha_inicio']==registro[i]['fecha_fin']){
+
+
                 html+='<p style="color: #000000"> Fecha del evento:'+registro[i]['fecha_inicio']+'</p>';
               }
               else{
