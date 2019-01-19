@@ -58,18 +58,24 @@
 </div>
 <!--/.Carousel Wrapper-->
        <div id="filtros" class="col-lg-22 card">
-
-       <div class="input-group input-group-rounded has-success">
-            <input id="NombreB" name="NombreB" type="text" placeholder="Buscar por nombre del negocio" class="form-control" onkeyup="this.value=NumText(this.value)">
-                <span class="input-group-btn"><span class="btn btn-primary btn-group-right" type="submit"><i class="ti-search"></i></span></span>
-        </div>
         <div class="col-lg-3">
             <a onclick="Mostrar()" style="color:white; margin:10px;" class="btn btn-warning m-b-10 m-l-5"><i class="fa fa-filter" aria-hidden="true"></i>
-Filtrar</a>
+Filtros personalizados</a>
        </div>
-           <div id="Filtros"  class="form-group has-success">                  
+           <div id="Filtros"  class="form-group has-success" style=display:none>                  
                  <div class="bordes">
                     <div class="row">
+					   <div class="col-lg-4">
+                             <div class="input-group input-group">
+                                <div class="form-group">
+                                     <label class="control-label">Buscar por nombre del negocio</label>
+									 <div class="input-group input-group-rounded has-success">
+									<input id="NombreB" name="NombreB" type="text" placeholder="Nombre del negocio" class="form-control" onkeyup="this.value=NumText(this.value)">
+									<span class="input-group-btn"><span class="btn btn-primary btn-group-right" type="submit"><i class="ti-search"></i></span></span>
+									</div>
+                                </div>
+                              </div>
+                        </div>
                          <div class="col-lg-4">
                              <div class="input-group input-group">
                                 <div class="form-group">
