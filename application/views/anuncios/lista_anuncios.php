@@ -46,12 +46,21 @@ else
 ?>
                 <div class="card" > 
                 <div class="row" >     
-                 <br><br><li class=" search-box"> <a class="text-muted" href="javascript:void(0)"><i class="ti-search"></i></a>
+                 <br><br>
+                </div>
+        <div class="row" style="margin:30px;">
+                <a id="btnFecha" onclick="Fecha()" class="btn btn-warning" style="color:white;"><i class="fa fa-search" style="margin:10px;"></i>Búsqueda personalizada</a>
+                </div>
+                <div style="display:none;" id="DivFecha">
+                    <form class="app-search" method="POST" action="<?= base_url()?>Anuncios/BuscarFecha">
+                    <div class="row">
+					<div class="col-md-4">
+                        <li class=" search-box"> <a class="text-muted" href=""><i class=""></i></a>
                             <form class="app-search" >
-                                <input  id="TituloB" name="TituloB" type="text" class="form-control" placeholder="Buscar por titulo de la publicacion"> <a class="srh-btn"><i class="ti-close"></i></a>
-
+                                <input  id="TituloB" name="TituloB" type="text" class="form-control" placeholder="Buscar por titulo de la publicacion"> <a class=""><i class=""></i></a>
+                                <br>
                                 <select id="Institucion" name="Institucion" type="text" class="form-control">
-                                    <option value="">Seleccionar Institución</option>
+                                    <option value="">Búsqueda por Institución</option>
                                     <?php foreach ($Instituciones->result() as $institucion) { ?>
                                         <option value="<?= $institucion->Pk_Id_Institucion ?>">
                                             <?= $institucion->Nombre_Institucion ?>
@@ -59,26 +68,23 @@ else
                                     <?php } ?>
                                 </select>
                             </form>
-                        Buscar por título y/o institución</li>
-                </div>
-        <div class="row" style="margin:30px;">
-                <a id="btnFecha" onclick="Fecha()" class="btn btn-warning" style="color:white;"><i class="fa fa-calendar" style="margin:10px;"></i>Buscar por fechas</a>
-                </div>
-                <div style="display:none;" id="DivFecha">
-                    <form class="app-search" method="POST" action="<?= base_url()?>Anuncios/BuscarFecha">
-                    <div class="row">
-                        <div class="col-md-6">
+                        </li>
+                        </div> 
+					
+                        <div class="col-md-4">
                         <label>Inserte la fecha de inicio</label>
                         <div class="input-group">
                             <input type="date" name="FechaInicial" id="fechaInicial" class="form-control">
                         </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                         <label>Inserte la fecha de fin</label>
                         <div class="input-group">
                             <input type="date" name="FechaFinal" id="fechaFinal" class="form-control">
                         </div> 
                         </div> 
+						
+						
                     </div>
                        <div class="row">
                         <div class="col-md-6">
@@ -88,7 +94,7 @@ else
                         </div>
                         <div class="col-md-6">
                         <div class="input-group">
-                            <button class="btn btn-primary" style="margin:10px; color:white;"><i style="margin:10px;" class="fa fa-search"></i>Buscar</button>
+                            <button class="btn btn-primary" style="margin:10px; color:white;"><i style="margin:10px;" class="fa fa-calendar"></i>Buscar fecha</button>
                         </div> 
                         </div> 
                     </div>
