@@ -102,6 +102,45 @@
 
   }
   
+  //Notificaciones Contactos/
+  setInterval("NMensajes()",1000);
+    function NMensajes(){
+      
+      $.get("<?=base_url() ?>Mensajes/VerMensajesC","",function(data){
+      //console.log(res);
+      var json = JSON.parse(data);
+      var param=1;
+      //console.log(json);
+      //alert(json.length);
+      document.getElementById('Num3').innerHTML=json.length;
+      if(json==""){
+        document.getElementById('noti5').style.display='none';
+         document.getElementById('noti6').style.display='none';
+        document.getElementById('MensajeC').innerHTML='<p>No tienes nuevos mensajes de contactos</p>';
+      }
+      else{
+        html=""
+         document.getElementById('noti5').style.display='block';
+         document.getElementById('noti6').style.display='block';
+       for (res in json){
+                html+='<a onclick="ver('+json[res].PK_Id_Mensaje_Contacto+')"><div class="btn btn-info btn-circle m-r-10"><i class="fa fa-address-book"></i></div><div class="mail-contnet"><h5>'+json[res].Mensaje+'</h5></div></a>';
+               }
+               document.getElementById('MensajeC').innerHTML=html;
+      }
+    });
+  }
+  function ver(id_m){
+        $.ajax({
+        url: '<?php echo base_url()?>Mensajes/EstadoMensajesC',
+        type: "POST",
+        data: {id:id_m},
+        success:function(data){
+        }
+    });
+
+  }
+  
+  
   
 </script>
 
@@ -201,16 +240,16 @@
                         <!-- Messages -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted  " href="#" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-envelope"></i>
-                                <div class="notify"> <span id="noti1" style="display:none;" class="heartbit"></span> <span id="noti2" style="display:none;" class="point"></span> 
+                                <div class="notify"> <span id="noti5" style="display:none;" class="heartbit"></span> <span id="noti6" style="display:none;" class="point"></span> 
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn" aria-labelledby="2">
                                 <ul>
                                     <li>
-                                        <div class="drop-title">Tienes <span id="NumM"></span> Mensajes nuevos</div>
+                                        <div class="drop-title">Tienes <span id="Num3"></span> Mensajes nuevos</div>
                                     </li>
                                     <li>
-                                        <div class="message-center" id="Mensaje" name="Mensaje">
+                                        <div class="message-center" id="MensajeC" name="Mensaje">
                                             <!-- Message -->
                                             <!--CONTENIDO DEL MENSAJE-->
                                         </div>
