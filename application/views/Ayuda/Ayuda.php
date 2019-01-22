@@ -27,7 +27,7 @@
                                            <p ><strong>¿Cómo veo el perfil de otra emprendedora?</strong></p>
                 <p>En la sección de bolsa de emprendedoras seleccione el perfil que quiere revisar y da clic en ver perfil.</p>
             <p><strong>¿Es posible realizar una búsqueda dentro la de la bolsa de emprendedoras por sede?</strong></p>
-            <p>Si, dentro de la sección de la bolsa de emprendedoras hay dos filtros: por sede y por departamento.</p>
+            <p>Si, dentro de la sección de la bolsa de emprendedoras hay dos filtros: por sede y por rubro.</p>
             <p ><strong>¿Cómo puedo buscar un negocio por su nombre?</strong></p>
             <p>En la sección de bolsa de emprendedoras hay una barra de búsqueda, digite el nombre y aparecerá abajo la lista de coincidencias.</p>
             <p ><strong>¿Cómo agrego un contacto?</strong></p>
