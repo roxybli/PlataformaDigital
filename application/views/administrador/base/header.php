@@ -123,13 +123,13 @@
          document.getElementById('noti5').style.display='block';
          document.getElementById('noti6').style.display='block';
        for (res in json){
-                html+='<a onclick="ver('+json[res].PK_Id_Mensaje_Contacto+')"><div class="btn btn-info btn-circle m-r-10"><i class="fa fa-address-book"></i></div><div class="mail-contnet"><h5>'+json[res].Mensaje+'</h5></div></a>';
+                html+='<a onclick="ver3('+json[res].PK_Id_Mensaje_Contacto+')"><div class="btn btn-info btn-circle m-r-10"><i class="fa fa-address-book"></i></div><div class="mail-contnet"><h5>'+json[res].Mensaje+'</h5></div></a>';
                }
                document.getElementById('MensajeC').innerHTML=html;
       }
     });
   }
-  function ver(id_m){
+  function ver3(id_m){
         $.ajax({
         url: '<?php echo base_url()?>Mensajes/EstadoMensajesC',
         type: "POST",
